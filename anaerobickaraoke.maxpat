@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 11,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 166.0, 112.0, 770.0, 770.0 ],
+		"rect" : [ 52.0, 45.0, 770.0, 770.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -183,6 +183,7 @@
 					"handoff" : "",
 					"hltcolor" : [ 1.0, 1.0, 1.0, 0.501960784313725 ],
 					"id" : "obj-21",
+					"ignoreclick" : 1,
 					"maxclass" : "ubutton",
 					"numinlets" : 1,
 					"numoutlets" : 4,
@@ -228,6 +229,7 @@
 					"handoff" : "",
 					"hltcolor" : [ 1.0, 1.0, 1.0, 0.501960784313725 ],
 					"id" : "obj-15",
+					"ignoreclick" : 1,
 					"maxclass" : "ubutton",
 					"numinlets" : 1,
 					"numoutlets" : 4,
@@ -244,6 +246,7 @@
 					"handoff" : "",
 					"hltcolor" : [ 1.0, 1.0, 1.0, 0.501960784313725 ],
 					"id" : "obj-14",
+					"ignoreclick" : 1,
 					"maxclass" : "ubutton",
 					"numinlets" : 1,
 					"numoutlets" : 4,
@@ -375,13 +378,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 817.0, 131.0, 747.0, 759.0 ],
+						"rect" : [ 200.0, 79.0, 957.0, 757.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -409,13 +412,280 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-90",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 425.808080155402422, 477.0, 80.0, 22.0 ],
+									"text" : "prepend read"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 11.595186999999999,
+									"id" : "obj-91",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 425.808080155402422, 454.0, 135.0, 21.0 ],
+									"text" : "sprintf symout %sphotos"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-92",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 425.808080155402422, 430.0, 57.0, 22.0 ],
+									"text" : "r collpath"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-86",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 49.808080155402422, 90.699893206357956, 80.0, 22.0 ],
+									"text" : "prepend read"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 11.595186999999999,
+									"id" : "obj-87",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 49.808080155402422, 67.699893206357956, 131.0, 21.0 ],
+									"text" : "sprintf symout %scolors"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-88",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 49.808080155402422, 43.699893206357956, 57.0, 22.0 ],
+									"text" : "r collpath"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-89",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 49.808080155402422, 114.699893206357956, 50.5, 22.0 ],
+									"saved_object_attributes" : 									{
+										"embed" : 0,
+										"precision" : 6
+									}
+,
+									"text" : "coll"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-85",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 834.490990784019232, 72.667365413159132, 92.0, 33.0 ],
+									"presentation_linecount" : 2,
+									"text" : "send pathways for resources"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-81",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 722.007763126865029, 224.699893206357956, 71.0, 22.0 ],
+									"text" : "s photopath"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 11.595186999999999,
+									"id" : "obj-82",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 722.007763126865029, 201.699893206357956, 192.0, 21.0 ],
+									"text" : "sprintf symout %sresources/photos/"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-76",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 686.007763126865029, 318.699893206357956, 71.0, 22.0 ],
+									"text" : "s audiopath"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 11.595186999999999,
+									"id" : "obj-77",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 686.007763126865029, 295.699893206357956, 186.0, 21.0 ],
+									"text" : "sprintf symout %sresources/audio/"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-72",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 706.007763126865029, 271.699893206357956, 59.0, 22.0 ],
+									"text" : "s collpath"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-63",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 644.558080155402422, 368.189620494842529, 100.0, 20.0 ],
+									"text" : "format UI images"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-56",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 530.5, 34.667365413159132, 78.808080155402422, 33.0 ],
+									"text" : "format audio level meter"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-50",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 185.308080155402422, 34.667365413159132, 98.0, 20.0 ],
+									"text" : "format waveform"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 638.007763126865029, 81.699893206357956, 58.0, 22.0 ],
+									"text" : "loadbang"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 11.595186999999999,
+									"id" : "obj-14",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 686.007763126865029, 152.699893206357956, 59.0, 21.0 ],
+									"text" : "tosymbol"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 11.595186999999999,
+									"id" : "obj-18",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 706.007763126865029, 248.699893206357956, 181.0, 21.0 ],
+									"text" : "sprintf symout %sresources/colls/"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-21",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 638.007763126865029, 105.699893206357956, 32.0, 22.0 ],
+									"text" : "path"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-52",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 638.007763126865029, 129.699893206357956, 67.0, 22.0 ],
+									"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
+									"text" : "thispatcher"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-80",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 50.524535469710827, 569.333331942558289, 39.0, 22.0 ],
+									"patching_rect" : [ 49.524535469710827, 610.333331942558289, 39.0, 22.0 ],
 									"text" : "s size"
 								}
 
@@ -427,7 +697,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 110.524535469710827, 515.546101450920105, 105.0, 22.0 ],
+									"patching_rect" : [ 109.524535469710827, 556.546101450920105, 105.0, 22.0 ],
 									"text" : "script size ? 28 25"
 								}
 
@@ -439,7 +709,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 72.524535469710827, 466.805360972881317, 105.0, 22.0 ],
+									"patching_rect" : [ 71.524535469710827, 507.805360972881317, 105.0, 22.0 ],
 									"text" : "script size ? 50 25"
 								}
 
@@ -451,7 +721,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.524535469710827, 442.064620494842529, 127.0, 22.0 ],
+									"patching_rect" : [ 49.524535469710827, 483.064620494842529, 127.0, 22.0 ],
 									"text" : "script move ? 541 513"
 								}
 
@@ -463,7 +733,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 88.524535469710827, 490.805360972881317, 127.0, 22.0 ],
+									"patching_rect" : [ 87.524535469710827, 531.805360972881317, 127.0, 22.0 ],
 									"text" : "script move ? 551 513"
 								}
 
@@ -475,7 +745,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 516.935776982456446, 365.0, 31.0, 22.0 ],
+									"patching_rect" : [ 570.274535469710827, 406.0, 31.0, 22.0 ],
 									"text" : "r pic"
 								}
 
@@ -487,7 +757,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 217.524535469710827, 515.546101450920105, 119.0, 22.0 ],
+									"patching_rect" : [ 216.524535469710827, 556.546101450920105, 119.0, 22.0 ],
 									"text" : "pic AkInstruction.png"
 								}
 
@@ -499,7 +769,7 @@
 									"numinlets" : 10,
 									"numoutlets" : 10,
 									"outlettype" : [ "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "" ],
-									"patching_rect" : [ 351.308080155402422, 515.546101450920105, 154.0, 22.0 ],
+									"patching_rect" : [ 350.308080155402422, 556.546101450920105, 154.0, 22.0 ],
 									"text" : "sel 1 5 9 13 20 21 22 23 24"
 								}
 
@@ -511,7 +781,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 306.808080155402422, 432.0, 29.5, 22.0 ],
+									"patching_rect" : [ 305.808080155402422, 473.0, 29.5, 22.0 ],
 									"text" : "20"
 								}
 
@@ -523,7 +793,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 275.308080155402422, 432.0, 29.5, 22.0 ],
+									"patching_rect" : [ 274.308080155402422, 473.0, 29.5, 22.0 ],
 									"text" : "21"
 								}
 
@@ -535,7 +805,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 393.308080155402422, 432.0, 29.5, 22.0 ],
+									"patching_rect" : [ 392.308080155402422, 473.0, 29.5, 22.0 ],
 									"text" : "23"
 								}
 
@@ -547,7 +817,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 353.808080155402422, 432.0, 29.5, 22.0 ],
+									"patching_rect" : [ 352.808080155402422, 473.0, 29.5, 22.0 ],
 									"text" : "6"
 								}
 
@@ -559,7 +829,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 335.308080155402422, 475.666665971279144, 67.0, 22.0 ],
+									"patching_rect" : [ 334.308080155402422, 516.666665971279144, 67.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"embed" : 0,
 										"precision" : 6
@@ -578,8 +848,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "jit_matrix" ],
-									"patching_rect" : [ 516.935776982456446, 389.0, 159.5, 159.5 ],
-									"pic" : "AkRest.png"
+									"patching_rect" : [ 570.274535469710827, 430.0, 159.5, 159.5 ],
+									"pic" : "AkOpen.png"
 								}
 
 							}
@@ -590,7 +860,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 454.308080155402422, 614.333331942558289, 82.0, 22.0 ],
+									"patching_rect" : [ 453.308080155402422, 655.333331942558289, 82.0, 22.0 ],
 									"text" : "ignoreclick $1"
 								}
 
@@ -601,7 +871,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 454.308080155402422, 648.546101450920105, 49.0, 22.0 ],
+									"patching_rect" : [ 453.308080155402422, 689.546101450920105, 49.0, 22.0 ],
 									"text" : "s stplay"
 								}
 
@@ -613,7 +883,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 569.808080155402422, 569.333331942558289, 29.5, 22.0 ],
+									"patching_rect" : [ 568.808080155402422, 610.333331942558289, 29.5, 22.0 ],
 									"text" : "1"
 								}
 
@@ -625,7 +895,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 538.308080155402422, 569.333331942558289, 29.5, 22.0 ],
+									"patching_rect" : [ 537.308080155402422, 610.333331942558289, 29.5, 22.0 ],
 									"text" : "0"
 								}
 
@@ -637,7 +907,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 401.808080155402422, 569.333331942558289, 29.5, 22.0 ],
+									"patching_rect" : [ 400.808080155402422, 610.333331942558289, 29.5, 22.0 ],
 									"text" : "1"
 								}
 
@@ -649,7 +919,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 370.308080155402422, 569.333331942558289, 29.5, 22.0 ],
+									"patching_rect" : [ 369.308080155402422, 610.333331942558289, 29.5, 22.0 ],
 									"text" : "0"
 								}
 
@@ -661,7 +931,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 485.808080155402422, 569.333331942558289, 29.5, 22.0 ],
+									"patching_rect" : [ 484.808080155402422, 610.333331942558289, 29.5, 22.0 ],
 									"text" : "1"
 								}
 
@@ -673,7 +943,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 454.308080155402422, 569.333331942558289, 29.5, 22.0 ],
+									"patching_rect" : [ 453.308080155402422, 610.333331942558289, 29.5, 22.0 ],
 									"text" : "0"
 								}
 
@@ -685,7 +955,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 622.308080155402422, 614.333331942558289, 82.0, 22.0 ],
+									"patching_rect" : [ 621.308080155402422, 655.333331942558289, 82.0, 22.0 ],
 									"text" : "ignoreclick $1"
 								}
 
@@ -697,7 +967,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 370.308080155402422, 614.333331942558289, 82.0, 22.0 ],
+									"patching_rect" : [ 369.308080155402422, 655.333331942558289, 82.0, 22.0 ],
 									"text" : "ignoreclick $1"
 								}
 
@@ -709,7 +979,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 538.308080155402422, 614.333331942558289, 82.0, 22.0 ],
+									"patching_rect" : [ 537.308080155402422, 655.333331942558289, 82.0, 22.0 ],
 									"text" : "ignoreclick $1"
 								}
 
@@ -720,7 +990,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 622.308080155402422, 648.546101450920105, 34.0, 22.0 ],
+									"patching_rect" : [ 621.308080155402422, 689.546101450920105, 34.0, 22.0 ],
 									"text" : "s st?"
 								}
 
@@ -731,7 +1001,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 370.308080155402422, 648.546101450920105, 53.0, 22.0 ],
+									"patching_rect" : [ 369.308080155402422, 689.546101450920105, 53.0, 22.0 ],
 									"text" : "s stsave"
 								}
 
@@ -742,7 +1012,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 538.308080155402422, 648.546101450920105, 41.0, 22.0 ],
+									"patching_rect" : [ 537.308080155402422, 689.546101450920105, 41.0, 22.0 ],
 									"text" : "s stgo"
 								}
 
@@ -754,7 +1024,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "bang", "" ],
-									"patching_rect" : [ 217.524535469710827, 389.0, 55.783544685691595, 22.0 ],
+									"patching_rect" : [ 216.524535469710827, 430.0, 55.783544685691595, 22.0 ],
 									"text" : "sel 1 0"
 								}
 
@@ -767,7 +1037,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 217.524535469710827, 363.0, 24.0, 24.0 ]
+									"patching_rect" : [ 216.524535469710827, 404.0, 24.0, 24.0 ]
 								}
 
 							}
@@ -778,8 +1048,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 235.916307812556624, 475.666665971279144, 29.5, 22.0 ],
-									"text" : "23"
+									"patching_rect" : [ 234.916307812556624, 516.666665971279144, 29.5, 22.0 ],
+									"text" : "21"
 								}
 
 							}
@@ -790,7 +1060,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 217.524535469710827, 339.0, 23.0, 22.0 ],
+									"patching_rect" : [ 216.524535469710827, 380.0, 23.0, 22.0 ],
 									"text" : "r ?"
 								}
 
@@ -802,7 +1072,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 393.308080155402422, 389.0, 32.0, 22.0 ],
+									"patching_rect" : [ 392.308080155402422, 430.0, 32.0, 22.0 ],
 									"text" : "r rec"
 								}
 
@@ -813,7 +1083,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 335.308080155402422, 648.546101450920105, 33.0, 22.0 ],
+									"patching_rect" : [ 334.308080155402422, 689.546101450920105, 33.0, 22.0 ],
 									"text" : "s pic"
 								}
 
@@ -825,7 +1095,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 275.308080155402422, 389.0, 58.0, 22.0 ],
+									"patching_rect" : [ 274.308080155402422, 430.0, 58.0, 22.0 ],
 									"text" : "loadbang"
 								}
 
@@ -837,7 +1107,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 335.308080155402422, 389.0, 56.0, 22.0 ],
+									"patching_rect" : [ 334.308080155402422, 430.0, 56.0, 22.0 ],
 									"text" : "route 1 2"
 								}
 
@@ -849,7 +1119,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 335.308080155402422, 365.0, 39.0, 22.0 ],
+									"patching_rect" : [ 334.308080155402422, 406.0, 39.0, 22.0 ],
 									"text" : "r beat"
 								}
 
@@ -861,7 +1131,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 534.308080155402422, 197.579328685998917, 62.0, 22.0 ],
+									"patching_rect" : [ 467.180383328348398, 210.579328685998917, 62.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"embed" : 0,
 										"precision" : 6
@@ -878,7 +1148,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 50.558080155402422, 98.972563590854406, 62.0, 22.0 ],
+									"patching_rect" : [ 49.808080155402422, 151.472563590854406, 62.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"embed" : 0,
 										"precision" : 6
@@ -899,7 +1169,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 11,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -943,7 +1213,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "jit_matrix" ],
 													"patching_rect" : [ 779.990990784019232, 268.546101450920105, 186.0, 186.0 ],
-													"pic" : "AkRest.png"
+													"pic" : "AkOpen.png"
 												}
 
 											}
@@ -1155,7 +1425,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 49.490990784019232, 207.115903273224831, 118.0, 22.0 ],
-													"text" : "pic AkRest.png"
+													"text" : "pic Ak0.png"
 												}
 
 											}
@@ -1995,7 +2265,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 585.808080155402422, 117.149130508303642, 40.0, 22.0 ],
+									"patching_rect" : [ 518.680383328348398, 130.149130508303642, 40.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -2014,7 +2284,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 513.308080155402422, 141.149130508303642, 29.5, 22.0 ],
+									"patching_rect" : [ 446.180383328348398, 154.149130508303642, 29.5, 22.0 ],
 									"text" : "* 2"
 								}
 
@@ -2026,8 +2296,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 383.180383328348398, 116.579328685998917, 64.0, 47.0 ],
-									"text" : "adjust\nmeter sensitivity"
+									"patching_rect" : [ 316.052686501294374, 129.579328685998917, 64.0, 47.0 ],
+									"text" : "adjust\n[meter~] sensitivity"
 								}
 
 							}
@@ -2038,7 +2308,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 390.180383328348398, 258.579328685998917, 93.0, 22.0 ],
+									"patching_rect" : [ 323.052686501294374, 271.579328685998917, 93.0, 22.0 ],
 									"text" : "setminmax 0 $1"
 								}
 
@@ -2052,7 +2322,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 390.180383328348398, 164.579328685998917, 50.0, 22.0 ]
+									"patching_rect" : [ 323.052686501294374, 177.579328685998917, 50.0, 22.0 ]
 								}
 
 							}
@@ -2065,7 +2335,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 479.808080155402422, 197.579328685998917, 50.0, 22.0 ]
+									"patching_rect" : [ 412.680383328348398, 210.579328685998917, 50.0, 22.0 ]
 								}
 
 							}
@@ -2076,7 +2346,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 544.808080155402422, 117.149130508303642, 39.0, 22.0 ],
+									"patching_rect" : [ 477.680383328348398, 130.149130508303642, 39.0, 22.0 ],
 									"text" : "r ptch"
 								}
 
@@ -2088,7 +2358,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 441.808080155402422, 197.579328685998917, 36.0, 22.0 ],
+									"patching_rect" : [ 374.680383328348398, 210.579328685998917, 36.0, 22.0 ],
 									"text" : "+ 25."
 								}
 
@@ -2100,7 +2370,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 441.808080155402422, 164.579328685998917, 39.0, 22.0 ],
+									"patching_rect" : [ 374.680383328348398, 177.579328685998917, 39.0, 22.0 ],
 									"text" : "atodb"
 								}
 
@@ -2111,7 +2381,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 221.490990784019232, 173.579328685998917, 46.0, 22.0 ],
+									"patching_rect" : [ 220.740990784019232, 226.079328685998917, 46.0, 22.0 ],
 									"text" : "s wave"
 								}
 
@@ -2122,7 +2392,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 534.308080155402422, 304.033227235078812, 43.0, 22.0 ],
+									"patching_rect" : [ 467.180383328348398, 317.033227235078812, 43.0, 22.0 ],
 									"text" : "s slide"
 								}
 
@@ -2134,7 +2404,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 534.308080155402422, 164.579328685998917, 29.5, 22.0 ],
+									"patching_rect" : [ 467.180383328348398, 177.579328685998917, 29.5, 22.0 ],
 									"text" : "+"
 								}
 
@@ -2146,7 +2416,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 513.308080155402422, 117.149130508303642, 29.5, 22.0 ],
+									"patching_rect" : [ 446.180383328348398, 130.149130508303642, 29.5, 22.0 ],
 									"text" : "!= 0"
 								}
 
@@ -2158,7 +2428,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 544.808080155402422, 141.149130508303642, 33.0, 22.0 ],
+									"patching_rect" : [ 477.680383328348398, 154.149130508303642, 33.0, 22.0 ],
 									"text" : "== 0"
 								}
 
@@ -2170,7 +2440,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 534.308080155402422, 258.579328685998917, 127.0, 22.0 ],
+									"patching_rect" : [ 467.180383328348398, 271.579328685998917, 127.0, 22.0 ],
 									"text" : "knobcolor $1 $2 $3 $4"
 								}
 
@@ -2184,7 +2454,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 441.808080155402422, 140.579328685998917, 50.0, 22.0 ]
+									"patching_rect" : [ 374.680383328348398, 153.579328685998917, 50.0, 22.0 ]
 								}
 
 							}
@@ -2201,7 +2471,7 @@
 									"offcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 									"orientation" : 2,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 445.308080155402422, 72.482464537024498, 12.0, 58.0 ]
+									"patching_rect" : [ 378.180383328348398, 85.482464537024498, 12.0, 58.0 ]
 								}
 
 							}
@@ -2212,7 +2482,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 441.808080155402422, 30.699893206357956, 81.0, 22.0 ],
+									"patching_rect" : [ 374.680383328348398, 43.699893206357956, 81.0, 22.0 ],
 									"text" : "receive~ tone"
 								}
 
@@ -2225,7 +2495,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.558080155402422, 123.542365413159132, 90.0, 35.0 ],
+									"patching_rect" : [ 49.808080155402422, 176.042365413159132, 90.0, 35.0 ],
 									"text" : "waveformcolor $1 $2 $3 $4"
 								}
 
@@ -2237,7 +2507,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 142.558080155402422, 136.542365413159132, 77.0, 22.0 ],
+									"patching_rect" : [ 141.808080155402422, 189.042365413159132, 77.0, 22.0 ],
 									"text" : "set yourtrack"
 								}
 
@@ -2249,7 +2519,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "bang", "" ],
-									"patching_rect" : [ 142.558080155402422, 98.972563590854406, 44.0, 22.0 ],
+									"patching_rect" : [ 141.808080155402422, 151.472563590854406, 44.0, 22.0 ],
 									"text" : "sel 0 1"
 								}
 
@@ -2261,7 +2531,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.558080155402422, 60.375699441879988, 32.0, 22.0 ],
+									"patching_rect" : [ 131.091624841094017, 114.699893206357956, 32.0, 22.0 ],
 									"text" : "r rec"
 								}
 
@@ -2273,7 +2543,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 221.490990784019232, 136.542365413159132, 47.891772342845798, 22.0 ],
+									"patching_rect" : [ 220.740990784019232, 189.042365413159132, 47.891772342845798, 22.0 ],
 									"text" : "set mic"
 								}
 
@@ -2289,7 +2559,7 @@
 									"numinlets" : 5,
 									"numoutlets" : 6,
 									"outlettype" : [ "float", "float", "float", "float", "list", "" ],
-									"patching_rect" : [ 50.558080155402422, 197.579328685998917, 216.93291062861681, 83.786469809710979 ],
+									"patching_rect" : [ 49.808080155402422, 250.079328685998917, 216.93291062861681, 83.786469809710979 ],
 									"ruler" : 0,
 									"selectalpha" : 0.49,
 									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
@@ -2299,11 +2569,90 @@
 								}
 
 							}
+, 							{
+								"box" : 								{
+									"angle" : 270.0,
+									"background" : 1,
+									"bgcolor" : [ 0.8, 0.8, 0.8, 0.0 ],
+									"border" : 1,
+									"bordercolor" : [ 0.482352941176471, 0.482352941176471, 0.482352941176471, 1.0 ],
+									"id" : "obj-84",
+									"maxclass" : "panel",
+									"mode" : 0,
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 626.524535469710827, 72.667365413159132, 299.966455314308405, 279.75 ],
+									"proportion" : 0.5,
+									"rounded" : 20
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"angle" : 270.0,
+									"background" : 1,
+									"bgcolor" : [ 0.8, 0.8, 0.8, 0.0 ],
+									"border" : 1,
+									"bordercolor" : [ 0.482352941176471, 0.482352941176471, 0.482352941176471, 1.0 ],
+									"id" : "obj-59",
+									"maxclass" : "panel",
+									"mode" : 0,
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 37.058080155402422, 368.189620494842529, 707.5, 358.75 ],
+									"proportion" : 0.5,
+									"rounded" : 20
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"angle" : 270.0,
+									"background" : 1,
+									"bgcolor" : [ 0.8, 0.8, 0.8, 0.0 ],
+									"border" : 1,
+									"bordercolor" : [ 0.482352941176471, 0.482352941176471, 0.482352941176471, 1.0 ],
+									"id" : "obj-53",
+									"maxclass" : "panel",
+									"mode" : 0,
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 303.180383328348398, 34.667365413159132, 306.127696827054024, 317.75 ],
+									"proportion" : 0.5,
+									"rounded" : 20
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"angle" : 270.0,
+									"background" : 1,
+									"bgcolor" : [ 0.8, 0.8, 0.8, 0.0 ],
+									"border" : 1,
+									"bordercolor" : [ 0.482352941176471, 0.482352941176471, 0.482352941176471, 1.0 ],
+									"id" : "obj-23",
+									"maxclass" : "panel",
+									"mode" : 0,
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 37.058080155402422, 34.667365413159132, 249.5, 317.75 ],
+									"proportion" : 0.5,
+									"rounded" : 20
+								}
+
+							}
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
 									"destination" : [ "obj-115", 0 ],
 									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-21", 0 ],
+									"source" : [ "obj-11", 0 ]
 								}
 
 							}
@@ -2344,8 +2693,39 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-18", 0 ],
+									"order" : 1,
+									"source" : [ "obj-14", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-77", 0 ],
+									"order" : 2,
+									"source" : [ "obj-14", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-82", 0 ],
+									"order" : 0,
+									"source" : [ "obj-14", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-3", 0 ],
 									"source" : [ "obj-15", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-72", 0 ],
+									"source" : [ "obj-18", 0 ]
 								}
 
 							}
@@ -2360,6 +2740,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-44", 0 ],
 									"source" : [ "obj-20", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-52", 0 ],
+									"source" : [ "obj-21", 0 ]
 								}
 
 							}
@@ -2844,6 +3231,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-14", 0 ],
+									"source" : [ "obj-52", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-47", 1 ],
 									"order" : 0,
 									"source" : [ "obj-55", 0 ]
@@ -2994,6 +3388,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-76", 0 ],
+									"source" : [ "obj-77", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-80", 0 ],
 									"source" : [ "obj-78", 0 ]
 								}
@@ -3017,8 +3418,64 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-81", 0 ],
+									"source" : [ "obj-82", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-89", 0 ],
+									"source" : [ "obj-86", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-86", 0 ],
+									"source" : [ "obj-87", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-87", 0 ],
+									"source" : [ "obj-88", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-20", 0 ],
+									"source" : [ "obj-89", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-36", 0 ],
 									"source" : [ "obj-9", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-29", 0 ],
+									"source" : [ "obj-90", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-90", 0 ],
+									"source" : [ "obj-91", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-91", 0 ],
+									"source" : [ "obj-92", 0 ]
 								}
 
 							}
@@ -3215,13 +3672,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 1077.0, 79.0, 854.0, 750.0 ],
+						"rect" : [ 904.0, 130.0, 854.0, 750.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3249,6 +3706,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-51",
@@ -4153,7 +4611,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 11,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -4713,7 +5171,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 11,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -5152,7 +5610,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 11,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -5628,7 +6086,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 11,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -6705,7 +7163,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 11,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -8907,7 +9365,7 @@
 , 			{
 				"box" : 				{
 					"autofit" : 1,
-					"data" : [ 36988, "png", "IBkSG0fBZn....PCIgDQRA..CfN..L.5HX....PSiRM4....DLmPIQEBHf.B7g.YHB..f.PRDEDU3wI6cGcdaaj9Gn92tm89vTAAaEDsUPPpf0aEXtUf8+JvLUP7VAVaEXmJPJUfct6bmXp.osB74Bf4PHH.PPRPIY622mG9PKPLy7gAPx7CCvfD....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................3qF+km5..9F1pjbwLVuqOywA7sf5QV911WOGT09pu6RxmdTiD...9Fylj74Y7Z0ST7AeMYre+Z8SXL02lLbLd0SXLA.vin+5Sc..eC6kyb8d8YMJ...fmEjfN7znNCeorNj+44KL...fmKjfN7zX8ArtWjwu+YA..fuRHAc3w2pL9nhe8HK+EmmPA...dtPB5viuWjgm321ljeYjx7xQJC...7UBInCO9Faxg62RyHnucfOaUddMaSCr7tM6dru080cOQwC...eUqJi+3dppcc1Lxm6QsDb79R3wrF...7H5xLbRBery5TMx5zMIdfCiDzA.3YOWh6viqeZjk+1N+6sY7IKt0KXr.....eSpNyejwe8Hq2sONgJ7UGifN...7+uKy7u2xWMx5943YhNbLjfN...jjouuxGaVc+pQV+2eliU3qQRPG.fm89aO0A.7Mh5I9reejk+aiTt5zLB6OGdzKU04Uw1zDae5QOZRtn8UUZ5i9tj7+ZimaSxezFWOE8cq5DaUI4GZW9e199mZes8QNtdLUklie+tj78498A2199ys9ftGSU7TerzRYpeeore3o32iA..3r5iY3Qu6CSTlUoIQfgJ2qW336MI4cC7pdf0sNMSpc2LRr089ker5XIUmlq1fw5qF61JXrqbgkzpj7pL9UCwPutIM8uUKTL7hL791w19Kw76Ryws2z40Use9gnNMaOGx9maZa+pCrslxgLB5UGPLujGKM19pk722qSyUgyb2e7X86w...7nnJG9k2dwXI1c0BGii0Nq6rNqRyWretIY0OgqpENlqmHtOj35bkn9qxgkT5PuVhjT2LQc20pzbhZ1WLO234hb56eVp9fLQ8uty5rJI+5QFmKwwRaFotWheeuNiehBm6qqhG0i...eg6xL7W1cNyH60iT1OmkcDsFKQp0se9EY+iX9bdsTiD3aVfXoeRfG5HCOlprLIl1Mwu5SHd1LR89tNqScl+ISnZFs4qlYc8XdryX0651OeoNF+MmPLtYj57pSnNWkl80K49hSYaD..fmTi8k9e2TEp0TWl6uchxcnFKgx0oIwkScjfWxDsdyBFKce8wb5IoWkkIIukreayH0W43uWdfwQ0dZukNYvkJwvwpy0saSK4w3+5QFiaFo9t5Hqupb9Nd7T1W..vHLIwAmWuHimPy+cFk+t106UC7YuLK+8hdeUo4KhOVhq2kcSRVqlX855WSx043l7odSZRhYJWmlIdusswVYxu5ejjeJiu+3h15++6Hhqjcib9X0eZimOjls8xjw0p1x7SY5QJujz2RdhYtHMWgGKk2k4MqnuM2eBVq6Dn2T1zttG69ngTkwu25uKMGOcWm0s7ZJutsL+xoGdGspL+KI8xDTXxteOtdOkYS66Okai...bPF6d19lCnNpGoN9bVtKy8qFo9GZTEuMMe47pApmUoIAs8MpcGyHBVsm578iDS885L8nkVeDw1pL817MYd2exUY7aIhxqKNvXayH0yU6IlK6quoyqOmw6ieyLpqMST9j4s8+4bbmXpo12LTeS8D0Ucl27wvT0wP1LR8bL+9xX+Nc28GuJieR0pRS+79NF4beRBA..XQTkw+Rsu6.qqwRn7X9h6CYeeY9xq2l4eYfuYO0U8AFiWNQcs4.qqotr8Ol9zolXwdeN7Kc9oNIB2bf02lIhswp+M4vNQ.0ynNqNf5qJ6OwvC8DUL2s+MGPc958TWK09pC8Xx2rm35xCHtpxz6Kt8.pK...dxrNKWxEalntVhub7bRPeyQTualn9NjjNplndd2QDWIM29AiUm0KTr89iL1RlNo2MGP8rYh5o+qiczPmJAtCM47hp8TuGZRqKcx4EqWv5byH0wR86JeNG2sHwpL8L.+linNA..3Q0XIWbyQTWWLRcsTe438kf9obeOOUcO2StvTiTY0YH11b.0wkiTG2jS+jmL118gLpkaFoN5WeG5IMpX8D06wlbdQUVtaGg80G7tSHN2LQ8tD6qNjDzubhX4X9aOEUY78EFEc..fm0py3eI4Wdj04XIS9wSLVmptWhjrlJ455SL99vIDWSEayMgnpQJ+oretuaFo9m6ncuYhXbIh0oFY0knOXpieNjDWmZ6+TOFOY59gSce0Rb73myouMNV7cHai...7n6xr7eI4kHQ2wLUB5G6iLphUST2y8K0OVRpaNwXarqLgalY4e6HkeINoIEm5IQXyHku75cmPrUMQ8N29v4XpjeqlYcLUevodLdxzmTtSce0bK+5IhgSY+bwTO1GmaLB..vitwRn7T9RrSkn6o9n2ZpDzqNw5N4zdVvm10anW0mXbMUe5bLVhiu7Diq9w3XIEMmKq3MiT1kX+6TmznkrOXp1YtmjmyUePWSc43eJ6ql6e2XpYV95YVG6yX+shaWn5G..fE05b9RZYpub7obOfNV8dyoDrcLVhCm5kn9R3XSZq5DJ6gZr8OqmQY2LQbN2D+Nz3Zo6Cl5DoL2sgyUePWicEUL2Dj2bhw3Ty7+Kko1FqVv1A.3aR+sm5..9JzXIgeWR9sSrt+sL7Wzu77G+TGI891tP0y+ajk+cKT8+TXrIUs6xx0uU7GY386G6D6VwkmX4Gq8uNKaevcI4SizdmZevebhkuqOjlms3C4hzzubtbQF+jzsjs6aSy9hgb2B1N..eSRB5vxpJiORYeHm9Wf8xz7LNdnuH9+LOeSPeopmi0p1WkjXpZe+TNAAikX3XIubJFqNO0SvwojbZoOcoq2w76Y397x9ysGY8tjif9T66+wErcFR0De1Rt+XaN8SrC..iPB5vx5ES7Y+dVlKAzOkgOI.0oIYkkbTr9yErtdLTklj39g12uH6RF+bzVCoNK6kT7TN0QO9TNYBS01aOg58XpySY+6XWcGGi6ZeMT7TsfsyPlp9OGmzH..NCjfNrrF6xaMYYlEk2mWmk44h9WJVklSJxOklDiqdDa6oF85pGoX3TRL8TOQNS01miSPwTw6OjiOIzsGY4FySUB5Ss+vkdN.vWH9qO0A.7Uj57zOIIM0IH3qI0o4RS91zbhOVmG+99ywnx+X5blf9RNpzEam3y99yT89bn9lqpI9LInC.7EBInCKm0O0APZRZp9oNHNipRSh4Wkut2Nmqpm5....X43RbGVFqRyjz1yAuJm2YK5mJuLMSBdG5HWWlU02ll6o9aRyH7VV1wd4XaTIA..VTRPGVFuHOetjmqyxOYw8T6EYdybz2klYK+Okljw+TNeWxwicYbeYR92mo17KEO1O97t8DJaUdbtrzO2+93WS+9N.v2rjfNrLF6Yedx4azrKO1vFZ4qyx+HW6oRUR90I976Rx+IM8yWe9Cm60tC4Tten+Rx1I9ryQeP0De143dd+XUMxxeJSP+4xIOD.f8PB5voqJie+PecR94yT6tJiOxgmimI5OU1jwS54SI4ekmlIlqwZye3wLHdBschOq5LzdSUmmRxu+XV1iepFY4m6Shv1I9rKhG0Z..eQPB5vo60S7YWdFa26RyI.ndfOqt800mw1+wxOMxx2llS9wojb1oLxhaGY4UmPc9kjo52O0mO6C4Gm3yNkjO+6mPY6qdhO6bmf71I9rkb+QcFe67x8DG..rGRPGNcSM4v8am419+lw+xx04K+Dzqy3I7tIm9kM7X08bb8HKubqG709HVVl78pF3yF6jpbJpGY4mZ+7Rd0lLUhvebgZiwLU+vTmbiC0Kx3ONG+Z4p1A.3IiGyZvooNimj2k47eem9gIZiuFdlnWMwmsDm7iSYjEKInNj5Snd+RxX6CV5G2e0Y7q1ge+Dq6KlntOTScx59iEpMFycY7jzWxswwR1+tXhpC.3jIAc3zrdhO6+9Hz92MQ670vyD8pI9rkHYf5Sr7i02uzOx8tMIedfWaV314P8gI9rol3DOTqOxXXNJSphmppL9wSayiyk98Tmvj0KP8Wky2Ux...QB5vonJimDx173c4kOUBJu4QJFdJbpiHXUN8jHudjkWmk6jiL0ivuwZ+GKeJiehRVmk49wuJm+eOaINgJal3yN22pKEWOwmsDWQM0S7YWt.0O.v27jfNb7pm3yt9QJFJs0XIIUmureDKschO6Tm3q1bhkOY5GsaK0IGYr5Y6Ds8ikxi3tw7tEnM1LwmsTWkJ0Y5I6w4T9oNYOOV2a1WmwOlnJm11XUl9X5S8VM...fSxGyvW1weNO9yj2alHV1Lixe0IT1SI9tZOkqdjx84bZI+8lIp2Cce3Tw3olj9qlntm6n+uYjxeyIFaEkG2emi9fo1OcSNreOae6uu8.quhp1XYINNcyH0w998jtpmHVtMG+I15xIp2k3Dw...vQqJi+kUO2yVyCo9DimmqInuuj+pOhXYNImeHInmLd+2ojf5KmnNOjjq2r.0ww1FmRev91Os4.qu4rO+PS5uJSmb9gdbzlQpiCIA8joOd7P2FS1+9hCs9...XQcYF+Kq9xmnXZpuTd8QV1MKTrsYj5eNIdLVY+bZRdet82UY3sywNA.0yrdK08TmHg2k4mDypj7qSTWG5wXaFoNVxDzSl9JJ4P5CpxzGK+4bbmDroNFp+OOmKE70CT19uNzKs8MiTOGZB5UyH1dyLqm8suXyAFa...r3tIO+FMoMSDS6KQgmyInuuQQujr4qxtG6ckWkmYyis8cSZRzZnO6Pm3vp2SLVRRsNObdAnLi6+lYrst4.iqMiTOKcB5UY+ilbYedYe0Esu129o9wc0QDeiUeubh14cswVc6q0o42k129nis+cyH00b98j9dwLiwtaiUY2146y92NOl3B..fE0Tew2S8Q9zoX0Dw0sY5IKtwRLZyBEaaFo9m6Wv+0iT9S4U49wsdjOe8Qrct9.a+ax7R16T1erYj55XRfbetHyKI8i80M43OAXiUm0Y4O95XiyMiTey82S5a8ItcL0qOlurm.JA.dVxr3Nb3d4De16ezhhG5tL9L37pzbhE9R0aSxurf021j7yo4wD11QVmiYxz5xj7ux7dFsuJMIwM2jb9k77+xI9Sooec6WX08Rd701b9hyC0ko43wsKb8dcZ1Fmyw4...b1TkoG0rmZqy3w2TiB2UiTlMKTbs4HhogrNm9Hz99b+Q2brq7fS4pgnpscVpQis9DhkMSTumKqRSRuKw1+ssaCm5n0NV8W2YcVmS63q2dhw4lQp2C82S5qJSOuYbH6KNkGUa...rnVmw+xqu6oKr9+29tesGK4gqFY82rPw0lQp+iIwip156PRj5111pdj5bn5ZIRfccl28U8X8MuZAhgMiT+myDzKpRShgGxkwe+DyqVnXYNIn2MlOjiul5XqCwlIp+kPcNtiGuMMm7gpEJN..XD+km5..fSPc6qeLO7jOrMI+YZtbb+TdZubbqRSb9OytIvttw6coId+T6qeu88ulTlHx9wrqOn3t1WeJM6y9Pd52mkb+XdU1sOaa1s+5+lm937PUkc+tyOjlamitGOtM61e76oY+wWZai....................................................................................................b97WdpC.3qH0ir7ssuVRWjjUS74mi1jusUOxx+TRt6QLN....lTUR97Hu1rvs0alns9bRtoMdfkRUF+3s5mrnB..9Jye8oN..NHuLSmv+1j7ywnmC..vWbjfN7kiKRxam3y2FImC..vWrjfN7kgpj79L98c9cI4eEImC..vWrjfN77WURtJSeek+uRyj0E...7EJInCOusJ6O47+cRt9wHX...fyGInCOusujy+kjb4iRj....mURPGd95coYhgaL+RV9Gga...vSDInCOO8ljrdhOWx4...7UFInCO+7lLcx2+2874...vWfjfN77xqxzIeecldj0A..fuPIAc34i5j71I97OklGmZ...vWgjfN77PURd+De91zjb9cOFAC...736u8TG..oJMON0VMxmuMI+b66OFVklQy+GRx229dRx+KMmffO0FKe5QJddLUkls8uK2ea+OSxssuW19eJTkcw2eu88jcw2ejlXa6idj87yEsupRywzeW913XX..9BlDzgmVUY5m04ayiSx4qRy8+dc6q43tj7gzLo0c8BDCuHI+yAV90ssQeqRxKytDw5dBN1l4eEGT211uLieRR5aaR9szbKIrclk4XUmCO99TR9873DeGqpzLgHNl+LG9jgXcac1+3gwrMMGe8K44a+D...bfpRxmG40lQJypj7wIJ2sY5mC5Kk2z1ViEGy40Tmjg4ZyH0865sdqlYLuu3opMtOks6OmoSx7TTuPw26xouuoZh5u9HqualnNuIGVLWum56wpeB...dFnJGdB5uehx74b9SNuJSeBBNzW2llQ48XsYj5saB50Y9mLgpIZqWd.0ybdcnITtO+5BFak36T12TMQcWeD00Rkb9pr78Uu9.2d...fmYpxgkf99RpX8iP7NURROEI3rYj5qjf9KOv3nZj14PqmCII3wZy4ZUVlQMerWu4HiqpIpy5Cb6apSJzgzGtu55oneB..NItGzgGeuISmD6ujjKOiseIIvpIVmx8W9mRyDqUQUR9oLcRY+Za4t93CwG3hrL8IyodtNMS1ZkIPr6RyjE2eOM2i7UiTtpzzu9OxwOa6eUl2UNw1b+92pNulxl12+kCInVHki6Fa6aal+7sv9pqjl8AW29pL4vsJy6X3Msu+TzOA...mnpLuQP+MSrd8W2ykoF89aSyIOXeSvVUoIQ2oFIzC0lQpq2m8OZ+21tN2zYcqFnMlpd9Xl2nAudO0ylYt8129tpJtsstmZeS4DPruQH9PuJGplntpmQ4WxQNOY5sw4zOk11ayD0ywzOA...OCTk8mv1KlXcdrRNep37PSRJY5Dbd4BVWSkH1buW8WOQccYl+Ljdxz2h.2df009hsxIOnZghuRLdn02wlf9Rmb95ErtR1+9xCs9...fmXUY5DuuHSOojc4iTbd4DwvwNozc0H02UGX8rYhXaIFYywRB6lb3ITmzrOer8oGZ7MUxze7Dhuop2CY+S0D0S8dJ6TSFhGZB0UY58iGRcM258PONF...dhUkoS9dpDkd+iXbNVb7tSnNqGoN+bNrDK2LQ8zcDMOlSjvTw3KOh5aew7gjT25IhsSIoyj8ehgpmY8Tcj0w6lnbGy11aFotVhQ5tdhXs9Dqa...3QTU1exkC85XGczkNFqOw5drKg40GPcrYh36TSl90iTe2dj0WQ8BTuScxaNkSdPwlIp+4dhDplnNpGoLKcx4Ii2Ws4Hpqgb0H0+aWn5G...dDTkiKA8e8QLFqmHNN0SRvkiTuaNf5XyDw2myoMJ+iEeyMA0oL1HTWMixVORYWpXKoYe6Xw3bue4qlHNqGX8OGImudhsgio9FR8Dswi0IRC.fug4wrFb9Ud7NMjW294OVONmtbjkerOVvJ1Nxx+gSrd65T5i9TZRzpuqOg5rXr8uUY+OxvVOwmsTiZ6cI4+jge1duJMSdgWtPsURyIcZ8He11L+GkZ8UOxx+vQVeC45zbrR+aihUsK65Epc...fynpL9HFtISOKV+47k+iyo0Y3sqOb.0wlQpikbzjOGF6xhd8LJ6XGWbpW588UMR6L2qLgoJecm06MSrdG6HmWbyH06+7Dpyg71QZGWl6..b18WepC.3aD6aTC+0rL2uwO27cKT87aKT87bRYTYGxuuvs01L9we0KTa7lL9szv1b7ibdRS+T0He1ebj04X9zHKer1G..VLtD2gGG2klDTtJi+E8eaZR1XrDDdNnJ6Rr76Rx2mlKi8pyb69bnOopyquKI+812qNx5apYi9yw16mxvw5PK6PcNSNOY7aQj6Nw5cHWOxx+wEtc..fGPB5vimsoIQkwl41WklD3+GY4S53PcQmW+P66qxS2Dk0iUB5kS9vOllDvKa6Umo1ZLe7Lzd+4DeVUN9i4dSFeT32lSO47jw6+WklK88GCiEC..vhQB5viqsI4ekwumpKIouDI0bHpSxO09dIY7mKtKm9jX2XJIj+hzbuLWclZmwZ6w7+NCs21I9rSY+c8Ds2Rcbb0Q9YKsU47crH..HAc3Iv0I4emwmbtpxiSR5qRxqRSxoSc4V+T6bjPTUZlX9dYd5NYDUS7YaOCs2T8iOmNgLOmIAc..NqLIwAOMtLS+XCqJIuOmuDmdUZtzf2jm2ImuzVklIjuaRSefDSOcikvZUldNW...nGifN7zYS1MJ1C4hzjj9Ouvs66x7dDf021zjL1mRy8y71NK+hzj36yYU43SXbaZ1tuK611KSPYuKeacRN560o4X4pA9rpr6XXi7L..rGRPGdZ85zjj9XOh0pSSBf+6Ep8lax4Wmcyn7eJ6RHcLUmVXc1Uk4kb9cY3s88UliwWKWx4+Yl9ITvEY2srwR2WsMMSle..vWEjfN7z60oYVCerQgccZRDYpKI943UY5jyuNIeHI+2702nctujyuNM8uW+HDKES0G+CY4m45ql3yN082aytI+vgN4Bkqvhi8DM801wi..vfbOnCO8tKMI2rch0YSZdbVcJd8De1+WZFgy+SNtjgdNOhuqy3ImtMMa2+bdbSNuz1i4bLpvUS7YaWf5+SY5DvWmi+1fXrSVQ0QVe7znNMy+C+ym333b48Y7I+yu1TkcykGGpxbfR0BFOGiWzFGeKeKJA7LjDzgmG1l8OqsuISmj8TVmw+xP+RRd6QVuEOmSPeraefjkIw7icae6DeV0QVmS4GFY4K4iwtOjlS1yXdcNtSzz1I9rpin93oSUR99m5f3LYU9153wpbb6K+977nepr+p6eCuNG2bzxSoWjwebWB7EHInCOerMMij9TIK8qY5DNGS8Ds4lin9564bB50ir7Ky4+Yz8T1lw2Wuziv3pLd+vReoz+1L8siwlb3IoWlP9FR8AVWv4R4pwguLbYR9K49mj104KuqBhWkS+JrC3YD2C5vyKeJMi.4TeAgKytIwr4ZrQO8ONf5XJ+3BUOKsotzE+vBU+mxIm35zL5G8U09Z6IT2cMTaT7aKTaz0lL8SnfMI4+kC6J232yvmLjeJM+NAe84h1WkmdDa684qZesM6FMztmLmUY2w9ayCuZY5W9WLv5U29YyYBirz9kS71P0+XaKk1pZj0oTWCcEuzuc69yCE+cOgcyY6pTltw+TJ62RZ5KmS8WZiKxt3+5L81ZU6qqmnNqy96S214e+cCzNSEuy83qp1Xo+5Um8e7U2sgqyCO9p7umSLC.7Mipj74Qds4HpuWOQ884jbaNr6ataFodVhQJnZh37pCnd1LRcbyIDa0SDa0mP8VK77JF...H.jDQAQUrdh5e8LJ+T6m2r.wWwUSzNy43npIJe8Q1teNG1UCx5QpiayxdEbLVLeHGKyvpy79ciUY29gaae847v4vfMsK+UcVmRc+pNku72+5OIFVJ+ax82W+wr6drt6x22sXzU49GmrtS45FGCUWuO696cksktiJZcFtuqZfkeUmWci+2jlee+1NK6lr++FvK6Tlx1vayC+6Tise6cY398pNKqabcSm26+2HJ0W2ssgTkc8kc6S6Veqyt+FVctee099c9xwLGywWuOy63qg1FtI6No.qyCi42MQLC.7Mkpr7IZsYh5r7kWplYc0+KBrj+m48+xGGaRMaFoNt4Dhs5Ihsk3xHer90g9hzCYUt+WVt6qkJwypIhw412NUcTOQ4VkljcFqrGxIZZp9pMyrN1mpIh09IJvgqNy62Mtbf0aSd395xxts8eWmliSVOv5Vkli2692jJku6eKsecVFYxOl8+6jWkgSP+iY2umTpqt+tSY85dL1a6sN04vRP+yooerLJqcOA.cikayz+c5x5zsOpJ69aea5rtWlGlnY4jP18jqrI2OA8wZiR+T2+FQYeyGyz260W1tdUcV1U496CWm62GWkc8SUY7++057vs8KFXYax3GecSm0sJCe70Msu5trtaWcO17pNKC.fbdRPOY2W3YpDrplQ8LVRRe7Dhsjo2teNjf9Tw2lSndSl9DSL2DzSlde7wNqm2U4KReJIcVMQcTOixNULz+KQOkMSTGKwWL8xIhy4FiLt5r+e2npccd2.eV+Dr1jGlPXY8F5usURVrpW46ex5JIK105QV29sa2+lWoL8+8rRxbkawiRbzMQzp15pLZo04vSPupyxJkue+5ksKeLk9r5dKuTea5EGise6y4g62JwW4jQz+j0MTcN2+lw6yC2G9hb+Q4dcd311kY59iR87tAhgOl6eqSsYf5OY5iutXjetnbhJ2zYY8OtC3Kblj3fm2Vmou+5px3O6o6Zr607KxweodWtbFeNaaF+9watImNj5rbiZ6kS7YuNmVb9lL8iXt+6IT2y01L8SnfxwQUyntdaFd+YYDBOEWjw6quLK27A.SqjPxGF3y9sL7Lk9k8945122z60E897h9+8w6xC2eW94iYVKue8Wtei+o1e9512KOl1JIk+y43mqL1l6uMT92+4.q2T5GiE8uOzmZ+V4uy7SC7YIMygICcususcY0Cz1aGotJJyYE2jl+tQcar8y4zuGs+P18HkbcZN15c492C6css2OO0wWk+u7R+4Kx8OF9089bfuBIAc34u88LRuJ6OI8qm3y908T1oZypCrbOEFaBMpJG2LeacN8jA655z77meLWli6wq2axzmDgo9rk11L8SnfpLuimtKi2WUmi+V13hL89zolU5YYU9aQ+uA9r65sN8Wd+54m585GxgMoksTF639x1w0I4umljJqytQ+8c4o+RVtLIm0W+soo1uUL0I2Xr9ngV9PwSeuMMIQ+ozbh2tJM8oGyeyuupd024XRRsze1+X3eJyeh8C3KTRPGd96tr+mQ5Wjoubn+PF+K.cQNrjsKWlfycxE6o1TI+tIy+KrsJM8w8OYHaGY8qlY8Vhiwpmz1tCcIUNj5zDialXctLONiddWeJS+LRuJy6pA4sY7S5x5bXyMCIMSlXSc7+uDeY3mBUCrr4lr5coIo2edjWWexQ2gYn3tehuaSywu+8j7ORyuetN6+jyctSf+Oyv2ayU8946FY4oSY2NRab2.0e2xdri38ko4DC98oY+9mxt4pfSwlz7++8yoY+0+JMmLfsmX81UYa9ekgOF9XNos.egPB5vWF1l8eo4sNimj9cY5QA7hraDadY18Xco75EoIwnaytYf1t9O4wOgu45CY5uP9lraauN6dL+T09uW29Y2jg+RQ+6AVVxg8EmuKSOByI6R978oIoxRrdQZ1+TRz7pL8W.calNQ4yoK2SaWk8mj995qpxt8muXj55hzbhYJW9qi0deHOtWoAr6Rjdna2fWlgebV02mxvOZAOjSt3RperTmli4JW56uOM+s0hOkleeea1cYgus88pd004daobxv52N0894qSyuSNz9sx8s+XmXs+H2+Q+VQUa6NV4lR+I+tqyt+1S+14P8S4gGGtJK69hxuGLTc997v+un9+MrxsBxS8UfA.vSlpb9lLx5pdh1o7ZpQD9pIJ2w9p7kftbjOet1LR46OY5bLpx3y.3mxqMs0+Pe1wb4VewYJN61WVcDwU0D0Y8QTea1SbNm9tCoupLoLcyLW+OmlI7Ie41kUcZ5aeed38G9lrKoi2lc+srRhF+Zd3eOcSF9uwTZm2kcGuWmcGCzu7U49tIOb90nTmqGn8JtJCOIwcaZ11p5DGcmnyJqWY6cUZRzs+1aYl99e1qt5GWWkG92MqFn9RFuOrXU10u0scKS7ncqut62px92uUMPaT2tr57v9oj4+2GtpcceYm1nDKk1XcueNY2jh2qy3+ssRcWNwCUY2DXX2ImvM4vO9paaV1OVV1pzrs2uNKmfmWlGNIysYjsA.fu5Uk8mD2RY8DsU40aForqxzO1qNzWWlcIw71QVmpYtcsYjx2+KZdrV5je6NBF2LvmeryP9UiTem5qqxweKGTMQ8Vej04k6IdmyLXeUNO8UWFImeNTmo6269658+6Ikjb6ZS6mMjWjGdrQ+eGnT9p6WzEOA8W2KVF5wK3l7v9i2m6ebXUu54lzrc1OttJKWB5C0tk3en56P1uUMQaT1952O84LuDzWkcOxzFKVVmG92vJmrf9GO10Pw5aa2t5dkPrIG9wWcikpQ1F5eEYTtB3JGi2caayHaC..e0qJi+kN2bFZuMSzdkWubjxtJimL8beMzW550irty84M9XaSi8kjNFU4zSn6p7vuz3PmziaywqJ6OA1SYe0wDOiU+0mP8d0D06my7le.pxyq9JVNkK64KxweBSpytaYmGaqy8+cjxsjxXJau0Y5s2xsgyis8E+Emx9sKxxt+p5Hik4rtk9iy8IyqJ61FlR+33lbZOEP..9hVUdbSPOYdIYWOQ4uHO7ryOmDX1jg+BIuXjxL2Dd1LR4WxDzKVmCOQ8qx38mWNRYpNw3rZh59T1WcLww4HA8tiV0ojjdIFubO00iQeETrNm9ui.GixULl+lF7En+xSc..7jqJ6F0heH2++P+tzLK9dSZdD.cLSVOOmcQZlve964gOpb1llGYPeJSOK3+Xn6Hq8iY282YwcY2yQ3+L6ehw6qYUY2nMsu9p+HM8SW+nEc7sj0o4xw9oXlimusU9+ze6Sbb....7rPUZRRu5IMJ..........376lb+Ki5eMG+7FxU43d7T9TW2mp2m6OqtWdBDbteF2uTdUN9842zVdfN9qO0A...7UlpbZWd6qyWFStbUI4657yeeNsGmiGaYeJq6S0pb+Xq7ycmOXtHS+H96ozotO+6WrHA...X.0oYFbe8QV9Ommui3aWeoDmOmcU1+HPuIM80OGsIGercNeR2.ew5u8TG...7MkprazguNMOwDFRc65Vl086udUsuuM6dlTuMCOiouJ6d9gOV8UVuWzodGpt125Ukci9YYzP61VkmJCqFnrqFnrkm7.UcZu9wxpNKu+OWtTom5ovQcleey9VmghkxSAi5NwR+xWZ+tOwL51WcWZdBULj8seqec2MNKkcaabMzSrig11GJdGR4Xyo5252Vc6CqxtiIpZeee0Q+5aNGSO23rN6Nldr5Zp3XN8CkXIsq6WaOAY...3Yg2kcO64us8e+q8VmpzLphety574j7ldqWYjGeWt+y09ax8ujaqZW1scd+1j7xd02q57Y2LRc0c897HqWYYceU9rWrm13xAJ65dau8UJSQc6O+xNswXixcUu331NksqKxC2ley.08Xwxld0+P6OuI2+dwtzl86q5euYWhitGS8tb+KQ7908lr6Xu9G6zu9eYm5s7doMWmoUN1r619XGGWrtc8pSy9m9GObH2u2kXeeGSOm3rDqc6qKyAA6aDzm53mMcVuUo4dxee6OA..fSzPeg7MsK60cVVIIg58rdkjEtJ69x6utcYcm3xdeteRIqRxGaaih0CDaU4gI1U0tdeL2eTMusy5U0o9dcm1srdW1qrerscJibZoM9Pt+nmdnInWRr4E4gIj0sr8SX68swY2X7ldqWYYyMA8OmcihaUm06EcV2980c6W51lcWm0Y2969GCrYh5dS1krX8.amoyx5mTaY81WB5kj+q6rrRr0+33wRPuzdkjfqx36KGxMoY+YQUZ121ce1biyx5soyx1jc6eGSUl93mt02PsQIV5tc....mntIw1UIQrj6O5u8URbunjfdUu0qeBOW01FcsN2Ow9wR9ccaaTFU0KGoM2za8pyCSfqaRVcMz51Ow2ohwRL0u9Fputu2k6mDVRSRycSXacFdeRoclSB582VVkGd7P+jnG53kWOPYFpO4pb+iUFKA89aSkkW09yk8Y8GU8RRiqGnsSZ19FZ6NY2ILparNUB5ciqCQIFdauk+1Nw09hy98gi0WOUrsNSe7yldwxP2FCW19YFEc9lf6Ac..N2pSyWt92G3y94r6KdW299eLv58ao4xKuJ6t+U2lGdur9m49I27aY2i+qeKMI.bY6qhKZqmM8pqUc97OkjeLCe+y9115ap6G4ersbqG4y6mD3o52lw57uyt6y6eLI+8j7C8Vm5QpuqOfXoeRW20V95Grl67aoIotqZK+ejl94RBmkq1fg1N+WYdIy0+3wscp6jl9jx8LcWeHO7Vynqx9xUY3iopx8u27OGJ8wuJMaGeHMaucOgL6KNKwZZe+WFnc9iL89wxm0e+T+9zRrb8.0w0o4XgWj6+6svWkjfN..OV1NvxFZh1ZnDWN1jYdaaYeYZRV4UswwkYWBGkDQ9oAJ+049Itscf0YNSVXUsker1XnQm7TLm9qWkcIlsMSOYbcJ6S9eirroRhdc1kXVIo7sI4+KMIaVJ6Pw7b1eLktw0oTOUY3swqOg57P7uRSRsuJ2uO7ek62ucQFONuKSeY0O29m4763is7syrMfuJHAc..N2Jeo6pA9rWjljCtL2eV1tuRYOlDltL6F4s5zL5maRyHJdc1MiT+umQcUMxxpSShiiEeeJMIB8yynMFxX062Mxx2mpzjz1GRy1co9qy8u2v6tOoeLL2K43pAV1OLP802kY28recZ1u89z7rytT19i3extIXsKmY7MlxUiQ+s8p8Ttx59eVfX3TbWtee3KRybAwU498g+RlNNm52Km6w.86C6Wt4zF2NvmAe04u9TG...7UuOklu.9Pid7ulc2epkQ06ECrd+TF+wf0T5eO1dcZFE1jcIZ86Y2IJnqWjljYJW9s+VFdh5ZS1+LM8eLRYqZai5IJaRyHNWMPabrWZ7k16xb+9zer25U1m75dKe8AzV8u+iqZa+gtkGJed26e56RyIRnbEObQ1cIbOz9s2jgmExOTW299gtsWNN8eNvmURP9Xze6rZfkUTm6eexWRV++lcWwHk3bn47gtw41IVug1F6Zrie5+63k1Xn5qrtCcqu....GgWmcOdkpRSRBkYs4tew+xjN0qytDId2Hq2blzzJSXXkx1scqaW1Esqy6ytDnqyvyp2kGuTkKK3WkGdR.pxtIps5r6948lzLg0UZiKxtIIupNkuLg3U2Kd9baLdQ10uTdTTkdq25LsK5DiUY2Hr9wdkuD2k9vprquYtSRbc2uW2oM5dxE5OQtUlo8qa+4pr6QvUU6xdQteeR28salnt2zqdJVmGNAsUh02kl80WkG1GMjtGumb+iU5FayYRhqacURVsJSOY.tJ2+X0z9d+iomJNe6.qW2i+JysCSMIwM1wOk9vMiDKU496O6FK...vBXSt+yz4ayCGYsxk699Vu4lfdU1kz+T02KxCeFlWRdsqKFY85ORlusymW2IV5W1OlGNJ3q6rda5r7M8J6kYWRqE0YdInOT8URlqbBRJ5G22lcIRNmDz2LP462+2OI59sY21sqWOv5sYO0cY6tp25U1lp6rrxwikSjxlrqOperzWoc59pehlyIA8UYWBsk92pr+Yq+gNVsaB6GRbNz589LumC5UY7ie1rm131QhE...XATtehKi34otdyU0LquKx8G45Sc8FpsNkxtJKWeR25aewRZWuCosqy8Sj8PKeoL0Y+WJ+0Y2UqvRoJMwd+5rNMaW66x6NYYONtbkXTbYF9QjVeGRe3b+8xpYztCEGyoeXo+ce...fu4Um4OZ9OGUFo79OR0JOivqdrCndtI6etK.....9hOA8jcWx0kKS9ayvWp8O1Vk4M54.eg4u7TG....eUpLwycc9x9YYcUZtb1+9zrc7gbZOezA........XddeN9mSzO2UklKU54L4h8slxrn+9lHyNEWk4MifWd7gUTk4ue68wkdNvI3u9TG...PGkm84espJMWpzS84qyW28ACore+bNqcWkjuaFq22mG1+Wko2uU7Xb76EY3YW9i0p7s4wb...v2vpx9mzzpmw5v40kY+OauGyU47eEfrIC+bb+XUEGyAOa72dpC...9lR4Yg7cI4S4gSdXUsuWVd4Y+b+0arkWp+zV+eZf5+tNq6pdwQUZRRdaZlbyFRYxOKyb8Jaq6SU1MpnkQhcamOu77gtrc2uc61mTZ69qWo+YnxW0991b+8SeXj3sa7bWa80exSqpcY209uqFnc6G6CU15rq+XnxWV+51+80Y3isJ0WWystmprCcrVxgc7a21ntym+odqypN+6LPcuuXt6xq5TOCcLG...7Up2kcOxptMC+Ll9pb+6+20Y3QKrr75Cr9+bZFgzaZ+2etccuHIuoyxJ0S+Ki32zoL21Y85Geup2meamxtNCqaLUdUp2WzoMKqW+1sty17s49aGUYW+ymyz88c2FGa66E897x6un2584zbeeeUm0YHqyC2eVdzlUJ6XwcZWV+8K8WuaxCu+vupW4tIM2G4cGA8p7v8aUY21c21q+HnuISe7a2kOzwl82N5e7wTiz+myv2O7cWd+9196C...fuBUR5qtyxdc6xdcmkcrIn+hApqMCzlet25UkcIP2MQzRrsYfsg2lcItWRTsaRYU4gI1VkcIxsNCqpy10qGnrWl6O5oeL2+jHTmcILV2trK5DKuuy5917v9lRxZebfsut6SFa66isqaUm0sDOerstFaRfqrc2MdJIp1s+dSd394x9kMcV1lAVV+Dz+0AVmR41WB5erW7Vkl8O8OVnTeU49VOvxKs6lL99opdKqe810bRPubUPz8Xty47.....7LvXIK79zjTSwwlfd+eNoIQiqx8Sr5y4g2ivkDddYukeat+k28MY3Q.dSu1tTe8SFsjz+5Lt5AVmR8Usm0s7yiMJwcKeUdXxoCsdIiu80e8J0Y2YJ89IxOl04g6+Fq+91b+swwVuqx8O1peB58OwCcK2TInWmg6mWkSOA89GatJOrOcr5ru4jfdh6Ac3YE2C5..btU299pb+DBSmkWkS6de8CoYDQeWZtOhuNI+dR94AV2+n2O+oQV91raV+tp80+Yj19MoIg7qSxOlguuyKw3g5Gaik0i748OQ.+due9OaeeamkU92+Pu0cad39gw195udkx9S8V9eLv5NW82mjr6dmNswTUR9kAVu+UFezfKy+.Cs+7OxzWl2k19+NPbschxMG82dK2+3yY1mG3q.RPG.fGKkjh5657vIxpC0cI4ejlS.Pc1kL6kI4+qW8OVa0e4CsdSsrtSvam51SeqxCS7MoouanQA9XMmsupQVujlDTq5srae3pMa6qrSc4XOzDj1bK2ozlmhk93FfuvHAc..N21199ujlDlOFy49hca1kXdUZtjxeUR9e492yxmhghip12KIWsMCOBrG681aIQygtZ.VZyY66SY7QX9hLuYr9kx112GJteQ6xu7.K291OsDips6yafA8WepC...9p21zjTS+6w6jlKc5922scURFp+khccue9xzbezVR7YaZRJ+SY3Qd9PssstdYdXxUqae+512+irax2pq+4Q11+Qt+iCqhpzz2cr06PpxCi60su28VAXnsuxUHwPWV5mKaSywHC0G7qo4DzLU4F5Xx80edc668mw5qxC6Stqym00RbL49z8VAnXrIoOfmIjfN..OF9kzj7xaxtmAzuJMWR5SkP20oIQi2lcyZ0uIOLwpKae+MYWRI0YYGQ2+SZh62kcIi9p1X4xNsyaai420IleQl2n3us88WlcOKrea6xeet+8dc4mW5DhKaeUY2120YWho829R66uuMN6Ngl8X3WRSr9qY2rPd4eOUr7Ksq66yts24LGArMM8Eqyti2paqm9tr88esWazO49Cw112eUl9dk++194kYm8RLN1sxQo9pNgXC...9Bwl7vm4x8Sfp+r3dRSxL2zoLkYl89y52CU+Wk6Oh28m4xSFelh+p7vQ2eSd3yo5tO9xJtn25cS18nfaclVYVRu+iWq9s6Gy8GQz5Qp+KyvOur6OadW562jG1GV0qryIdFpMFy5L7r39Pk8lL79ktO62uMO7DhLT8sIObeYYYEU4g8qkKc99s2PGyrNO732RaT0Y8F5Xyxx6F2kSpPo9Fypr6wAW2Xbe8CqmnNA..fuhTtznGaBiaJkQfbN0e8LV2SQoM121vE43urhGptuHmusstmbjR+39ZmyY7bLpyger0b2VGR0Azdy432C0bZ2UY9wn6Md...fmAF5pW..dD4dPG....dF3+mm5....3Yg+LI+dR9+8oNP.........3qZ+ZNt6u4isbeM5lbbOByJyB9UKZzvR4U49GiW09yK4y2dfuP3dPG.fGCeeNtDDO1x8bzEo4QX0wNSYWkju6HJ2p70Se3WiF5X7p1kC7Ml+1Sc....ei3EI4MI45jb2SanvyXaSxe4oNH.dZHAc..dJ084D9mZeMlpz77p9tj7gQVmxy74p106SoIgm90ycsupZeccmOudOkeLkskgJWU1Mx4UsuOU8tJMIzOmXnJMwbx96C62FmZe0Tayi0lqZWuRY21oNKOSxyD0WouI8Jae0swaYc511cik65r9KQ61WUm5dtkqJ6526pN2eap+50eaLyX4Gy1D...7ErKSxm6srescY2z95ysKanx8l12usSYtn25dQuOu79K6sd2jj2kj22tNk3ZUZdVfWJWotdyd111W4p5zNety5Mlg1NJa+uq259trqeoTl2m6eYzutc4U8Zit8Qk3p+1Zou5cYY5qtrc8KaOkW+Z1cuW2c4unW46dbPYcup21a2Xqa+8a6D+IMI6VZ6a6s982NdQ10G2seqZOauCEuuqW7toWbU09yq6srR4Kw5u1tcd0.0U+3Z8.KenX6i43uEL...fuPbYteRHqa+4W2YYutcYcSntTtax8GA5aGXYkD8q5rrO1V95N04McJ+K57YW1trtq6lLbhh821tsW45usTkcIHVmwSrq61Qcuk0OA8xI3Xy.sa2j1Vm6mbV213hNKqbBK5tcLUe0Xayc2m12kchux9tR+xsc1VJw3scJacd316ECrrg5W1jcI11u95t+sJ6NloDeqZiktwbUmkMlgh2gV1ldwUUdXB5k8+0cVmKa2lNlDzKsQ23nJ2ee....7UpKyCSPu+nAmraDa6Wt9iVdIYv08945dq2p7vDaKI6T0YYU4gmbfh9iRYWkxsYFkay.saeqGINpyC2N5mHdQIg2R6rdjetearJOLguo5q5e0Nj1x9wAVdwk4g6OK6i5usT1mVZ6WjGN5yos85dKOzeanarMTB58ONrr70s+bU65T2a85Oh78MV7dSu3cSlNA8xIgnebNz9qRcU0acW2a40s0W+06iY58e.mYtGzA.3ovksupxtQT9GxvWdsk6u4t9PZRPrjn2+rc8tdjxV2a4Wm6e+3Vpm5j726stSMKnWV9OjgSRue6tOk3325s7qy8uejqGY8Jq6qZWmKmHl9u8Vdoup+IC457v6m9jl9kMCT+8K+P5t+rrcss25z89pNoYe9GZa+Wj6eLSYcqZ+4eef17Oxv6O5utk3npyO+uyt6W6eH2etSXLiEuIG1rweocFZ+01bbtN6tu7Wmo+8OfGQRPG.fmBUY2nRtMMIr0eBwpXrkmb+Dclp78S7Xauet74WjGlL9Pmffhx5NT4R1kDzTaCCEGCs9mxx5ZpjC+yr+SpPU66K0179z8xJeeGyLUBlmR77qoYD8KIEO0wqEUY9GierN15qJ6hsxI1ZoiMfifDzA.3oPYhL6ej6m7a8.q6PIcUV1e199cY7Q4dNIKV97MY3QkdLaOxxsu3nJCOip2e8lpu41A9rjj+Wm0qe+xOLvx5qDWaxxrMOWaRSevOm6ekRz8R7da66C0u7iGY6tNMIm++klKq8twS8DkqbIjOU7dHNjQcuu98GaRSrOTrUcBsCvI5u9TG...7MoKRShAcSNuJCmbvp7vDg9msuec66kKS49qWUaaM1HfWbcZRL8eLvm81L78KextQE8EC7YuYhxMUbjb+IHrg94R69OyCUhk+Xj1nzWzurUoo+6CYZK817b8S4g2FCU49Wp4kO+k4g227CEuyQc66us2x+o8Ttp7vGcYU4vusGJkue7OTcssym0U+X8GSy9wq6s79kqZfkA...eg6xb+IBqqRyH718d+tL6Y2eRhqLKhWmljEdUd3iprUY2LSdIwy5ral.upy51ehnqXSt+rP9praFAenIOthWOP4dSFeFV+MY7jEKaG2lcIYV1N522zs9p5EucSlbct+DDV+1H498+UcJ6XyT4CsMW1urYjssjgeb6kL7jfVItqa+4xwLk8uWzFy2l6OwlUmcGe7pzz+T1dGZRhacu1sp21Q294UYW+bo9F6xpep3cnI1s9se23pLA2U1WWmc6u5VWqxtGWZkaAgxwDc22dYt+9upzz+W9cn9saU...fuZbYdXRHkjN+bZRZ40sq2G6UtaRSxJcW+gtTb6WmAiHk9H...B.IQTPTkjz5OYdMVB5I6lYt6GW6ylYTtU49OetGS+siaytjU6G28a29ImmL7y.6pL7yJ75dkcrDzGpsmSe0k43SPuJOre4sswwM8JacabWh+WNPaWm4kfdxCOt3p7vYY99FJd2zVWci2M8hqR62MtVkcOF751WeUd39m04g+tRoMJwZ+Xqbbyqy8u0HjfN7H6u7TG...7MsRxyay7ljppaW2s6oNWMi0aLqZqixDB1gLAuMmxM0DAWWysu4Xi2jcWBy2k8ea.rzs8wZe8KkqNg9Wp9uusr8mk9mqUY2ks9grcdnGiOkpr6X66xtjy+4QZ2x9k4Ve....vh4s4g2VCUY3Qo+KcCMB5....vyBUY2ku8UY28p8GyWeWp1RPG9JiKwc..fuF8hzbYdeaZlQ6u9IMZNOpSykn99l48A................................................................................................NIqdpC.....3aUuJIeLIet80sI48IoZgameMI2rv04w3lj71irrWcBk8qQUoo+7UOwwA.mU+0m5...fuI7lzjv4cI4e2952RRcZRZuZAaquegquiUUR9tmfx9ktKRx57vqxhpzruE...fSvMY3Q0tNMil9RNZwW1VmO09bRd2ScP7EnMoouq5oML.3w2e6oN...3aBUoIw49tNMipd0.e1EsutKIeJIaGotqaK+115atJkap5eUaLTVuOLRcsJIuXFwZ+xrpccW0oM114ee2.sQxvaqUc9rwZmtpy9296WGk3ot88gJWoNK6Wq5EqSsesJ6F47p12214m61mz+m6VGcKW+94WjG1+U29YyceWoLUcpq98yi0uO0xmZ+64Z6....9FyssupF3ypFX4uKMih5Msk6yo4xjuqUo4d0tb+rea65+9r+QPuTtop+K574ce+hAVuRcbSm5Zeif9l1040cJ+l1O6ldk8E81FKsUUusogtJEtr2xqFX65yI4kSDq0chutkYn9sRr+tNqSUt+9qg52q5r9ety508y1za68pAh098Cqyt8Eci6R+2U49sY+sm95Vlx9jOlli6Fpcq6U95AV9Ky92+Vpu2rPaG...v2ndc1k3vUoIgj9I5V7q4gIvTJ+qGX81zYYa5zNiYcdXBousWaVklDe9Xt+H5dYZRNZUu06lAJ6bSP+11+cc1kPV+DzGJVtM2OA04lfdYanpyxtJ2e6pu5rqeccmX3x7v9xtI+uN65WJsacm0s+90pb+8EUcV9olfd28QutyxtL61tKaOciw9JqS2XoDyGSB5Us+76yC2+18J13P1NJmjpo1N...fugsNObT9tI2O4tUY7Da6OBk8SPsnzFiYS6m28DDT0Vt5NwZYje6pDeu9+O169o6133d+O+mFjR1x5dNB59DPsydaRKpY6UsxS.Qmk2YhIXd.DRkG.gPY+XQ8aeL.kbt6Rjzr2gPKmyDJQdylYVjP3G.+9Q3ywhzwlD0rn5xcgBUCzfjfjh78qyAGPzn9e2vVe6p6pCRW3rOmopGf9Sh7cgAn6BfKL+9oopAn+BYG67sXd9SKoslo38m5Z38CtSNQZP5Ja7XSYO4CNMij+TcxCPe0fz4dhB3WOYkjVmQ0ObmThv5MKHcYAae97xK7DV0tjx6zne.fKn3dPG...mUZqhY4KS1fBWJea2V1YgzEjRcMXvXtskF79qiTO6nQOygcj8x+8E4+8qj8d18Ado4g4u2HR96Io4x+aW68UQpiv6M5xDl2X5nhfneor8wlUr7C857xZ2759kduFmvzzKuskEr8NZv6AZ+fOaFobmWCdOtOMrcvmc2u+c81l6uK6JIv0O1Ix28JIc+iY6ZYUbekem7549J9IL4zne.fKnH.c...LsUW1.N5l+pmJBHrory.3ZZvUx8TEO3hNdkoT7EBqwEjWGI8wp3xJuQ91aKoGEj+XAbssj9tf1Qr5rpAa1sBo4Ax1NWREiScks8Vk.q8strssGlWdqj+40kziGSd+tR113BDLM+84U7fN6Ll7eQwn1eeRJyVZ3EYvo4Iq..WPQ.5...XZadYm42Gogebp0U1YdbIUrpbKI8TEeUe2OetxNTUl0vtpHv74k8RAtgj9VYCb+6xaKOXnbNHW6MUwWMyOM0VEWABKJ6I0nkF+r0G64otqrjrmjhUjse+ZM5fkSirs6Ll5WpXVeG290I0Y8LD2cD0aUet0Gl2Ujc+4Czfi8sU4qSC.3RpZm2M....bo21pXFai49pX10GUZcWV5REyvXrY3tr5wI7dvdaYCNuqJBH5kp3Rw2WprmrA281am72aDjtvOeRLuF79ItmrAu8XUb49KYO4B00vA.FFjW38LdGYO4IRieQEK7dsOMOOgW10g5px2e4NQCSpdZ3SXPpltA01UwO9LUCO14exa7sXvmmWE2p.9NNWt7.38bDfN...l15IoMjM.lWj+97ZvElrM7R+iUwLDKYC3zMCu6DjN+EXqTUs.8dUdYtlJBnck776Bz7kxFLl+h2UcuO+xfzshJtJ.xzo6i3J2k77JdskTUboo20qsTW1EcN23g+JCtiaegKfeW+WZvEqsXxjsukph8mREA3Wldxt+pQj5sormbAmt4u6lY4x7ZUreb9f1yzROYuJ.x7p2TE+3tN4oeMUrhzulF9jbrir8C23Rpr6C49GG.....SMMUwJ7s60dJ9JMcyfzYzvWd7wRWausMJqGo7CClMUwW04yBJqzf90dZvm81kw0NSi7cgqh6g0gqdBCfsoFdLqsFb0.utJdTgMt8CNYZvmC5iJe6p3qt5wZetGwb9pqhGSXt8iod0uuv8iw5uMT7US8vU68QUOgpR8JUrX74R2lQZOw1e3tJMLp3XxoQ+......Ww4lsywcoHW2KciZ1DcoaRmwQW9FWdSU0Zuyqw2VOopxXW8J1NRU0FekJBPugW6331Wq59UUgu2klo83dY0alW81VweL2IU9hiWX4cdzO......v6QxzfAnig0VkGfN.Pkv8fN......vE.ybd2.....vEd8jz+eZ7OR2tJqmrKbc++dd2P.............vUHuPGuma1W1rqFbks+IZ5eOPuRdcjdJWttU67o4yv7q5xzviwaJ9sDvEJbOnC..f22TWm9AHFJU1EDsiS8TOOuS6fMSkzs797s0zebYZUGt8orBlOckpgeTBlddzP.....vkCapxeNaeZISG+Us7Tc17LndbOm0A7ko3OG0AvEHydd2....vkdoxt.ZEawEK0a60KIciJ+t7UWRcyeew7ztc91pRY4u8TULKitY10ubb0gx2dmfxIcD4UxFfjq95DosDi6YtsT79kKM0i7c9sWW8ENVm58YW6qqFruMp5vkmxF2GWZhUtgso5A4y0uh0NKyj1FF01cOK3Ud8G98gs+z75b6RZaopXebrxyuc3RaWUde2+2BkkF+1ne9x7pqX4cT+FvmaLZTGW.....fyP6o3y3cCYmQukT4yXcZjsGNC5tx4I400t4e1Ho0hTVMizV72te9cuRy+tkxqC+5w+dxdyH4Myq920Kut2G2kB+74o0UWt9U3Ln2Nea9Vwqc3Z2ts0vKc6J681eX6eSM3kDcSM33Qcu735SwF2eajzrpWZZngmc2cyKaWdcuVJneEtOHlTM39qQ0FBKmXssVQJqmDTeFU7rQeuRRmyS7JucKIctxxsueT8c+z3NNyMl42ObiwNti0BO91+Xzw8a.mwMFA....fyAMU7.edgr+C2kNcBPeWMXvvt.672VUBPO0qLWUCFLpKP15do0+DP3l8QirKfaopXlO2MuM4Gva677W18dsKek02FU.5o4e1uNcKFawBP20lcosoFd7xssz7O2H+y9Avsdv1VWCu+2su2UWtxIyKMt1jq9Sy6Kt.CyBxq+BlWn1SPavOMwZaKpgCtuoherVYie9ayELcCussXdayOct9va8Zitz4+6gLM7IWwe+dlWZCCP2crVYGe6RyK79rKMuLRexutVUCOtA....fyXoZ3fRpqACvLSm7.zWJHuyqACbKV6vIb6wZOo4s2rf7ttJNQCkUOt1X3rkWWCGHlOW9B6at12nBP284zf71TwCPe2H0eXfWt75JSWv29mfg4kc+SV9mCCD1092TEiGMT7fGCaStzEFj2aKo863exfbVLuMjFT1oAoKrsspFts5tRBZj+4TUDjbH2IYvYWEesDH73p1kz9ZGjtWTR5ZFocGFf9dZvfuc4y+DPE6jgrtFrODdroeaKb+..7v8fN...l15J68n5881l69WciSw5YmfO6tmWu+vI8XoqjVVE2+s2QE2iskMC3NY4uunJ569J6xb2s8v9VGM96c86n322uuTCdIn6DlN21tUjs6WVqHaPmcjzqxe+Ado4Ux1mea9e+x7zzYDkqSX+10FCuOtc2W8k40pXVjcsA2qIUm75qkJ5yaqA6y90arsMuJBfNM+UyfzcGEecLnqFleeOUwuG1K6de2WGUbhKdori+9sK28y9JRZt7z7ZM3ILIyqM4mW+1ZZj1G.DOl0...vYiWohEJKIoGpIaw8pJhEv53BbaR4tO2aohYKcbAJ669QdMpEOKWaOVvUiqdSmf1UYFWczQRelJB.1MCo92qwsk8DarsrWI.almlXmjfPmVy155mf1PnsUQeNS19raVvqxwZgKHaR18UgGWTW1w2I832xReUNN8ykcbRxNlsor8sEijl54owc0KDdRllWk2mljey.bkByfN...NKzV1f1ZH6+n9EkzSqP9ljfSRU7UR6wMygUsNZH6LE9HM3k365Z7O5pbAjDaVVqR9RU791nzUwmY9wkuI01p3jULuriQqJouUEiSsyeIYGqVQ1YWcaYO4MmEJqM7ZM4mnntZv9bi7x6a0v2JGgRye2OH0mpQeOzOoRGaJJW67WtqTj0TwUKPu7WwRylR5iUwwoOVEi2.nhXFzA..vYA2kF68Uwrw4GPR272SCxWYW52wjE4y0UwkIsqNtSP5hcImOpxOLPp4pPdcWJ0YAaOU1.aJagyxkuFAaO7yw7ZY6+gkc38y9Iga1ic7CV2MtrqryxpSGYOIGR1Yh9rP38ZseaHKHsg6OC+91Zv669skcLtqF91oH1wF2OOs8xeeaYuhRB4B5cRmA8WI6wUg+1owXxWpF7962EH9iyaCtamC+0u.WZ1PC9XfqmheblqO4WmoiocA....fofEUwpP8ai78tEOqLY+Gs6tmgq5hD2dpXUWOSEOdmRCx6dxF7fe5BWT2RUwh7UlJteZMxFjgKXD2k7t+hylx21a0fWV+gWJv0UwihpTUNW+HVadTKRb0CR2JZvGaYMBpiXKnYgi0MCZutO6OlrlFbgsykFWfetwM+zzPwW.yBWnwxhjNW6bTKRbqOh1vC81l+i9tTuz3WmtiiehJVk9csKW6MUEGStlW441e6G7ZCM3XnecLp8ukscWPz98C+GKcYdoMb+9tp7mX.t9Z3iGv40vKneqFoO4ZC9mfKiF89M.....Lk39G2GFfhi6enuKPB289ZUCPeof76B12WZjz3xeyfzttFLnl5pHXH2qMU7U+6U8RiqsmphUXa+5ebyf+nZyiK.tz7s6N4.MUQvj9yZ6wM.coAGmbu7CBK13V3JWuq+jEzlNsBPur1P3UWPCM3Xs+9W+5roFtOuoF7dJ2MN3WuwpSW44Wut75O64txITrs6exsLxt+OV+Hb+dZj1g63Mmvem5ex.B6Si53B4kW.....bAkaV+ppFZv.ObWJtiqNlWU6xGNLMtK22iSdkJlE7I4x2WZxZytz2HR5cmzirIr9GE2rHmEo9BSyjzGNsU01PUNFbT84TM3I8IsB0oFQ4cbkoi2kP97Z7GiVkzbQXeN.....NC0Pm9AbdYPlJtTrcbW16LqkSWoJ9UkA.vHwp3N...vkScjc0AeUYm07tpX1NmzUSd..bFH47tA....bBkJ6rE2Qk+7D+pr4kckC+1xN97Rwyg5os5xdRQ1Vi+w7G.................................................................................................................................................duP8y6F.......vUUKJoMkjw60lRJ8brMA69fVdedEIsqJ1ujl+4UNSaUSlTU813KjsOOtx6E4k45mjF1IzSzfs0LYaSyetzZlbo53crS3wj.WIL64cC....WYrljZJodR5o4umJoGJ6+.9OWRu7bpsMsjIaer8wHuo44+kxNVMMkF74aGYao4a+hrTUs1XcM9SJTSYOgROVRcNAsoSpx1W79zUfRpl7icRO8aF.....PRpgryV9a0vAVjJo8xe89TPGUQaY62GGY44M6TpsLJ6pQOixo4sklmAskyBaJaedbo4smAskIUlN6Nt37z3NlD3RIlAc...bVXo72+bM7rA2U1YTeMYmwx1deWcYCDodd95DI+o4aqmWZ6JosizNpmWGt5sSIs24ye0Kub5VR5RUQfRcBRWpjtk2eqfu2usrcP6MUEmrhz7Wc89rq+F1V72dcULVT2666pwyOuwjkWdgs6v1SV9e2IRYE19lOur7a+UYeUXcFarw0dqR43ZWkUliqck58cUY6iq7F09BWdK63zTUsiUpR6HVc6u+aQU76toQ8A....fSA0Uw8ZdYRkc1Yy711RxNq5FYmMM26KNXVkQ1f5cow85IAoyUd6ETdoAo6Edemq9WKRa9I4e2ddoyUmoAsEW44rl21bskVpHvvv9hwqc5RancC1dy7zthW6qQj74xq+9GWdc0oq+zVEiKg8YetwF+9WX5bk0JpnOlk+ctwG+5I19Jet1Xyfs4pe+16nlA8FZ3wd23pqsFdLje.8kU1w1t+9lx5msCxWVd5VMncD63zxNVIb6Kpp8aCeM8pyviy8u+3S0v6W72+V13HyfN....vTv7x9O.eRVnsRUwkDep21dqr+i5S8RqKvflp3ef+5Zv.9bmj.+fRRyKK+10Sx2Vl21VUEAD43Bvno21ZFrsTUDrepWatQjxa9750O.eW5dnFt+NIAn6ZSYp7agfpFf935yREiMM71lK.P+z0VEAE529ZnhiWbs2LUDLWYbsQ+5vM962Vb0aYkk6pM3spXALzssviiSizupZ.5teW7BUzOcGG3uunshGft+w2opXwWLyKsUM.8ckcFr8upMBaGgZpgCHOV9R0v+tH7D1jog22Q.5.....SAYZxu+kaqACPzIVv9FM7+P95AoKMR9T9maEjmXAzDFbUYAO71fz45G91UwWL7ZpAuO7yT7603IM.8Uij1X4sJAnGqOuad6tr1gy5AoqcdYtTP5BGCCaSYQ9N+1XyfOG1VpqwGrujsu52eyxKqzfz8BM38pdUCP2+j23a8fs2VwCPOV+xnAO1ppAnGKcMKIu9eer8Gt1uev996Wb+FN73xWHBPGf6Ac...L04eu6VU2Q16K0tAa2ce1d+fsGlNWcdKuuuirWRwyIaPLuVCOK1NMizlRUwLolJoMhjlGnQ2Oc4uaj5XNuuur6q6iiNmhk0qirsWI63ZpFb7oYP5tiFr+63ON5tWzeUj5osryNelpVexs+L7jgzKO+yqISGULKyMjsebmiQ43jo32a9MkMH2v6i6PgG+4tOzm6XzV5nh9j62FMqXd6FocHUrtQDK8ckcFzuuW884Ur9.tTi.zA..vzV272GUfCoxFvhaQGKUiN.kIIXemkk8RsdIULS5ckMv.+.hmWwu2a6Tg5N1BxkO+YULlNkr8ShSyf86FYaw5uokj+NZ7m.CoQ2luyH9tXk02E46hsswIU1YTNSCtfE1SGuiGKKOi6XnQ431V9bE+2FORm9O5C6I6IxZUYCPuc912Nucz8Tt9.duBAnC..foM+YrrrYUKS1feZnhUA5xBzntNdAc1U1fOVWEmPf0j8Rq8i8ZWOUi94VdWu1QnEy2dY42UGuRU6ROeRjdJWdwDa1hc0q+90mpIaMGvwUFwBB2Md+sSXYlFYaUMHeeMk8XlGnAOQJuPGuYQuqheLTZd87RM5.0uUjsU1uuFmdxdLaaUr5pulr+lrywrLGktp33+TY6uOIu9dvobcA7dkZm2M....bkvFx9O7esHeWp21cWB0uRC9X5xIKub1YBq+EUwBtljM.g1d0SZ915ogu74kJBjWdoK1UDvSj8x8tLtSVQr7tnr2ysgAsEFHVOE+dy+rPr188UwXRWYO4IOLR5VSw6e9biOKFIctxrSEaqtY9M7dbOUGumg3ta6hv5Obr2cxk7a+tKseeuVwuZMZpQeue6rXvmSUwipN+1RX4G1dCumvcAq+TEuceR0PCduq2UE+VLKR5cRmBsE....fqrZqhUl8Ek8eL9Jp3wrTSuzVWEKjWY4aKSEO1tR8RaUVHrbk2aUQ.Jy6UdNqpAebUUWEOZsZVR5RySm6QK1RkjN+9gedcaauf9gKvoWnAWA1WWEATkphwkvwglZ3EntxT0EIt8xa2t.Kaog6yM75et1r6Dj3Oq5sKo8koh9s6ptvsOXTKZXt1XSus4Fqbi0yK6w.FM4KRb9i6t5qkFdAmqgWcNe9qWDIcyqAOlzue5uershuHwsmheLPZIsY+zEdrl62A9+1vsX8U1IToYj5K11S0f6WpqgeBM3ZW9K1dgGStYI0G.....NlZphm2ytWt.MBkpgedfuoFdF.qR.5REAj6Wd9Ak32FCaewtbsC6Kw5G0U7.BWMRaw+wsky5deelWY9BMb8tql9AnutJBrdT66Zpg6eqqA6etxIlXiOapQO66t1XSus4tcC7KmlZzOGzcBCPOUEAI52mVUCt5zKM39M+wsv5bQM9iCByWlJNoH94cOM7y495As4xNVI1uM1Si9JynoNdAnKEueuYPYQ.53Jojy6F....tRJK+8tZ7KJTtYWrJosJpR4UOOctKa6xtGbmjzoHeeV96aOh75xe326t7iGU8NsjphwvQU2Y4uOt92zJ+NopZs2pnpi6Sx9G2wjGm9oKH5QUOUss3ZG8zo6hK33puthEGN...................................fybYp3Q4TrU8aes7Ra5oXaHMuLG0yobmWnw+H8ZWE+48crxJ1pL+zl6QXWZ9mSU06+XXi6XB.fSrZm2M....bkQpJdVOOpzzH+8zoTa31UHctU85ypxZZ31Qp2TMXaNU1w6Q83KCVmW6GOoRUwuo.vEbDfN...NK8RYCTHqju2s81S+lxH8.I8wmysgSack8QraSuskI6r6Opm20v580iIRkceb14ay..Uwrm2M....bkRGIsX9qNQ99Uj84u72NhxHS1fNbOql6F780UwyVY2yo7XOSmcky1Q99z72CK6XpmWV0ksOUk73W+k0ObeWOY6CymmlNio7FUZ7KyTIcKus6x6wsM6OtqHa2UugsC29nNdoew7+NVeI066hUOgaeTs4Pgkg6DWr8Hp2QU9iaL4jzV8KqxFuRUwUGg+yBc.....bEVljLxdo11VR6ogurpSySyRxNKuFM3kkapr2Cvl77uW9e+jfxosJtWqcoIyq7ce+nJiMySSYbkUSuxxj+ZsHkk+8tbcu9gedCy2tp39d1385sZ3wtVZvwkc81VZj1rq7MAuboMV+0erOVeMSEi0Jx1aDz21T1wc+5NKnO3Fi7aWksuocv1SUw3q+37RkzG8aqK4U+t8cg0arxeufxuohOt1Hx1qxwDgVQE6S7GubGeDdryn1GC....fqHxTQPZt+NKHMqqh.HZpgCl3EQxmKcM81VaUDrTSUL61opHHE+zGqLpZ.5gAd1VCGDXX.5tz32Ob8c+K0bW.Wqqh.th0VWaDoaTAnmJ6B1mQ1E6NW5hI1XeX+HKRZ72dCus4GLYCu7rqF7DPjJ69Q+wupFfd677lFj2Xmbnv1pQ1SvwhpXeRX8FV9tS7he42TUK.c2m8OtwcLQVIs0Tu1o+11KOut1jqrWMR6......WAkoACRKLnKohYUUZ3.alWCGLhiKnHm1J9LklpAmQTetYfzuLqR.5gsm5Jd.k9etoFL.a+xqg211sj1vtxdu7Otz4l8zzf5vutanQGDnT4i80C1dVIkka6MBZywBb0H6ICvWyfsU0.zegF73BIa.2aFodCaquMx2EVuwZGtxeRCP2kN+SPSZdYkMh1ZqHk8KBZWYZ3we.bAE2C5...37vFxd445t2jyTwLmGiKvkMh7cuNO+g2q4upjx50Q11qjMfdW6op1I3y87JqxzL+848dcm7skFj1tQxeWUbui6tx.dZjz4FWNobkQ3XeOcxVzzhcOV2QEA49RYGeadLK+WmWV6J69jW58ZbhcbVnWI6kn+wo7C0Q1qDhWj+2uR1wmGLl7zQEyRdprGGwB9Gv6wXUbG...mGbAwzv6cWvswjNhxpa96gW1xkEnc2QrsI8wM1jDLuyhxNytuU1fxtkj9tiQ4HUzdi0N5dLKyxpiX5dBpmXs4GHoky+60UwrTuXjzNNqmWVaK6ILwckVr1wrsUV420q72shkenNxdxNbmTE2rf2RkO96eI0+DIM2Dz1AvETDfN...NOzI+0Cy+78kMn8wET8sh7co4uW0.ShMCiG2fahE7zchrM+z2R199skMnrk0weVhcs2X0Y5wrLC0M+8Xi8Kpgmk9XoaRzV1.0usJBVeTApNp5ssj977x5AxNt2TmdOxwZqh15Cj8jATkxOVeoqrmnpOVRelryheCYu2wiY875wU+etJNgA.38TDfN...Nu3lsvEkMXxQcYE2I+8Xyj5RxFTx1Q9tXlK3ytGyWaqIO.8GF74TY6ScJI8o402qBpqrIrdcbONtVTCGz2ntL6CMpfp6j+d3Xepryzqa6F0+wsC..f.PRDEDUt9S3k898qXavcut6BHsmrA.+XUrORx9H3y8XJKL+9BWK.5HoGk+2YUrMMJ6oAuu76Haa0us3FSRCxa3XR38K+1xFbdWU9kr9cT7GCcU8RbOMR6B.....WAjogWnpbKxXgKPaRwWbsZqhG8Tt68Z2ioqkhjtPod02ZxFHSpJVgx8KiptHw4ZOo4k2aKorbAJ5VD4dqJBVOSEOZsZ5kO+EMOegK5btUh8W30mBe7k42l8qi48xalJeVpaqhfmcAK65qodoysf0kku8UTwBBWiJz2b42EjYZd83uxnunJVb5b82VZ3iibqB5t.9qqhwkvSrhSVj1pSrEIN+809kel21bK5biZeSCM3w10yK2v8W9B6eoJ93PpWaHSEiiksP8A....fK4xT7.ebA4zJX6M0vAOTWEAJ5dsmF9R.1klPop3wQlKn7xJipFfdSUDn5nJK+fQcKbY94oQ91V2KcUM.coAerpYx+dW.boQZy9VWCGvXnxF6CmU84C5a6ph.paTg9VZP9KqdZFjl00vqh6U83EeYQZqNgGSjpAONprxuQPeZSE+36v9j6DmLp6A8v5ecUbBa74W1Y4ai.zAt.J47tA....LgbyfaOYuDeOtKJVo4k0IoLbby36jTV98gSCtwktGyxrtFea2ereT2RAmz917dsmxpG2UQQWM51cZ9qS5wKmzxuJiI9WJ+U8VtnpiCtzdZ2+A...............................................................................................................................................................................tDKSR6JoGdN2Nv4umHoM89blrGaL+4RqItckz5m2MhJXSI057tQ.fSO0Nua....3JiTIc6y6FwTRcI0P19HFsaqgGmRkcL7hhTIcqiYdaH6Ic3rPp3XNfKUH.c...fSt5xNSlYmysi2G0QRI4ueQQhjV9Xl2VRZoSw1B.tBY1y6F....PDYxNyf8jz1Rp6wLc0ye0UEy1XWuzUWRKl+2cU4AINpz4JWW5b0QYFWclJa+oWjs6xieYMuJeLvu+6p2S5Xpe6Kyq72dLkWWEe70uMFVOY4+81kT9ym+ZR5Sczvisgbo0ktXiic0f8GWZb+cXYD1NF2XaZ9KWc3uutrwixFKiscWco7xsdPaJMu81UWrN4I.....3DJSRFYu7eGmMyS6tRZu7+dsfzj5kt87R2SBRW67xYMuz3ZCq4k+cy+6WnguTqWwqNbo6spHfYW6v+UVI8skhTV6pAuLk2UCdOZ6rY924jphwH+28q6lpX7yuN2SCOKuoZv1jK8KFjNiJFW86ygi8oZ38QaJ6Xre+HSCOl412rqW8DV9szvGmDqMDaLZb2u6FM381cSULN52m8Kq1Z3iCZ30NdaP6M19.ir2669+Fvue3FKc80viUbsyzfxM11isebu79Sr94EoaAA.....bBjopEfdi7z4GTXSMb.bsiTdtz0LHctfgZphY7sQjzllmtWDo8DlN+.ipqh92pZz2O06FT9t5rUPZpR.5tO6pqTYCBbOuzzTCeBEbs+8zvmXfvSVv5Jdfctwj5AoKyKcs0victzMp.zcedUuzrZ91bAz1HRZh0F1U19t+9i1x12GU.mkEft+3y7p3jNHULq4FI8RM3wAwFackoe60Ej7ak82.tf+2MHsopX78jDft+XXpF7jX3Rqaruo.....vkBYpZAnupFdVPqqACPHUCG.kylZvfuZqACry4sJdPvMySuK+gAE62N8C3w0lZDIsJHMgqN3qqiW.5tfO80HOct1eSEu+moAGSWTwm4+5xNd52lCCJzkN+9l6yw1G4B.Lrs3p6F4eNbE+eSUL95F+8mI7zfzzHRZbsM2IroLkEfdVP5bmT.+f8Cyalh2ejF9jyDdR.7ye3XoqebRBPOb+nq+Dd7xdxdRG.vTF2C5...3hDW.dy68Jb0z1Ev0FQx+qTw8461AaOrL5ngCRKM+86mmm4k8dvMLct.xxj8j.TEcyqyUjzbxFvyq0fyB7jXCYuTj2M+u6j2Vh0ddcvm6H68erarz8dlFNHzdxNd3amHoQpXe07kjNI63ZX446kxdRZZm+2cjs8+.uzzI+8Wj+2uR1829oIK+8E0vWl99swIQmfO6eOpW180tqc7.I8YQxeVv11QCeuhKM7w68znWqCphv8OaWx16oi+pZO.l.DfN...tHYdYC5JUEK7XeaPZF0klbuRRievS9WR3wzQRemWZSU7.J6nIO.okkMfrUTwIinqj9bU9hrVYZlm2kjMP80x+baI83fzFqc5GzUZ96w5mcij+wsHq4FiGW5homrAx1T1wpF4a+kR5Qp33hONRZZmmF+5MVeJ1Bz1z1bQ1VWMb6XufOmNhx73L9Vk7eRKW.bLQ.5...3hD28m8s0fAIrRjzFaF8RyeeTAX3VkrekF+rW2U1.wOtOxshUdsyeUW1Y1cMYuTiONOi3ckkjMP0mHaPquVCuRy2MHuopXlR2V1.8+bc5DblqthcxTpxLw1UCt.q0P1woDM3JfuKMyK69xFxdBcZph9g+rpedv0NVVGuSJfKOwF2F0L2Cf2CwyAc...bQQZ9qMzvOZp74tWXicYKujF8i7KGW.ogVT1fkcW9yuNeagAZFlNmQM69t6y6F4etmrAWugJlodWaKrbS0viCg2O6cTwLmmFj1Fk7Y2IDY6RRmKMMir8Qoqr8uv665TM9mU7g2W2cyq+sUwrP2VCNSyaKaauqJlwb2wIg0Wpr66Nt2ZASJ2XariWegFdMWHTmRxepF93jddemuXydO.....thJSEOFyZF4kKXovGCVYpXkk1OXTWPbqohfaehhuJtaFQ6okJBlwUW9KbVyqhU18vz4uPm4VTzdqJtG3C4VTu76eyGorZ502lOu77eDc43VP7bAAWWEO5wb0uqrbORuRCZ+9sS2hPme44FS8CDrrUz6xVX0b8iTu17nVj3beNbeie42vqrSyaqKEoM7VM33crwnXJquDxsc+xxc7Zl21isuxM15ehhJag0aSMX+MSEqr69Gu5ebnaL2UOwVj3ZFTOMhjNWeJbAkC.....umJSC+Lh1+kKfMW.qtsumrAu+VMbfKqGTFtz5qshGXkjcFI8qKWvNwls7XoKMHcM899FkTmg8OWeOblPC6aqq3OGz2TidLv0lB6Cwpy5Z3mk26EouT0.zKqezViN.cW6dOM5w7lAeer8eoxdxUB6SwlM6Q0Wb0UH218aWMTwXcy7sU1Xa3wqkEfd8f9gKuapgCbdUM395MKocR.5.....nRby923TW1.6lWi9xKeTxTwyG8w0lxpP6pJsipTV0U05Wop7wflZv.tpx3pe4cZvsO53r+ISidbptp19uTc51mphXsG+1wwY7HcBxaU+MD......NCzTi+x4F..WPvhDG......vE.ybd2.....vTSOI8+srqj3+v4baA..............3hoUzvqJ76pAe1k+Bcwe06dSEekOOjq+lVwzs6XR2zjaU22eQsaWM3iZvK5p59EegGSBbkyrm2M....fKYRkck5tij5dLxei7704To0TtaqgCVMMe6N0ijlKZRqX5h0eCkIaPvuTRu5X2hN4bi6gOx3t04Qi4XJ8XjmprOB.....nxxzneVnONk8rv9zVSU9yHdmvm85uOqoF+JZuKMmkON1ppypiKNO0Ti+XRfK0XFzA..vYoTYCfUZzyvbVdZ6I6BbVX5RyeuqrASMuJeVmcOOwGU44R2hdkarxZboKUEy5oaVP8qK+mI3g4sdj71K+UpW8E1Vp6s8vO6Bzb6R5Kg7qyPYpn+zIx26p+QMF52976ic899r726km+XskpzlcGWzS1YDebRU466FW6JbbebaWZviwqZ4El2tZ3w3z72qZawucT1uMBKCWaMK+8x9MZ39kiy9W.....LEzR1YGau7WFI8jfzjJ6r1Z7RiQRqEjN2L61xKMFM78XbZ911y688jzRAk2Jd04tkTVtzsm22GlN217e49tE8p+X4scj71Hn+FxkGmr7OujWcT1rt1LHuoZ3Y92eb1e+VrwlkFS+S4ksQE2i09su4U7w1E0nsqF99j+IZvi07OVIrcKUz2COVx8cgGCEd+g2rjxtQ91yBpK+9Wr9Yr7Yx6mapA2WroF7RgupGqD1Nbk2pQxqSlJ9cq+uOi8azv8Kt8ugGeDabD.....SQqI6+v6ldaqoFNf.WfBYiIctf38CNY07s4uPZ8BMXPh0kzayqCmFQZaoZ3.LRyS2a8pyz7xZSuO6JuU8pWW5ZGj22lWOtYlzUGuTCNitSZ.5t.eWTwCHUp5Anajcbz0VbmngXiMqGz+1MuO5zPEANutW6KUEAtk5k+2pweImGtexUG9sE2wFkEftq9VWEAF6R2tkzt72ezrjx10VxBZu65sMW4smW6MV9bs+lQpW+sU0iUZmWm9s4WDzNBk40NbmPAW62Djuv8K9Gq6xW3wGMCZi.....XJHLfNG+.cxTwr+FxE3tiKvwzfzEFbxlZv..jrA+3GXeYAzzPCFbX6RpylAoKSCGnqKvuv7FKstfq8MoAnGarNTSU8.zSKIuYdsi8zvxBRWCEu+4FeBCD20lF0pWdYABFpr9hulQRi6Dc3qQP5hkO+zkE74viwyzfmDpv7IM3r56aSMXP0U8XEWv39VLO+oQxue6Lb+ma6M71V39kvOKY6u9aqoH.cbEG2C5...XZKS1fGdcju6ApHvhr722IR5dkrWd4op3dcsqF99d8a0fA07JYubb2M+ueorApz1KMt6e8lAkUcuueaIMmheu1tdd4Mp6k14xyWiR99QMCwGGmlq.4czv8Y28zdZ96yIa+uYP57GC63s8v6IbW9CuW46l+5gZzW509lWw6+uRCdrQUsrJt2omSReb96GGt8ygsuN4k63terGU+JUUesFPx96Q2sZf62FtWUIu95l+d5HxyFxdkzrYd96H6ucF0IeA3JGBPG...mU5FYawVbuhEjxwcgjZ877tjrA3uRd6nsjdbdZbWZ42OR96nAWnv5FIMw5CgRyyeY0QrY77jXZuva4J+z72cWh9k0+BaOe2HJyPc0nC7ymKcwlM+i6XxJp3DOzUSVPvgbmvhXsktUH+i52FkcYoWF2uMdnJ98Qu7s+3Qjuiqlx1GWR1.0WK+yORU6jB.bk.AnC..fosvf47snrAVzViNPCWdONAY0VEyXdlryndSULKdcyee4JTVokrsLYCxnr121xN6oOnB0QLkUtmEOWrSGw24t8AbmjhSR+qr.Lqqpueu6H9tIM.VI6wmt.VcAzJYuRHxpP9CqS+eKzMHcKJ6wIi5D.bmHaKMnrmjiUZqA+sg6jQ39swoM+5aQY+s3Kj84e9z9jJA7dgZm2M....bo21x9O9N1rq9DUb+35BLI798U440UNShv6W1NxNicREA17JUbhB74teb8urjSU76G6VQxuucJIuo40Q1HxqjcFmSiTGm1WZ7wjp32a0RE2NBtwlXsupz+1QEWF4g0s6VLnp5n36Oe3DTFN9q+.9G6kEjtt4umVR98aaRCeqNrnrGCMtKc9X8qkzfyreUOVI7dBuiJ9sQ1XZGSpTM7ZIvK8puX+2F.....vTxpp3QwTprAO3dTX4ufY4VHuVUEW54sJIcUYgvxs.Z4xqe8lkus4ySyKTQ.VYpX011IUC9H1ptJd7r0JHctEpsLUb4e6Vwpc0w7pXAMK0K+tEDurf1iIuMNuJFWbOpqTP5ZnwqYPdcsa+75F+b84TUL942mqmmN+9WlFdEPugFdwOykeWZcemK+gqz3gBCzbQUL962lciUiprZFjlLU7XEysebMuxxEzqe+ObbJr+5Vw1cGS55miabxUV9GC3pildoy0laoQerx5ZvElN+eaT1IyvU1MB1dZj1Q39E2wRt9T879RrEaO.....Lk0TC9bSdOM7B+k6xceboqpAnmphf9GU4snF9YXdrUy54KIcgyV45Z3fyRijWW.c9Z3ktldauYPdaqh.bbxzoe.5aFoti0mKarI0KMMT7.zc0eX9cmXfQILPPUR60ssTUtXoIVYkogCjsQP62uNy7RWpJ1uMIiStftWOHu9yJcYs41Z3eaT0eq4KSG+.zS0v6eCqOW6F3Jqjy6F....tRotrAb0S1KK2xtj0qZ5ppz7Wiq7byLdWM56m4pltX2+zmj75tpB5F46l1b6S5pSmwloU9cpZ68ztr7OtcTRUw9xwk1XsGWdG0ugFWZbo6z72Ziia+6YU8A...................................fIzlZvGWWm1VQC+XLKlz7zsxTrs...LR0Nua....3JgTYezLkFY6ga6zzsmfxOMO8SSKl+B......3bQlp9ym6yCoZ3miySCk87aG..Pydd2....vkdox9bOVZvmMytuqmJdVHWWEOCrqK6rM2SRaq3OqncOCmckyKi78txKb69kcYsa+1l+1kWYF1lyx291QRy3Ja......folMkc1o8ekl+c6l+8NMy+9mDj9ckMPbeymucSv69oyUdodaaIIsWP9VWCOC5aFz172t+rf2vqM6JW2qkBRi+qo48dO..dOD2C5...XZ6ykzx4+8ijzGq3yFtuEkzCjTRd5kjdg22m584O16kjM.Z+Yq1WprAi2KHeObbchJngr8UWad675ptryruaacy+6GcJTm..3RDBPG...Sa8TQ.49+8nzTRcx+6tR5oZvETtr7+dYuxqqrA85t70iYw7uOLeKWR5mDOVC2lqKo6qh9cOuumKuc..L.tGzA..vEQ6D7YWvroxFbqaFu6DjN2LUWVvu2uj7U18g9jHrL5l+9zdkgG..WRP.5...3hnwM6xkcIrKM5YnudIkMylM..N2wk3N...dez2l+dXf5oxdufGtfx4muvUT8Xky31N..voNBPG...uOxc4jGFHdlrqN52YL4KbQgK18rdOM3p+tTwi0sSStG8bbx...thi.zA..vYgt4uuhrqN6mzfQaK6i5rVpX0d+ARZs7s+pwju0kMn7ONOe+1Ho8U4sylR5yxe8hHoaRzUEyx+mkusEyaSO4DV1..38bDfN...NKzU1U474jz2nhYg18LA2W3mis8dR5WJ6yc7uQRGk+9t4auJ46uHo+gj9yR52EodaKaf7+dIsU9qskcgn63zlkriA6JouRR+eFjtxJC......fohS6Kk64UwicsIMeU4xU2cYseZ1t4xYG...................................................................................................................................................................................................3xfjy6F....tZwHykp+8GIJwLMJ2KaiSuOZZsucbF299yq1E.l93+vO...NyzdgCdPsj9+diRlSxT+7t8bRkH8ZiIo8Ra8QabZVtW1FmdezzZe6n7m9jd29Gu9GLmjYwYj9OLIJsX+eRuDY14HSxNRlNM15idEApCb4CAnC..fyDO6d6ulouYo9I09M5veX6k2418NuaSmTsV3cKVynuLQIa7Eu4id7oQYdYbb58QSi8sk4O8I8t8QW65+VSMshLlsqYzqN7Hyqk9ott8+slau5Z1Ob9YM8mqehdnjRSLIanCSd1W7eeicmlsO.b1g.zA..vTWq6dPiZp+uu+Q+3curEvYq41qdsYt9a5mT62r7V2nyIprtDON89nSy8swXjI4qu69+190RVqlw7xCOr1eX4ctQ2p01NHMY19qkHceojG+EacimwLpC....fw5Y26catwBu6gm2siokVKbP1yt2617jVNW1Gmdezo091PFYRd1B6+jMt669msl66m+3VNsl6fzMt669mOag8eBqaA.u+q14cC....WEjjszV27Um2sholC+gskRN1AYU3R93z6iN012VvHSxWuv9eUeYpauZI92193VVKuyM51+ne7tR5Ne8B6+UDjN.....Fomcu8uzeo2dZzGuJLN89nS68KOag8exyVX++xoYYJI0dg205YKr+SNsKW.b1Y1y6F....PYy52Yw8TqQlj2mt2cciU+Wex2U++7ueqdRW7era4ZySy1Y39wyh573n0cOngwz+g4y5coLxjrwB+Pl5qTIIkzuWsCqs8u9+9C6VVexb3O9HyLW+Mst6691keyMW+zu0CfoMtDX...vT2yt29lu3u8QQ+2c7769tULIZ0A1Xh5lXTWyOU6OLMWgpaM2AoyLa+MSLZ8e8at4SOIk0n5imVkg8wv00WalDsjQlaIIkXz2lHsw+Ga8QO9hVvnNO6t6+VkXpejzFKu0MadZW9t8iFoUc2h.sWX+WTKwT+K9a27Amzx+zXeqe67nCq8fQsXv0dgCdPM0+qTRR5PeoQq+q25F+tx1W2Ztue9YtVsMO5m9WeLKzf.u+g6Ac...bt5vDcakjjZTxaMRaZj1zXR1quQ2WW27Oasv6VbZV+lDcmCSzsml0wokit90dSsDyusuQs62u1uoVe8HiRdqIIYsudg8+py61WLsV3fLUSy2WI6MSRxJslauoyy08jjz9lZ+79wZIlaYL5NSk55XZlqYVJQpynBNu0BGjUKw7WURRp5q212n0OxXdrwnWXjwnDs5n1Wu7N+aa22Xdol85qVVZ.vEWbItC..fKD5eXxua4c9nttO2ZtCRmIw71Yjdhjd4znNyCT58hIrn0BuaQkjj1WlGs7Vej+ku7Se18d2lljjFsl6fGW0GSWmc52PF00nZ+NIylZlObQI0dZWqewe6l+xoccLwLlFGdXsQNi9yHi8dH2nW7Eu4i9U9eWq6dPiYpYZYRRZzZgC1nrG8alCq83Ytl4sslau0YVzAd+BAnC..fKjVdmazs0Bu6Uyjjrj+1Mxj77O8GROZVceIoYNTuN18kqQljmcu2Mu4nYlWI86sza9nW9e8IeW8iR9f59W17O6SO3iOJ4G1yEHyy9zC93YL+qd+m+8a06myeM0cos9vNmyWB41URbSsgVwuOpesMpUq+80LIYxK32+zmz61+309fGJIkjnu00GZM2d0mw7g2dFy+p2+6+8564WVtuyeLorxYbM37SxxRIFS6k25Fc1Xg20clZlkTP.5+oOo2sC2u32VB29e5S5c6eZ1OXQSs96MyOUamijFps7rO8fOVRpz7lHyjzWNoZsv6VzXT2QN64ysWckX2Oezg8+Cge+xu4Fs2Xg2sVRRRpL42a5Qr7N2n6yt261Vy9gyKoNm3FO.Ny7dwYLF...W8XjIYFo6q95s9a+4KbvWZtd++Qh5+6ST+eu458+GOegC9xv7+0Kr+WknZuIYl9+wjZ5O+7E1+e1+5W6K00M+SWZZM2Ao55l+4.WNvWu+Wc30t1ewdYDmrUxL8+iII8+lmuv9+yo1kmcUXp0URZFYdnQlD+EVukeyMZ2+mp8KzQ+vOekF77EdWyi9fq++pVh4KST+eusObva949v0Luo+0u1PiaZ1OnocL5CqKI8769tUGpbt29+0+zmza72V.ynLIoCUsMjj5KsgTRV333Od8q8D+8KEskquZ31yaO+yjY5+GSL5KMW2r0LWyrzP4858+Jcs9+0xxasDyW51u5Ble5JIquzXdD58g0MFSKiwz5j7nWSR5n95URlo5sGB.N8Q.5...3BgYls+7sW3fGzdgCdP669tOu8B62RJo9QIledlDe181eMknU62u1uowat4unwat4unuQ+JI0n0Buqoe5LIIM5az58+oe7eeo+1MqcjzFljjFUosjTKI6HI4xa+952ojjTM6GzbLYc54ne3kpudqRzpOeg8+me8B6+Usu6697+zmz61FYRVdmaz0Mi2sl6fTSRxZGYLOdos9n+8Fu4l+h9+TsegjR0rWe0k2418ThYaSRxhgAKOiLOT80aWdmazs0cOngoVxSFpbLJ8nO3Zi8wD1LIlUjwz8muTrOrVaIoi68Gcq4NH0TK4Il9l85+S0r6++oj6ZLZkwl279Rei4k8+oe7eeos9n+87wDoq0+uNsO4KyjXlSICe0O3a4ctQ2k15l+lk15l+lXe+y9zC93D2BG2QGM5.3OxzYFi8pLA.u+f.zA..vEBlD8WRR5+MII8+ljZ5OOSRxRGIySWdqaVb+maLMRLl1K+laz1sok25lu7HoMlIIYE+zIioais9nG4BZ0t5ga5T41yg0d7Om22by0kQaOiLO7D2QOlVdma26ni9W+x9FstwHS+DsTRM8mO5Ct9+qudg8+pAlE3YUpwXZ8yADKoF67geqj5NiI4gRRGYp8XIUO+xfVR1U.bkjjZRzSkjloV+kTess+Ju9x6bitGYzSsyD9Aok0daM2AoJQyejRdkedkLcFXe0jXVypRR8Ox7qbWp3KuyM512XF5xAOzL05ujLltlC+whiI14FcOxT6wJIIUyb8FGq1TUYRlWG9CG6YE+Ye5Aer6JBnuQqO9YX+m5pZkeYvCfKl3dPG...WHz2T6WpCUWIIMqRST+klIIYsmuv6zudqa17mCdTlT+YKWRZ1DcGiTca.i+POkjjZChbPGYzqmIwdYWORFSW+ErNIoijYmYz46LRlGX4ijziZM22O+ryjb+9IlGZRzRIW2rXq4N3yVdmazc4stQGiLu9+5S9t5st6AMTR+zuV6eGIU+meH6d3Orsl8C5Mq5ujb2mxylXC.9vjWaSTRlRz1gi2RI1Ya1dIr2NZic19MkRTR+jcZuvA+7BiVhoeWShxZsvAYksHmUlYRLyIkzanfSOp1KUs7EWsRkjcjQuZnEMsi9gGZhv.G...DCjDQAQUpZePqYSzbSRaYhkn5G2ErseN37jjTiwro4ve7wiKOKuys68r6s+42sjA.NVH.c...bwvgCr.Z0URcZsv6RlIIYsVycPaoireiQo0BVTv5aLRRapq2ut9wOT1u1boZ0qt0be+7IyNysar0M1Tx93zRRaKom15tua0YpomjOCyq1ZtCRe901ukQW69I862MQIa2Wld9OHuWdma2q0B6uwLIIK0Zt8dzx6b6dyHceSeSmAO4Dl50j9OFr0XjwnMURRWUhYjtuQFSxLl+n+16KoDIMvIFXRXN96WmMwrW31xCj83VjSc9Am22n0ar0Mez4caB.SODfN...tHqqjjlUo5vY5JYzQF8zkeyMWOLgFYRbqP4ReflUQeFXmNUasSSylrZsDyRslauaGNSrK+lat9yt29OYVYtkMs8aJkj02j7fkeSwrT+r68tMGb0+N4kRlUzre37sl666I682bye9qMpWhTmuXqatbXywMdGqo5+HgS+TsgdD4My052J+9e+QidVkSFXFf6aR5UKQQlU3ipO16bSi5cnIYnE1N6UcgQGpjuazEvIjQ8ZM2dS7rnmbcyWZj8JBY4s9nJGbd98T+kpSREvUAbOnC..fKjxWkxSkTwrq2WaOSMMz8A9yW3cMe981+uVD.jYSSRxh92W1O6SO3iOuuD0OQLxdYcO60W0eEbWRxcIj6BxbFkLm8dGuH3biLIgOZtVdqazQFYuL2msVCI0aos9nM94DjuPxEVesV3cKZGu+94UDIJ+Qi2OU6k1EutAeke6GT2699tqTwiFMW6M7d92HyNRpt+kLujzLWq13Wa.RLaOSMc+gV84yWo4qIylisLNY5JcszIMSFI6Jw9gICcRoFoY+v4M8MmnUBd.b1iYPG...WHL6L8Wr8mcv2IIkjz+VOu19ObFkjYWPrrW56GojmNiTqmc28Wale5G+e7e92uUuMt69KZRRVylN6rSdzOY9c0lM4ulbs9+0VK7tMl0n8LI8OVqb3WXbzO11nq+amoVxZOegCtUacv+WIIG0S8Steh5uhwjrmKHt9xrcsZIMd1+aGz3W++yGtwy+zeH8qu19+9nEqLOcljjUlwX5kXz.y18QlZOtVR++5WeuC9KO6GO328q+u+vtarvOjUS8ehouLwVnxZM2Ao0RLKdTe8pRelee3O1Qy9A8xOYKqKUqijYsjqa9xMt22+GR9wY587qcvuUtUr7h7stY1O32VS8+p1Kbvuo1OotGcs9yYLZkjjH0Sj9xQW+5+0Mt22+al8ecX2e55ev70RLOwz2r6Ru4li4Qf1IyQRuN+4TekCZ1M69CeaGTAl9y2OIYmIJO.3bGyfN...N2Yjwzul9xjY5+GSlo+eT0zW1uutyQFyia3cY8t7atQ6iLlGajYoC+fq8+7Y2a+iRpo+beiV2b3+5mW3rVdm+ss6eXxcMR6lXzWbjRV5nD8zij1HVcGtISv83tjTRIa+rxx6b6d8Op1uzXLaZRLqjjz+ajR1R0zWZj1s+g8+kt.hMGV6wl9lcMl9e0yt29GYtd++wQJo2QF8TSRxsFnfOrVaiL2xjn63ddk+y04V2nSei9U86alyb89+imcu8OJIo+2Xj1s+Q09kQanynLiLlZIlViruH01Hc+Vy88yu7V2nyQFyi6KyCkR1xb89+CiLy02n082+r7N2tW+C6+KMFYRR5+Mlq2+eTynuruL+lwsez0WLFysjR15vO3Z+OSR5+MFi4sk1WNUk7xXW8GiiQFiRl7i6lold3YvUE..NkMly0H...vI2yt29lu3u8Qmp+6NZsvAYRR5veX6v6q2VK7tESLJowat4KB1d6YRRd3W729ngtWjOoNM5iUsLZM2dEOdzFbw0KHcGjZu+r+otG2UP7etr94w6xquSpeteUg5vc40O9G2Xkj2YmodU6KmF6aaM2d0mY1OX2iNL4ylVieE00AoyLa+M+hst4GO9TC....fqTd181+Lclmauv9O4Y2aeyF266+LiLIFYRd1mdvG+rEd2tOeg2U5L6dRbZzGOqGmP0bZseo0Buq4jb7WqENHq0Buq4vOl6Fa8zdRyC.tXfKwc...boi4v+0iM8M6Jkr0yu29+0muvAuwbcyVFiLGdXsw9LjFXp3veb89J4gabuu+ypVF5mMSRxZyjjrVUqhm8oG7w0L5+PGVq8wrUBfyQDfN...tzY4ctcukdyM+E8M09kI80KSLl18MI+pkdyM+ES6KuXfxr7N2tWei4OjXR9KCsZxWBiLlH2e8Q8m9jd2N+Yl9i43b.....D0UgKcatD2u75zd+R6E1+IOeg20J7wW2IgQljmeu8eQ6E1+ImVkI.N6wLnC..foOi50Zt8ped2LtviwoqDZr0G8nijzWeuCp7LoOJ+oOo2s+5E1+qNxX54+TO..u+g.zA..vzWhY6jY+vJde299mVK7tEM8McNwEzk7wo2GcpsuMPist4xGYT2it90dyy9zC93iyroajIYi688e1QW+Zu4HkzqwV2b4S61I.NaQ.5...Xp6HSsGWS8+pSiYK7hl+zmz61yH8Dkjz9jVVWlGmdezo491XZr0G8niL0drY19eyWuv9eUUCT28TIn8B62RlZeyQI5oLy4.WNvyAc...bln0Buq4LRKcjziZr0G8py61yI0+0m7c0+wq+AyUS8+p9ROa4stYySix8x13z6ilV6aKSq4NHUy1uQMi9hjZ5aS5qWdXRsct9O9u14+7ueqdt1zgevro05m7eXpoEMlj45Ky+Cc3Ot9I8YbO.t3f.zA..vYlV28fF0R5+EJQYm2skSLSROIy18Us+vxaciNmlE8kpwo2GME22NNsV3cKlnj6mHybRIyqDScWaxXTWknWaTxqzg+v1DXN.....................................................................................................................................................................................................................................................................................................................................................................vjH47tA...bAm6+Wo4XlN++esiqLNtskpVGm1oaTsoia5...txh.zA..JWCIc+7+tij1njzsnjdX9euijVO+uSkzZdo6oRZ6iYaoojtSj5XdIshW5Vtj7WWROw6yORR8JIss796MjsuGyZx1GkjdkjdYIoqgp13H......PTskcFeMZvfVC0zKcaF7ca58cqqimTuxvHok79trfuqpkQ5HRqe5ZLhz422ZNhz0VUabD..3JsZm2M...fK4ds2eujryj8jJaDkI...tjf.zA..ltZ6820k8RReR4Oi4uRRcOAsG...bAEAnC..Lc0UCdObuT7jUpTM3Ln+hSTqA...WXQ.5...Seux6uWTS1k49hd+cufxB...WhP.5...Ses8965ZvftGG+Yb+kp7Udc...7dNBPG..X5qmNdWl6oZv6Y8xdLlA..fKAH.c..fyF9WZ5yqpcYtyk2N..vUHDfN..vYi1d+ccM5mu3NgWd6...3RLBPG..3rQ3k49CGS5mWCd4suwocCB...WrP.5...mc7uD0yznuL2a382c0fA2C..fKgH.c..fyNsC9biQjV+YXuyocCA...W7P.5...mcp5k497xtBt6vk2N..vU.DfN..vYK+fsyT7Ky8U896thYPG..3JABPG..3r0KkclzcZDIM226u6LMaL...3hCBPG..3rUOIss2mCuL2Cu71e5ztAA..fKFH.c..fydO16uyzfWl6M796tZvf4A..vkXDfN..vYus0fWl6K5829ynt+ikM...bIGAnC..b1qmFL36kxeO7xae8ypFD...N+Q.5...mOZ682yK6k4t+LousrWh6...3JBBPG..37QGUbYtWW1Utc+Kucd1mC..bECAnC..b9wOH7Ukclzcd4YbaA...myH.c..fyO9Agm482cDWd6...W4P.5...me5nAWM2cZe11L...vEADfN..P4LAupZZmDsiTOudBKiS613zLcS53C............................................................................................................................................................................................................................................................................9+u8fCD......A4u0SvFTA..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................vKPHyF0MhBd1fC....PRE4DQtJDXBB" ],
+					"data" : [ 39283, "png", "IBkSG0fBZn....PCIgDQRA..CfN..L.5HX....PSiRM4....DLmPIQEBHf.B7g.YHB..f.PRDEDU3wI6c+ccbac1Gn9WxI2a5JvHUfYp.CWAQoBzjJP5qBz3JvJUfXp.IWAjtBj7cm633JfLU.OW.rOCHH.FLy.xgh54YsvZDAvduewFfTyK9yFI....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................vKF+kSc..eC6rjb9LVuqdjiC3aA0iL+MsSOGT0N02sI4KOoQB...eiYcRtaFSmchhO3kjw98qUmvXpu0Y3X7xSXLA.vSn+5oN.fug85Ytdu8QMJ...fmEjfNbZTmguUVGx+7wKL...fmKjfNbZrZOV2yy3O+r...vKDRPGd5cVF+phe0Hy+UONgB...7bgDzgmduJCOvusII+xHk40iTF...3EBInCO8Favg62RyUPey.K6r77ZzlFX4cS19Zeq6zsmn3A..fWzpx3utmpZWm0irbupkfC2WCul0...fmPWjgSR3ycVmpQVmtIwCrejfN..O64VbGdZ8SiL+224euIiOXwsZAiE....3aR0Y9WY72Nx5cySSnBu33JnC...++6hL+ms7yFYcuKdmnCGBInC...IY5mq7wFU2ubj0+iOxwJ7RjDzA.3Yu+1oN.fuQTOwx98Ql+uMR4pSyUX+4vqdopNSEaRSr8km7nI471opzzG8cI4+0FO2jj+nMtNE8cm0I1pRxOzN++r8yuzNs4INtdJUklie+tj78498A2z94ys9ftGSUbpOVZoL0uuT1ObJ98X...dT84L7Uu6SSTlyRSh.CUt2tvw26RxGFXpdf0sNMCpcWORr084ker5XIUml61fw5qF6wJXr6bgkzYI4MY76FhgltNM8uUKTL7pL791w19Kw7GRywsW2Y5x1kuOpSy1y9r+4511uZOaqorOWA8p8HlWxikFae0R9660o4tvYt6Odp98X...dRTk8+1auXrD6tbgiwwZmUcVmyRyWretIY0OgqpENlqmHt2m35wJQ82j8KozglVhjTWOQc20Yo4D0rqXdtwy4432+rT8AYh5eUm04rj7qGXbtDGKsdj5dI9885L9IJbtSWFupGA..9J2EY3ur6bFQ1qGor2kk8JZMVhTqZW94Y2Ww74LsTWIv2s.wR+j.22qL7XpxxjXZ2D+pOh3Y8H06G5rN0Y9mLgpYzluYl00S4wNiUuqZW9RcL96NhXb8H04kGQcdVZ1Wuj6KNlsQ...NoF6K8+goJTqotM2e+DkaeMVBkqRShKG6UBdISz5cKXrzc5y43SRuJKSRdKY+15QpuxweudOiipczdKcxfKUhgiUmqZ2lVxiw+0CLFWOR8c4AVeU4w63wiYeA..ivfDG735UY7DZ9uyn721tduYfk85r7OK58UkluH9XItda1NHYc1DqWW+ZRtJG1fO06RSRLS4pzLv6soM1JC9U+ij7SY78Gm2V++eGPbkr8JmOV8m134SoYauLXbcVaY9oL8UJujz2RdhYNOM2gGKkOj4MpnuI2e.Vq6.n2TV2ttG59ngTkwe15uMMGOcam0sLMk21Vle43CuCVUl+sjdY.JLY6uGWuixrt8yS41H...6kwdlsudOpi5Qpi6xxcate4H0+PWUwaRyWNuZf54rzjf1ttpcGxUDrZG04GGIl56sY5qVZ8ADamko2luNy64StJi+HQTlNeOis0iTOWtiXtru95NS2kw6ie2Lpq0ST9j4s8eWNrSL0T6aFpuodh5pNya7XXp5XHqGodNjeeYremt69i2jwOoZUooedWGi7XeRBA..XQTkw+RseXOqqwRn7P9h6CYWeY9xz6y7uMvWui5pdOiwKlntVum00T219GRe5TCrXeL6+sN+TmDgq2y5a8Dw1X0+5remHf5YTmU6Q8UkcmX39dhJl61+58nNe6NpqkZe09dL461QbcwdDWUY58E2rG0E...mLqxxkbw5Ipqk3KGOmDzWe.065Ipu8IoipIpmOb.wURyievX0Y8BEae7.isjoS5c8dTOqmnd5OcnWMzoRfaeSNunZG069lz5RmbdwpErNWORcrT+txc4vdDINKSOBvu9.pS...dRMVxEWe.004iTWK0WNdWIneLO2ySU2y8jKL0Upr5QH1VuG0wEiTGWmi+jmL1189bUKWORczu912SZTwpIp2CM47hprbONB6pO3CGQbtdh5cI1WsOInewDwxg72dJpx36KbUzA..dVqNi+kje8AVmikL4mOxXcp5dIRxZpjqqOx36SGQbMUrM2DhpFo7Gy949tdj5etWs60SDiKQrN0UVcI5Cl53m8Iw0o19O1iwSlte3X2WsDGOdWN9swwhu8YaD..fmbWjk+KIuDI5NloRP+PekQUb1D08b+R8ikj55iL1F6NS35YV92OR4WhSZRwwdRDVOR4KSe3HhspIp241GNGSk7a0Lqio5CN1iwSl9jxcr6qla4WMQLbL6mKl5093biQ...dxMVBkGyWhcpDcO1W8VSkfd0QV2IG26B9ztdCMUejw0T8oywXIN95iLt5GiikTzbtshWORYWh8uScRiVx9foZm4dRddr5C5ZpaG+iYe0b+6FSMxxWOy5XWF6uUbyBU+...rnVkGujVl5KGeLOCniUuWeLAaGik3vwdKpuDNzj1pNhxtuFa+ypYT10SDmyMwu8MtV59foNQJyca3wpOnqwtiJlaBxqOxXbpQ9+kxTaiUKX6..7Mo+1oN.fWfFKI7aSxucj08ukg+h9k2+3G6URuuMKT87+FY9e2BU+mBiMnpcaVt9sh+HCue+PGX2Jt3HK+Xs+UYY6CtMIeYj16X6C9iir7c8oz7tEeHmml9kGKmmwOIcKY699zruXH2tfsC.v2jjfNrrpx3WorOki+KvdQZdGGOzWD+elmuInuT0yg5r1oRRLUsedLmffwRLbrjWNFiUmG6I33XRNszmtz06X98LbedY+4lCrdWxqf9T66+wErcFR0DKaI2erIG+I1A.fQHAcXY8pIV1umk4V.8KY3SBPcZRVYIuJV+4BVWOEpRSRb+P6mmmsIi+XzVCoNK6sT7TN1qd7wbxDlps2bD06gTmGy92wt6NND21NMT7TsfsyPlp9eLNoQ..7HPB5vxZrau0jkYTTdWdaVl2K5es3rzbRQ9ozjXb0SXaO0Uut5IJFNlDSO1SjyTs8iwInXp38GxgmD5lCrbi4Tkf9T6ObqmC.7Uh+5oN.fWPpyoePRZpSPvKI0o4VS9lzbhOVkm999GiqJ+SoGyDzWxqJcwlIV12+HUuOGpu4pZhkIAc.fuRHAcX4r5TG.oIoo5ScP7HpJMIleYdYucNWUm5....X43VbGVFmklAosmCdSdbGsnOUdcZFD712qbcYTUeSZdl5uNMWg2x7NzaGaWUR..fEkDzgkwqxyma445r7CVbmZuJyaji91zLZ4+kzjL9Wxi2sb7X2F2Wjj+8iTa90hm5Wed2bDksJOM2V5O1+93KoeeG.3aVRPGVFi8tOO4w6pYWdsgMz7Wkk+Ut1oRUR90IV9sI4+jl94qd7Cm60tC4Xddn+ZxlIV1iQeP0DK6w3Yd+PUMx7OkIn+b4jGB.vNHAc33UkwednuJI+7iT6dVF+JG9X7NQ+TYcFOomujj+UNMCLWi0l+vSYPbBsYhkU8HzdSUmGSxu+XV1iepFY9O1mDgMSrryiW0Z..eUPB5vw6sSrrKdDa2aSyI.ndfkU2Nc0iX6+T4mFY9aRyI+3XRN6XtxhaFY9UGQc90jo52O12O6C4GmXYGSxm+8inr8UOwxdrSPdyDKaI2eTmw2NuXGwA..6fDzgi2TCNb+1iba+ey3eY4570eB50Y7DdWmi+1Fdr5dNtZj4WdzCdoeEKKC9dUCrrwNoJGi5Ql+w1Ouj2sISkH7mWn1XLS0OL0I2Xe8pL9qywWJ20N..mLdMqAGm5LdRdWjG+m6zOMQa7R3chd0DKaIN4GGyUVrjf5PpOh58qIisOXoec+UmwuaG98irtOeh5deM0Iq6OVn1XL2lwSReI2FGKY+aiApN.filDzgiypIV1+8In8uch14kv6D8pIV1RjLP8QV9w56W5W4d2jj6FXZ8B2N6qOMwxlZfSbes5.ig4nLnJdrpx3GOsIOM252ScBSVs.0eUd7tSF..HRPGNFUY7jP1jmtau7oRP4cOQwvovwdEAqxwmD4UiL+5rbmbjodE9MV6+T4KY7STxprLOO9U4w+2yVhSnx5IV1i8i5RwUSrrk3NpodhkcwBT+..eySB5vgqdhkc0STLTZqwRRpNec+JVZyDK6XG3qVejkOY5WsaK0IGYr5YyDs8Skxq3tw7gEnMVOwxVp6Rk5L8f83bJ+TmrmmpmM6qx3GSTkiaarJSeL8w9nF...vQ4yY3a636xS+H485Ihk0yn7WdDk8XhuK2Q4pGob2kiK4u2MQ8tu6CmJFO1jzeyD08bu5+qGo7WejwVQ4082iQevT6mtN62umsq822rm0WQUarrDGmtdj5XW+dRW0SDK2jC+DacwD06RbhX...3fUkw+xpO1iVyCo9HimmqInuqj+pOfXYNImuOInmLd+2wjf5qmnN2mjqWu.0wg1FGSevt1OsdOqu4rOeeS5uJSmb99dbz5Qpi8IA8joOdbe2FS189h8s9...XQcQF+Kq95STLM0WJu9.K65EJ1VOR8OmDOFqr2klj2ma+cUFd6brS.P8Lq2RcO0IR3CY9IwbVR90Ipq88Xr0iTGKYB5ISeGkrO8AUY5ikuKG1IAapig5+yy4VAe0.ks+z9dqsudj5YeSPuZFw16lY8rq8Eq2yXC..fE20442USZ8DwztRT34bB565pnWR17MY6q8txT4c17XaeWmlDsFZY66.GV8NhwRRp04giK.kQb+2Mis006Ybsdj5YoSPuJ69pIW1mW1Wcd6zt1O0OtqNf3ar560SzNenM1pamVkleWZW6iNz920iTWy42S56UyLF6tMVksameL6d67PhK...VTS8EeO1W4SGiylHttISOXwMVhQqWnXa8H0+b+B9ucjxeLSkmG25QV9pCX6b0d19Wm4kr2wr+X8H00gj.4tbdlWR5G5z04vOAXiUm0Y4O95Piy0iTey82S5a0QtcL0zmyW2C.k..OKYTbG1eudhk8wmrn3gtMiOBNeVZNwBes58I4WVv5aSR94z7ZBayHqygLXZcQR9WYdui1OKMIwM2jb9k77+1I9KooecyWY08Rd70l73Em6qKRywiaV358pzrMNmiyA..3QSUl9plcpsJiGeScU3tbjxrdghq0GPLMjU43uBseL2+paN1cdvwb2PT01NK0Uis9Hhk0STuOVNKMI8tDa+2ztMbrWs1wp+5NqypbbGe89iLNWOR8tu+dReUY5wMi8Yeww7pZC..fE0pL9Wd8Cmtv5+e6540drjGtbj0e8BEWqGo9OjDOpZqu8IQpaZaq5QpygpqkHA1UYdOW0i027lEHFVOR8+XlfdQUZRLbetM96mXd0BEKyIA8tw79b70TGasOVOQ8uDpygc73Mo4jOTsPwA..i3ubpC..NB0sS+Xd3IeXSR9yzb639kbZucbqRSb9Oy1Avttw6soId+R6zu294KIkAhreLa6CJtsc5KoYe1mxoeeVx8i4yx18Yax18W+2b5iy8UU196N+PZdbN5d73lrc+wuml8GessMB...................................................................................................vim+xoN.fWPpGY9aZmVRmmjylX4OFsIeaqdj4+kjb6SXb....Lopjb2HSqW315cSzV2kjqaiGXoTkwOdq9jEU..vKL+0Sc..rWdclNg+MI4miqdN...e0QB5vWONOIuehkuIRNG..fuZIAc3qCUI4iY7m67aSx+JRNG..fuZIAc34upjbYl94J+eklAqK...3qTRPGdd6rr6jy+2I4pmhfA...d7HAc34sckb9ujjKdRhD...3QkDzgmu9PZFX3Fyujk+U3F...bhHAc34o2kjUSrbImC..vKLRPGd94cY5ju+u6X4...vWgjfN77xaxzIeeUl9JqC...ekRB5vyG0I48Sr7ujlWmZ...vKPRPGddnJIebhkuIMIme6SQv....O89am5..HUo40o1Yir7MI4ma+7ovYo4p4+CI46a+LI4+klSPvWZiku7DEOOkpRy192k6us+mI4l1OKa+mBUYa782a+LYa78GoI117jGYO+bd6TUZNl96x2FGCC.vWwjfNbZUkoeWmuIOMImeVZd92qamliaSxmRyfV2UKPL7pj7OGX9W01F8cVRdc1lHV2SvwlL+63f51190Y7SRReaRxuklGIgMyrLGp5r+w2WRxumml36PUklADww7mY+GLDqaqy9GOLlMo43qeIOe6m...f8TURtajo0iTlyRxmmnb2joeOnuTdWaaMVbLmooNICy05Qp6Oza8Nalw7thmp139X1tuKSmj4wndghuOjieeS0D0e8AVeWOQcdc1uXtdG02SU+D...7LPU1+Dz+3Dk4t73mbdUl9DDruS2jlqx6gZ8H0a2Dzqy7OYBUSzVudOpm4LsuITtK+5BFak36X12TMQcWe.00Rkb9YY46qd6dt8....OyTk8KA8ckTwpmf3cpjjNEI3rdj5qjf9q2y3nZj1Yeqm8II3wZy45rrLW07wld2AFWUSTm06412TmTn8oObW00oneB..NJdFzgmduKSmD6ujjKdDa+RRfUSrNkmu7ujlAVqhpj7SY5jx901xc0gGhOv4YY5SlS8bUZFr0JCfX2llAKt+dZdF4qFobUooe8ejCez1+xLu6bhM498uUcllx51O+k8InVHki6Fa6aSl+3svtpqjl8AW0NUFb3NKy6X30sedJ5m...fiTUl2UP+cSrd8W2GKSc06uIMm7fcM.aUklDcm5JgtuVORc8wr6q1+Msqy0cV2pAZiopmOm4c0fWsi5Y8L2d6aW2UE2zV2SsuobBH10UHdeuKGplntpmQ4WxqbdxzaiyoeJss25IpmCoeB...dFnJ6NgsWMw57Tkb9Tw49ljTxzI375ErtlJQr49r5uZh55hL+QH8joeDAtYOqqcEakSdP0BEekXbequCMA8kN47UKXckr68k6a8A...mXUY5DuOOSOnjcwSTbdwDwvgNnzc4H02k6Y8rdhXaItxlikD10Y+SnNoYe9X6S223apjo+7QDeSUu6y9mpIpm5cT1oFLD22Dpqxz6G2m5Zt069dbL...bhUkoS9dpDk93SXbNVb7ginNqGoNuK6Whkqmnd5dEMOjSjvTw3qOf5aWw79jT2pIhsiIoyjcehgpmY8Tcf0wGlnbGx116FotVhqzc8DwZ8QV2...vSnpr6jKGZ5Pu5nKcLVej08X2Byq1i5X8Dw2wlL8aGo9t4.quh5Endm5j2bLm7fh0ST+y8DITMQcTORYV5jySFuuZ8ATWC4xQp+2uP0O...7DnJGVB5+5SXLVOQbbrmjfKFodWuG0w5Ihu6xwcU9GK9laBpSYrqPc0LJa8Hkcohsjl8siEiy84kuZh3rdf0+wH47USrMbH02PpmnMdpNQZ..7MLul0fGekWuSC4ssK+o504zEiL+C80BVwlQl+Obj0aWGSezWRShV8c0QTmEis+sJ69UF1pIV1RcUauMI+mL7616yRyfW3EKTakzbRmVMxx1j4+pTqu5Ql+mNv5aHWkliU5+XTbV67tZgZG...3QTUF+JFtNSOJVeW95+04zpL710m1i5X8H0wRd0jeLL1sE8pYT1wNt3Xu066qZj1Yt2YBSU95Nq26lX8Nzqbdw0iTu+yinNGx6GocbatC.vit+5oN.fuQrqqZ3ulk44M94luagpmeagpmmSJWU1g76KbasIie7W8B0FuKi+HMrIG9UNOooepZjk8GGXcNluLx7Gq8A.fEiawc3owsoIAkKy3eQ+2mljMFKAgmCpx1DK+tj78o41Xu5QtceNzmT0Y56Rxeu8ypCr9lZzn+wX68KY3Xcn4sudLSNOY7GQjaOx5cHWMx7+wEtc..fGPB5vSmMoIQkwF41OKMIv+Oxxmzw957NS+P6mmkS2.k0SUB5kS9vOllDvKa6UORs0X97iP68mSrrpb3Gy8tL9UgeSN9jySFu++rzbqu+TXrX...VLRPGdZsII+qL9yTcII8kHol8QcR9o1OKIi+bws43GD6FSIg7Wklmk4pGo1Yr1dL+uGg1ayDK6X1eWOQ6sTGGWcfKaocVd7NVD..jfNbBbUR92Y7Amqp7zjj9YI4MoI4zotcqO0dLRHpJMCLeuNmtSFQ0DKayiP6MU+3yoSHyyYRPG.fGUFj3fSiKxzu1vpRxGyiWhSuIM2Zvqyy6jyWZmklAjuqSSefDSOdikvZUldLW...nGWAc3zYc1dUrGx4oII8edga2Oj48J.quMoIYrujlmm4Mcl+4oIw2mypxgmv3lzrcea1tsWFfx9P915jbz2aSywxUCrrpr8XXW4Y..XGjfNbZ81zjj9Xuh0pSSBf+6Ep8lax4Wksin7eIaSHcLUGWX8nqJyK47ayva66pLGhWJ2x4+Yl9MTv4Y6irwR2WsIMCle..vKBRPGN8daZF0vG6pvtJMIhL0sD+b7lLcx4WkjOkj+ad4c0N2Ux4Wkl92qdBhkho5i+gr7ib8USrric+8lrcvObnStP4Nr3POQSuzNdD..FjmAc3z61zjbylIVm0o40Y0w3sSrr+uzbEN+O4vRF547U7cUFO4zMoY69mySax4k1dLOFWU3pIV1lEn9+RlNA7U4veLHF6jUTcf0GmF0oY7e3edhiiGKeLiO3e9RSU1NVdruJiAJUKX7bHdUab7s7inDvyPRPGddXS18n195LcR1SYUF+KC8KI48GX8V7bNA8wd7ARVlDyOzs8MSrrpCrNmxOLx7WxWiceJMmrmw71bXmnoMSrrpCn93zoJIe+oNHdjbV9153wpbX6K+977nepr+p6eCuNG1Xzxozqx3utKA9JjDzgmO1jlqj9TIK8qY5DNGS8Ds45Cn9564bB50iL+Kxi+6n6orIiuudouBimkw6GV5ak92moebLVm8OI8x.x2Pp2y5BdrTtab3qCWjj+Rt+IocU956tf3M43uC6.dFwyfN77xWRyUfbpufvEY6fX1bM1UO8O1i5XJ+3BUOKsot0E+zBU+GyIm3pzb0O5qpcZyQT2cMTaT7aKTaz05L8anf0I4+k86N232yvmLjeJM+NAu7bd6T4sGwldK+r1oMY6UCs6Iy4rr8X+M4g2sL8K+qFX8paW1bFvHKse4DuMT8O11RospFYcJ00P2wK8a2t+7Pwe2SX2b1tJkoa7Okx9sjl9x4T+k137rM9uJSusV0Nc0D0Yc1ce5lN+6uaf1Yp3ctGeU0FK8Wu5r6iu5tMbUd3wWk+8bhY.fuYTkj6FYZ8ATeuch56tjbS1umatqGodVhqTP0Dw4k6Q8rdj535iH1pmH1pOh5sHQlPy3...H.jDQAQU0D0+pYT9o1OudAhuhKmnclywQUST95CrcuK62cCxpQpiaxxdGbLVLuOGKyvpy79ciyx18C2zNcWd3XXv514+lNqSoteSmxW96e8GDCKk+c496q+b19LV2c965QL5xb+iSV0obciigpqOls+8tx1R2qJZcFtuqZf4eYmotw+6RyuueSm4cc18eC30cJSYa384g+cpw1u8gLb+dUm40Mtttym8+aDk5q611Ppx19xt8ocquUY6eCqN2uuZW+Ne4XlC43qOl4c70PaCWmsmTfU4gw7GlHlA.9lRUV9DsVOQcV9xKUyrt5+EAVx+y79e4iCMol0iTGWeDwV8Dw1RbajOV+5PeQ5gbVt+WVt6zRk3Y0Dw3b6ampNpmnbmkljcFqr6yIZZp9p0yrN1kpIh09IJv9qNy62MtXf0acd395x7to8eWmliSVMv5Vkli2692jJku6eKsecVtxjeN692IuLCmf9my1eOoTWc+cmx508Xr22acpy9kf9cooerbUV6dB.5FK2jo+6zk0oaeTU1929V2YcuHOLQyxIgr6IWYcteB5i0Fk9ot+Mhx9lOmoe1qunc8p5LuKy82GtJ2uOtJa6mpx3++q04ga6mOv7VmwO955NqaUF93qqam5NutaWcO17xNyC.f73jfdx1uvyTIXUMi5Yrjj97QDaISuc+bHA8ohu0GQ8lL8IlXtInmL893CcTOuqxWj9XR5rZh5ndFkcpXn+WhdJqmnNVhuX5ESDmyMFYb0Y2+tQU657gAVV+DrVmGlPXY8F5usURVrpW46ex5JIK10pQV29sa2+lWoL8+8rRxbkGwiRbzMQzp15pb0Rqy9mfdUm4UJe+90KZm+XJ8Y08leo9V2KNFa+1c4g62JwW4jQz+j0MTcN2+lwGyC2G9pb+qx8p7vssKxz8Gk54CCDCeN2+QmZ8.0exzGec9H+bQ4DUtty75ebGvW4LHwAOusJS+70Ukwe2S20XOq4mmC+V8tb6L9b1lL9yi2bSNcH0Y4tpsWLwxdaNt37cY5Wwb+2intmqMY52PAkiiplQc89L79yxUH7XbdFuu9hrbiG.LsRBIeZfk8aY3QJ8K58y0sett2z48VdQ++93s4g6uK+7gLpk2u9KOuw+T6OeU6mkWSakjx+4b3iUFax82FJ+6+bf0aJ8iwh9OG5Sseq72Y9oAVVRyXXxPOa6aZmW8.s8lQpqhxXVw0o4uaT2Fa+bN9mQ6OksuRIWklis9Pt+yvdWa58ySc7U4+Kuze9pb+igeaukC7BjDzgm+106H8pr6jzuZhk8q6nrS0lU6Y4NEFa.MpJG1HeacN9jA65pz79meLWjC60q26xzmDgoV1RaSl9MTPUl2wS2lw6qpyg+Habdlde5TiJ8rrJ+sn+2.K61dqS+42ud9odS+P1uAsrkxXG2W1NtJI+8zjTYc1d0e+PN82xxkA4r95uMM09shoN4Fi0GMz7GJd568oII5ujlS71kooO8P9a98U0q9dLFjTK8m8OF9mx7GX+.9JkDzgm+tM69cj94Y5aG5Okw+BPmm8KY6xsI3bGbwN0lJ420Y9egsyRSeb+SFxlQV+pYVuk3Xr5Iss6P2RkCoNMw35IVmKxSyUOuqujoeGoWk4c2f79L9IcYU1uwlgjlASroN9+WhuL7oP0.yatIqdaZR58mGY5piN51OCE28S7cSZN98umj+QZ98yUY2mbtG6D3+yL7y1bUue91Qle5T1MizF2NP82srG5U79hzbhA+9zre+KY6XUvwXcZ9++94zr+5eklSFvlird6prM+uxvGCeHmzVfuRHAc3qCaxtu07VkwSR+1L8UA77r8J175r805RY5UoIwnax1Qf1t9O4oOgu45SY5uP95rcauNaeM+T09uW0trqyveon+8.yKY+9hy2louByIaS97ioIoxRrddZ1+TRz7xL8W.cSlNQ4GSWri1tJ6NI8c0WUks6Oe0H004o4DyTt8WGq89TdZuSCX6sH8POtAuNC+5rpuujge0BtOmbwkT+XoNMGyUt02+XZ9aqEeIM+99lr81BeS6mU8pqG6skxICqe6T26muJM+N4P62JO29ich09ib+W8aEUss6XkaJ8G76tJa+aO8am80OkGdb3YYY2WT98fgpyOlG9+E0+ugUdTPN02AF..mLU4wavHqq5IZmxzTWQ3KmnbG5T4KAcwHKetVOR46OX5bHpx3i.3Gyz515enkcH2t0m+HEmc6KqNf3pZh5r9.pu06HNmSe29zWUFTltdlq+coY.exWtcYUml91OlG97guNaS538Y6eKqjnwulG92SWmg+aLk14CY6w60Y6w.8KeUtuqyCGeMJ04pAZuhKyvCRb2jlsspNwQ2A5rx5U1dOKMI51e6sLRe+O6UW8iqKyC+6lUCTeIi2GVbV11u0scKC7ncqut62pxt2uUMPaT2Nu57v9oj4+2Gtrccecm1nDKk1XUueNY6fh2ay3+ssRcWNwCUY6.XX2Amv0Y+O9paaV1OVl2YoYauecVNAOuNObPla8HaC..u3UkcmD2RY0DsUY5ciT1yxzu1q12oKx1jXd+HqS0L2tVOR46+EMOTKcxucuBFWOvxOzQH+pQpuic5xb3OxAUSTu0GXcdwNh24LB1WkGm9pKhjyeLTmo6269658+6Ikjb6Zc6xFxqxCO1n+uCTJe08K5hmf9a6EKC85EbcdX+wGy8ONrpW8bcZ1N6GWWlkKA8gZ2R7OT8sO62plnMJae86mtKyKA8yx1WYZiEKqxC+aXkSVP+iG6ZnX88saWcuSHVm8+3qtwR0HaC8uiLJ2Abkiw6tssdjsA.fW7px3eoy0OBs25IZuxzqGormkwSldtSC8ktd6Hq6beeiO11zXeIoCQUN9D5tLO7KMNzI83lb3pxtSf8X1WcHwyX0e8QTuWNQ8dWl23CPUdd0WwxobaOedN7SXRc19H67TaUt+uiTdjTFSY6sNSu8VdLbdpsq3u3X1ucdV18WUGXrLm0sze7Xex7px1sgozONtNG2aAD.fupUkm1DzSlWR10ST9yyCO67yIAl0Y3uPxqFoLyMgm0iT9kLA8hUY+ST+xLd+4EiTlpiLNqlntOl8UGRb7Xjfd2qV0wjjdIFuXG00SQeETrJG+ui.GhxcLl+lF7Un+xoN..N4px1qZwOj6+eneaZFEeuNMuBfNjAqmmyNOMC3O+87vWUNaRyqLnujoGE7eJz8Jq8iY6y2YwsY66Q3+L6dfw6krpr8pMsq9p+HM8SW8jEc7sjUo41w9TLxwy21J+e5u+DGG....OKTkljzqNoQA..........O9tN2+1n9WygOtgbYNrWOkm559X8wb+Q08xaffG62w8Kk2jCee90skGni+5oN...fWXpxwc6suJecL3xUkjuqyO+843dcNdnk8TV2Gqyx8isxO2c7f47L8q3uSoice92uXQB...v.pSyH39pCr72kmuWw2t9ZINeN6xr6q.85zzW+bz5b3w1i4a5F3qV+sSc...v2Tpx1qN7Uo4MlvPpaW2xnte+0qp8yMY66j5MY3QL8yx12e3iUek06Ucp2gpqcsdUY6U+rb0P61Vk2JCmMPYOafxVdyCT0o85GKm0Y98+4xsJ8TuENpy76a105LTrTdKXT2IV5W9R628MlQ29paSyanhgrq8a8q6twYoraZiqgdicLz19Pw6PJGaNU+V+1paeXU1dLQU6m6pN5Wey4X54Fm0Y6wziUWSEGyoenDKocceo8FjA..fmE9P19tm+l1+8u1acpRyUU7tNqycI4c8VuxUd7C49uW6uN2+Vtspcd2z4yaRxq6Ueuoyxtdj5p65c2HqWYdcmJK6U6nMtXfxtp21aekxTT29yutSaL1U4tpWbbSmx1044gayuaf5drXYcu5en8mWm6+rXWZy98U8e1rKwQ2io9Pt+sHd+5dc1drW+ic5W+utS8V9rzlqxzJGa1caeriiKV0td0oY+S+iG1mm26RruqiomSbVh0t80kwffccEzm53m0cVuyRyyj+t1eB...Gog9B4qam2a6LuRRB06X8JIKbY19k2ea675Nvk8wb+jRNKIetsMJVMPrUkGlXWU6584b+qp4McVupN02a6ztk06hdk8yssS4JmVZiOk6e0S22DzKI17p7vDx5V19Ir8w13raLdcu0qLu4lf9cY6Uwspy58pNqa+95t8Kcaytqyprc+c+iAVOQcuNaSVrdfsyzYd8Spsrd6JA8Rx+0clWI15eb7XInWZuRRvUY78kC45zr+rnJM6a6tOatwYY8V2Ydqy18uioJSe7S25an1nDKc2N...fiT2jX6pjHVx8u5u8URbunjfdUu0qeBOW11FcsJ2Ow9wR9cUaaTtppWLRatt25UmGl.W2jr5Zn0sehuSEikXpe8MTeceeH2OIrjljl6lv1pL79jR6LmDz6usbVd3wC8ShdniWd6.kYn9jKy8OVYrDz6uMUleU6OW1m0+ppWRZb0.scRy12Pa2IaOgQci0oRPuabsOJwv66M+22It1Ub1uObr95ohsUY5ieV2KVF5wX3h1k4pny2D7LnC.vis5z7kq+8AV1Omsew651O+iAVueKM2d4UY6yu5l7vmk0+L2O4leKae8e8aoIAfKZmJNusdV2qtNqyx+RR9wL7yO66aquoddj+w1xsZjk2OIvi0uMi04emsOm2+XR96I4G5sN0iTeWsGwR+jttss70OXM252RSRcW1V9+HM8ykDNK2sACsc9ux7Rlq+wia5T2IM8IkmY5t9Td3ilQWk8kmkgOlpJ2+Yy+wPoO9MoY63SoY6s6IjYWwYIVS6m+x.syejo2OVVV+8S86SKwxUCTGWkliEdUt+u2BuHIAc..dprYf4Mz.s0PItbnIy791x95zjrxaZiiKx1DNJIh7SCT9qx8Sbay.qybFrvpZK+XswPWcxiwb5udS1lX1lL8fw0wrO4+Mx7lJI5UYahYkjx2jj+uzjrYorCEyyY+wT5FWGS8Tkg2Fu5Hpy8w+JMI09lb+9v+Ute+14Y7371L8sU+b6elyuiO172Ly1.dQPB5..7Xq7ktqFXYuJMIGbQt+nrcekxdHILcQ1dk2pSyU+bcZthhWksiH0+6YTWUiLu5zj33Xw2WRShP+7LZigLV89ciL+coJMIs8ozrcWp+5b+mM7t6S5GCy8VNtZf48CCTe8cQ19L6Wml8aeLMu6rKks+U7OY6.r1EyL9FS4twn+1d0NJWYc+OKPLbLtM2uO7UoYrf3xb+9veISGmS86ky8Xf98g8K2bZiaFXYvKN+0Sc...vKdeIMeA7gt5w+Z197oVtpduZf06mx3uFrlR+mw1qRyUgMYahV+d1dhB55UoIYlxse6ukgGntVmcORS+GiT1p11ndhxlzbEmqFnMNzaM9R6cQtee5O1a8J6Sdau4uZOZq9O+wUss+POxCkk284m91zbhDJ2wCmms2B2Cse6cY3Qg780Usetua6kiS+mCrrRBxGh9amUCLuh5b+mS9Rx5+2r8NFoDmCMlOzMN2Lw5Mz1XWic7S+eGuzFCUek0cnG8E...3.71r80qTUZRRnLpM28K9WFzoda1lHwGFY8lyflVY.CqT1tsac67Nucc9X1l.ccFdT8t75kpbaA+l7vSBPU1NPsUmsOOuWmlArtRabd1NH4U0o7kADu5dwycsw34Ya+R4UQU5sdqxzNuSLVksWg0O2q7k3tzGVks8MycPhq6985NsQ2StP+AxsxHsec6OWksuBtpZm2qx86S5tuc8D085d0Swp7vAnsRr9gzru9x7v9ngz838j6erR2XaNCRbcqqRxpUY5ACvyx8OVMse1+X5ohy2Ov5083uxX6vTCRbic7SoOb8HwRUt+9ytwB...r.Vm6+Nc9l7vqrV41ceWq2bSPuJaS5ep56U4guCyKIu104ird8uRluuyxq6DK8K6myCuJ3q5rdq6L+08J6EYaRqE0YdInOT8URlqbBRJ5G22jsIRNmDzWOP462+2OI59sY21sq2Nv5sdG0cY6tp25U1lp6LuxwikSjx5rsOperzWoc5N0OQy4jf9YYaBsk92pr6Qq+gNVsaB66SbNz58wLu2C5UY7ieVui13lQhE...XATddhKWwyic8lqpYVemm6ekqO10an15XJ6YY45S5Ve6JVR65sOscctehr6a4KkoN69V4uNauaEVJUoI16Wm0oY6ZW2d2IK6wwk6DihKxvuhz5ae5Cm6uWVMi1cn3XN8CK8u6C...7Mu5L+ql+yQkqTd+WoZk2Q3UO0ATOWmcO1E.....e0mfdx1a45xsI+MY3a09mZmk4c0yA9Jye4TG....uHUF34tJec+trtJM2N6eeZ1N9TNt2O5.........LOeLG96I5m6pRysJ8bFbw9VSYTzeWCjYGiKy7FQvKu9vJpx72u8w3VOG3H7WO0A...zQ4ce9KUUo4VkdpkuJur6CFRY+9i4n1cUR9tYrdeedX+eUld+VwSwwummgGc4OTmkuMOlC...9FVU18flV8LVGdbcQ18616wbYd7uCPVmgeOtenphi4fmM9am5...fuoTdWHeaR9Rd3fGVU6mk4Wd2O2e8Fa9k5Os0+WFn9usy5dVu3nJMIIuIMCtYCoL3mkYtdks0coJaupnkqD6lNKu79gtrc2uc61mTZ69qWo+YnxW094lb+8SeZj3sa7baa80evSqpcd219uqFnc6G6CU15rs+XnxWV+51+8UY3isJ0WWystmprCcrVx9c7a21ntyx+Ru04rN+6LPcuqXt67q5TOCcLG...7B0Gx1WYU2jgeGSeYt+y+6pL7UKrL+58r9uKMWgzqa+220ttmmj20Ydk5o+sQ765Tla5rd8iu2za42zorqxv5FSkoR89pNsYY852t0c1luI2e6nJa6etKS222cabrsuW0a4kOeUu06tz7beeYm0YHqxC2eVd0lUJ6XwcZmW+8K8WuqyCe9vurW4tNMOG4cuB5U4g62px1s6tsW+qf95L8wucm+PGa1e6n+wGSck9uKC+7v2c986a6uO....dApjzWcm4811481Ny6PSP+UCTWqGnMuq25UksIP2MQzRrsdfsg2msItWRTsaRYU4gI1VksIxsJCqpy10aGnrWj6e0S+bt+IQnNaSXrtcdm2IV9Xm0884g8Mkj097.aec2mL112maW2pNqaId9bacM1f.WY6ta7TRTsa+857v8yk8Kq6Lu0CLu9In+qCrNkxsqDz+bu3sJM6e5erPo9px8sZf4WZ20Y78SU8lW+5sq4jfd4tfn6wbOliC....vy.ikrvGSSRMEGZB58+4jlDMtL2Owp6xCeFgKI775dy+lb+au6qyvWA308Z6R80OYzRR+qx3pGXcJ0W0NV2xOO1UIta4qxCSNcn0KY7su9qWoN6NRo2OQ9wrJOb+2X822j6uMN15cYt+wV8SPu+Idna4lJA85Lb+7Y43SPu+wlmkG1mNVc12bRPOwyfN7rhmAc..drU294Y49IDlNyuJG2y95mRyUD8Co44H9pj76I4mGXc+id+7WFY9ax1Q86p1o+yHs86RSB4WkjeLC+bmWhw80O1FKqFY48OQ.+due9Oa+bSm4U92+Pu0cSd39gw195udkx9S8l+eLv5NW82mjr8YmNswTUR9kAVu+UF+pAWF+AFZ+4ejouMuKs8+cf3ZyDkaN5u8Vd9wmynOOvK.RPG.fmJkjh56p7vAxp80sI4ejlS.Pc1lL6EI4+qW8OVa0e9CsdSMutCvaG61SemkGl3aRSe2PWE3C0b19pFY8RZRPsp27t4gq1rsqxN0si8PCPZysbGSadLV5ia.9JiDzA.3w1l1O+kzjv7gXNOWrax1DyqRysT9aRx+K2+YV9XLTbT09YI4pMY3q.6g9r8VRzbn6Ffk1b199RF+JLedl2HV+RYS6mCE2upc9WrmkaW6mVhqpsmyafA8WO0A...u3sIMI0z+Y7No4Vmt+ycaWkjg5eqXW26muHMOGskDe1jljx+RF9JOuu1zVWuNOL4pUsedU6m+Q1N3a00+7.a6+H2+0gUQUZ56Nz5cHU4gw8p1O69n.Lz1W4NjXnaK8GKaRywHC0G7qo4DzLU4F5Xxc0edU6m8Gw5qxC6Stsyx5ZINlbW59n.TL1fzGvyDRPG.fmB+RZRd4cY66.52jlaI8oRn6pzjnw6y1Qs52kGlX0Ese9trMoj5rrWQ2+SZh6OjsIi9l1X4hNsy6ai4OzIleUl2UweS6muNaeWX+914+wb+m85xOuzIDW19px1suqx1DS6u8k1O+Xab1c.M6ovujlX8Wy1Qg7x+dpX4WZW2OlsauyYLBXSZ5KVksGuU2VO8cQ6m+Zu1nex86iMse9lL8yJ++sc4kQm8RLN1ixQo9pNhXC...9Jw57v24x8Sfp+n3dRSxLW2oLkQl89i52CU+Wl6eEu6OxkmL9HE+k4gWc+04gump695Kq37dq20Y6qBtUYZkQI89uds52teN2+JhVOR8eQF98kc+Qy6Re+57v9vpdkcNwyPswXVkgGE2GprWmg2uz8c+9M4gmPjgpu04g6KKyqnJOresbqy2u8F5XlU4gG+VZipNq2PGaVle23tbREJ02XNKaecv0MF2U+vpIpS...3EjxsF8XCXbSobEHmS8WOi08XTZicsMbdN7aq3gp6yyi21V2SNRoebWsyiY7bHpy9er0b2VGR0dzdy43280bZ2yx7iQOa7....OCLzcu..7DxyfN....7Lv+Om5....3Yg+LI+dR9+8TGH.........7h1ulC64a9PK2KQWmC6UXVYTvuZQiFVJuI2+X7p1edIe+1C7UBOC5..7T36ygkf3gVtmiNOMuBqNzQJ6pj7cGP4NKub5CeIZniwqZmOv2X9am5....9FwqRx6RxUI41SanvyXaRxe4TGD.mFRPG.fSotumv+R6zXpRy6q5aSxmFYcJuymqZWuujlDd5WO21NU0NcUmkWuixOlx1xPkqJaux4UseNU8dVZRneNwPUZh4jc2G1uMN19po1lGqMOqc8JkcSm5r7NIOSTek9lzqr8U2Fuk0oaa2MVtsy5uDsaeUcp64Vtprseuq5b+so9qW+swLi4eHaS...vWwtHI20ad+Z67ttc5t14MT4dW6m2zoLm2acOu2xKe95dq20I4CI4isqSItNKMuKvKkqTWuaGaa6pbUcZm65rdiYnsix1+G5steHa6WJk4i492F8qZmeUu1naeTIt5usV5q9PVl9pKZW+x1SY5Wy1m85ty+U8Je2iCJq6k81d6Fac6ueem3OoIY2RaeSu0u+1wqx193t8aU6X6cn38C8h208hqp1edUu4UJeIV+01syKGnt5GWqFX9CEaeNG9ifA...7UhKx8SBYU6O+1Ny6ssyqaB0kxcct+Uf9lAlWIQ+pNy6yskutScdcmx+pNK6h140ccWmgSTr+11M8JW+skprMAw5Ldhcc2Np6Mu9InWNAGqGnc6lz1pb+jy51Fm2YdkSXQ2sio5qFaat69z9tnS7U12U5Wtoy1RIFuoSYqyC2dOef4MT+x5rMw190W28uUY6wLk36r1XoaLW0YdiYn3cn4stWbUkGlfdY+ecm04h1soCIA8RazMNpx82G....uPcQdXB58uZvIauhs8KW+qVdIYvU8945dq2Y4gI1VR1opy7pxCO4.E8uJkcUJ25YTt0Czt8sZj3nNOb6neh3EkDdKsypQ949swY4gI7MUeU+61gzV1OOv7KtHOb+YYeT+skx9zRa+p7vq9bZautOxC82F5FaCkfd+iCKyeU6OW0tN08Vu9WQ99FKdutW7tNSmfd4jPzONGZ+Uotp5stq5M+515q+584L89OfGYdFzA.3T3h1opr8JJ+CY3au1xy2bWeJMIHVRz6e1tdWMRYq6M+qx8edbK0ScR968V2oFEzKy+GxvIo2uc2kRb7a8l+U49OOx0irdk08MsqyESDS+2dyuzW0+jgbUd3ySeRS+x5Ap+9keHc2eV1t1zac59bUmzrO+Sss+qx8OlortUs+7uOPa9GY38G8W2RbT04m+2Y6yq8Oj6O1ILlwh2j8az3uzNCs+ZSNLWksOW9qxz+9GvSHInC.voPU1dUI2jlD15OfXUL17StehNSU99Idro2OWV944gIiOzIHnnrtCUtjsIAM01vPwwPq+wLutlJ4v+L69jJT094RsMuKcusx20wLSkf4wDO+ZZth9kjhm530hpL+iwOTGZ8UkswV4DaszwFvAPB5..bJTFHy9G49I+VOv5NTRWk48msedaF+pbOmjEKKecF9pROlMGX41UbTkgGQ06udS02by.KKI4+0Y852u7CCLu9Jw05rLayy05zzG7y492oDcuEu2z94P8K+3A1tqRSx4+eo41Zua7TOQ4J2B4SEu6i84pt2W+9i0oI1GJ1pNh1A3H8WO0A...eS57zjXP2jyqxvIGbVdXhP+y1Oup8yxsob+0qpssF6JfWbUZRL8eLvxdeF94kOY6UE8UCrr2MQ4lJNRt+.D1P+boc+m4gJwxeLRaT5K5W1pzz+8oLskdadt9o7vGigpb+a07xxecd3yM+Pw6bT29466M+eZGkqJO7UWVU1+G6gR46G+CUWa5rrt5Gq+XZ1OdUu42ubUCLO...3qbWj6OPXcYZtBuce1uKid18Gj3Jih30oIYg2jG9pJ6rrcjIuj3Yc1NRfW0Yc6OPzUrN2eTH+rrcDAenAOth2NP4dWFeDV+cY7jEKaG2jsIYV1N522zs9p5EucSlbUt+.DV+1H498+UcJ6XiT4CsMW1urdjssjgec6kL7ffVItqa+4xwLk8um2Fy2j6OvlUmsGe7lzz+T1dGZPhaUu1sp21Q294yx194R8M1sU+Tw6PCra8a+twUY.tqrutNa2e0stNKaecoUdDDJGSzce6E496+pRS+e42g52tUA...dw3h7vjPJIcdWZRZ4ssq2m6UtqSSxJcW+gtUb6eMZdNO...B.IQTPTUmkjz5OXdMVB5IaGYt6GW6x5YTtyx8e+bOl9aG2jsIq1Ot62t8SNOY32A1UY32U308J6XInOTaOm9pKxgmfdUdX+x6aiiq6U1513tD+udf1tNyKA8jGdbwk4gix78MT7ttst5Fuq6EWk1uabcV19Zvqae8k4g6eVkG96Jk1nDq8isxwMuM2+QiPB5vSr+xoN...3aZkjm2j4MHUU2tta1Qcd1LVuwbVacTFPv1mA3s4TtoFH35Zt8MGZ7lr8VX91r6GCfktsOT6peob2Iz+V0+isks+nz+bcV1daquOam66w3SoJaO191rM47edj1sreYt0G....rXded3i0PUF9pz+0tgtB5....vyBUY6su8kY6yp8myKuaUaInCuv3VbG..3knWklay6aRyHZ+Umzn4wQcZtE020HuO...................................................................................7Bwe4TG.vis6t6t6N0w..Kk+xe4u3+6F.3Ep+5oN......jfN..mFmcpC..fmajfN..OUdSR9bRtKI2zN8wjTsvsyuljqW357PbcRd+AV1KOhx9RTUZ5OeyINN.3QkDzA.3ov6RSBm2lj+c6zukj5zjzd0B1Ve+BWeGppj7cmfx90tySxp7v6xhpzruEfWr9am5...fuIrJIaRxO2YdWjlDzuLIuschF+8Sc.bB8pzbBctJMmPmjlicL.IB7hmDzA.3oPUZRHuuqRSRXUCrryamtMIeIMIoMj51xuos9lqR4lp9OqMFJq2mFotNKMIVtqXseYNqccOqSaroy+91dq+qZ+2axC2Vq5rrwZmtpyt296WGk3ot8ygJWoNK6Wq5EqSsesJaux4UsetoyO2sOo+O2sN5Vt98yuJOr+qtcYyceWoLUcpq98yi0uO07mZ+6i01A.vSm6.3EjS8eS8HTdlyqFXYUCL+OjlmU8qaK2co4pp10Yo4pu28YZ+5z7bsuq9pR4lp9Ouyx6944Crdk535N00csaGiYc6571Nkec6xttWYeUuswRaU0aaZnm89K5M+pA1ttKIudhXstS70sLC0uUh8OzYcpx82eMT+dUm0+tNqW2kst216kCDq86GVks6K5F2k9uKy8ay9aO80sLk8IeNMG2MT6V2q70CL+Wmcu+sTeuag1N..d5cp+xz.rjN0+M0ivay1DGtLMIjzOQ2heMOLAlR4e6.q25Nyacm1YLqxCSH888Zypzj3ymy8uhtWjljiNq25c8.kctIneS6+tNaSHqeB5CEK2j6mf5bSPurMT0YdWl6uc0Wc11utpSLbQdXeY2j+Wks8Kk1sty51e+ZUt+9hpNy+XSPu69n21YdWjsa2ksmtwXek0oarTh4CIA8p1e9i4g6e6dGarOaGkSR0TaG..O8N0eYZ3+O16946133Neu+mFjRxx+RPNdlby3YF0J6cDnn8Y1MBJ+CX5Y4y4bCgxe.QR4OfQPy9mHp69wjxSlmcSjzy9DBsz2wj.xd8DBeN2LY9QhIrikosHQW2EcUtKTna.PP.BPp2uNGb.QipptppaXquc0U0.SRy5+apGQ0T+ix2Np2f6JqhCrMbDJCCP0wsOJRc626eABhs4qpWc0Mxu9b0uaEjtUCRWUM5Aneub9tv.zcAvEle+zLpAn+Pk124aEa9iKntVU42dJq9ON3t3DwAoqn9iMU5EevodN4OVG8.zCWiCbOQA72OUKHsNCpc3tnDg62pAoqZv1qXKuvKX0FETdSh1A.lSwbPG...GW1PYixWUkFT3p1scQkNJjtfTJqdCFyss3f2eRN6mmpAOxgMT5s+6Cs+8iU5b10eAr68ruWKm72QRWw92t56iyYeDN2nKRXdySCkED8iTZar9HV9gdhsr1wtuej2qgILMcr0spAaug5cNP6G7Y8bJ2Jp2439zPqfO6lu+s81l6uK5NIv0NdZNe2ikz0Fy50MT17J+R18y0T9WvjIQ6..yoH.c...LsUVoAbz19pixBHrtRGAv6ndeteGq7CtngWYJk+Bg0vBxqgRWkzqqz.KqY29FR51A4Ou.tZIouHndj29bTC1r8Hjlqqz54pJqepsRquiRf09VSo0s2yVd2z940jzcGRd+hB11vBDL19dEkePmMFR9mWLni2Gkxbc0+hL3z7hU.f4TDfN...l1pnzQ981p2fvkRCD4wJMPwXkETx8U9q5694yU1gFkQMrsxBLuhRuUfqIoOSoAt+E15x06Km8xUeiU9ql4SRanr6.gUT5E0XcM7QqOumm5txRJ8hTbSk1tehFbvxw4rsKMj8uT1n9NriqGVG2iPb6AreG0ma8g48lJ8340Uu88anhWmF.voTkl0U....bpWKkMhs44ZJaz0GTZc2V5RYivXdivcQ6Gmv4fcKk8bZ2EPziT1shuuXk8baWJKfpZAoK7yGEUTuym3NJM3s6pra2eozKtPY0e.fgA4ENmwanzKdhzvWTwBmq8w17DdaWGpsJ93k6BMbX0Q8eACh0zMn11J+yOiU+8c9W7FeqD74JJapB3abtc4AvIbDfN...l15HoGnz.Xdn88Jp2ElrG3k96prQHVJMfS2H79zfz4u.aEqQKPuGaKy6nr.ZuoM+t.MejRCFyew6pr2meTP5toxtK.ppI6i3J2s77M8pKwJ6VSusWcorRWz4b8G9qL3NtiEt.9cseodWr1xSUk11hU1wSor.7KRGkd7pVN625J8hK3z19tajkKxST1wwJA0mokNJ8t.np29MV4edWCa5uixVQ5ui5+hb7Tk1Nb8KwJ8XHyeb..b5yrdEWF.XRZV+eS8HptxVgucu1U4uRSWOHcF0+sGedoaCusMHqkS4GFLarxeUmuZPYEGzt1U89r2tHt5YbNeW3p3d39vseBCfst5uOaC06pAdYk8nBaXGGbppdeNnOn7sixe0UOu5m6QLmuxJ6wDl63Xr292W3ww7Zu0T9ql5gq16CZ+DZT1uRYKFetzsYN0m7Nd3tKMLJ6bxoQ6..yYhl0U.fosSA+CZA.9NQQQmF9+cWQYqX2C5Vitrxt8eaqhmmytz0Z.oYP4SCIuwJa9wOn5qqrZeHqGGFiRem61deX0iXk0tFVZqpz.Aug5ctQOr7UT8aTNt5R6vJ+Qs8NoEdd2FJ81R+x4jV+16fJuXwBDGvKzNM7+jGXfH.c.bZxoj.zwIOUUuAni9sgJN.c.fQByAc......f4.bU3wodLB5.3zDFAcLiTVoym5FZzdts+hnpJse5QCIc..Eh+m73TOBPG.mlP.5...mdws3N...No4gZ7dtYeZyNp2U196o9WMumztoceDOgKW2pc9z7YX9K5pp96i2T7aIf4JDfN...NowsZWOMEqzGqUiy9orMuS6fMikzE797E0zueYZsObGS4Y+8zUr5+QIX7rnh.f7Q.5....8KVoirX0wHuks4M7YT9zVMM8m9h0s6i1S3xcCa41XBWtXvtrjt9rtR.fLKNqq....3TuXk9bcNumsywdaubAoaP42kuxJMnQ2hYl64Dd6Qrr72drxFkQ+mM096OWv2sUuAUFqrQjLu7JkFzua+0Hm5RdJqrKVPdsKWZJmy24Wec6uv95XuO6pesU+ALWz9vkmh52GVZxqbCqSkCxmqckW8rHG15vf1dEkcWRzHmuOr9Ga2mE87qOVYGiyq77qGtz1VE218+sPQowuN5mupd6q7x6f9MfOWezfNu...uHw..bJxr9+l5XZWkNWWCUSRFIspRCHvX2lu3b19lAkmqbtmcesi8yFIcmbJq54TW72te9cuhse2p18g+9weNYuYN4sp29eGu75deX2J7Uro0subsKi5c9Cugca9toW8vUucaqlW51Qoys+v5+lp2aI55p29ixd4w0lxqeuYNo4Vdool5suxUm1zKutWqFztBOFjmX06wqAUGBKm7paqmSYcuf8mQoGSboIuz4bOuxamBRmqrbG6GTa2OMtyyb8Y9sCWeri6bsvyu8OGcX+FvYX8Q..3EQy5+wz..SRy5+apio5J+.ednR+GtKMYBPeG0avvt.6721nDfdrWYdK0avnt.YK6kV+K.gazGMJcAbKVYi74N15je.uaXyeQy8ZW9JpsMn.zise1ee5VL1xK.cWc1k15p+9K21hsetl8y9AvsVv1VS8e72cr2subkSUuz3pSt8erss3BLrZPd8Wv7BswgnN3ml7paqn9Ctutx+bsh5+72lKX5ZdaaEacyOct1PSu5nKc9+dnp5+hq3ebupWZCCP2ctVQme6RyC89rKM9Od4bsI+80sT+8a.H.yAc...Lssg88ZdaycKx9nvDeDTWY2psskzMr+8gctf2VY2JtcTu2R0Mjz8U1sDbaI8.kELZmbxaGacH1Vm7uchuUv6gb4qt5ssc6QncT29966sOejs9lm115gKs0s+8fFge2201aaaXqqtf7tj5+1n99J8VdNd.ksqbq68222Vt2WY8GaXKq2a.kyETuGajR6GZohu3HEI19t+sp9Z15SbPZan9CPukRGMamZJsMrg21bGm7Smy6qr1wijziUuGib4w+bsAcb2maZD3e988C99XI8Ydaqssr20aa0U14ANqYqG92cE.H.yAc...Ls0Vo+C0ul21bAMOJAMLpdZvmcy40q0eRGKsUZPOtKtvkT1brcXA4U099JJ+KXPQAA61dXaqgF9bW+RJ+48aQAIElN21tPNa2urtoRGU2FJMXwFp2EdrGqz1bS6e+HaZZLfx0Irc6pigyi6NZvGCdhxFEYWcv85vpgc+stxZysT9K1ZOofsUQYAyGqrKBiuKo7WGCZq9421iU9yg8v9r7zPo8Sapz9lmFTubym8aJoqXSySTuWfopd0I+75WWiyo9A.wHnC..fiGOVYKTVRoi1YaMYW0tyKf0gE31gkadtutxti.FVfx9tVNuFzhmkqtmWvUCa+FeHpWEYX6iFRZIkE.r61F2etFugRuvFsT57WdSaZFkQRc2gmjQxZGg5PnVJqMWUos4cT54Dix4Z98o92J4gmW3tiMNrm+VT5GkySeekcmmrlR6m1Q8dQkboorMMMU9qkBUTwsoCyuY.dgBifN...NNrgRCZqlR+G0uh58VmsHGlfShU9qj1CajCG08QMkNRg2V8NemWSC+wwlKfjC6izJW9hU9ssAosxej4GV9NrZorKVQEk1GcKkdaP65m1PY2B2UU5HvV2l2GOgqOEon5vSzg+BE0V81lqYKuOS8Npw4ctUr88va4+05Oois3glhhsg8k6NE4NJ6tEvMUExKMapzGaasskycUu219.XDvHnC..fiCtaM1qorQiyOfj112iCx2fl+ygplymKqraSZ293RAoKua47AU9gARckQHutak5pAaOVoA1bKkOW9pEr8vOmmmnz1eXYu5Hj2Qkazic7CV20u3Vb7bZnr4P+RSv5xfDtXn4WGpFj1vimge+FJcwNy+ta3VJ+oSQdmabMks1DzVEO+4cA8dXGA8GqzyqB+sSsgjuX06h3lKP76ZqCtoyg+BZmKMOP89Xfqix+7LWaxeeFOj5EvKTH.c...bb49JajKCustaqrEOqpJ8eztaj4FU2TYq55UU5n90Q8FPcCa4tpW5Fz7wdU06yDZYSuKXj6o9CDpsc+9ddskFJs8stW5KaKqpp34BcCa4cyQnNGZMadumc+dSkFbT7Hj2Q0Sskmeehqt0v9taQzyE3WYksPl4Gb+zjaJVjWcvcwCdjxNewMGwum5OPS2wp6nrUo+pJ+6xgJ1z4Ju0U+y2b2uKb8gRomiVWYmKcXrg88G5secm+LHsU14ZUsaykW+uuixZSx99pdeuTZP8UUusI2crf+5JP3ENA..m1MqejHA.LIMq+uodDUVYOOjyKXgJp2mA4t49Z3ifpMU9Ol0VMH+6p7Gw5vz3xe8fztlW5pZq+a3sM2ixJW9i8x6s7RiqtGqzfl7y+tZ3if+fpyq6kNWcKLuanr4Ibck8X3xeTaKJPov955p+1pe+j6k+EEIu9svGgXt1S0f5je6Sd08pAa2MWoKRQ0gv6tfZp29Z+iu96y5p+1r+ncGqr9A+8ad6SW44uec40ezyckSn719JAkWyBZGgG2iyod3NeyI72oteqFdgppq96iBu6Sb4E.VQy5J.vz1of+As..emnnnWD9+cWQ8+HwZPpoz.4ttRG0VWfBCZtm6RSaM7Qnrr5eg8JdLyqT1s0amgTGCcXpytzWQYiLryJJ8BE35ulDb2BzR89X5Juz3N1dXGY3IgQsNLJmCNn1brRC77tJMP0X06s+cQpVP4MtppdGY6QUEkctaQmiNJoYd3XNvIJuH7+jGufi.zAvoIufDf9gUM0a.5HUUkN5nqor4acYkcKce4YPc5EEwp2.zA.FIrJtC...b5TCkN+lukRG071JaDeOrql7..3X.WEdbpGifN.NMgQPOWwJczhanC+sx6KBpnzUN7Kpz9mva4cL4UVoWTjV5vMMF.vK33+ION0i.zAvoIDfN..voW7XVC......XN.AnC......LGf.zA......lCP.5.......yAH.c......f4.DfN......vbfEm0U..zuuYu8zyd1yzy+1uUe629sxjjHIonRkz4N24zKc9yqW60ecs3hmN+IbRRhd929s5O8keod9yet1e+8+t9fydtyoEWbQ8xuxqny+xu7o59f+zW9k5a1aO8se62ptGbfjROG3Lm4L5rm8r5Ud0WUu7q7Jy3Z5zy2r2dZu81Seyd6o82e+d5CN24NmN64NmdkW4UzKc9yOiqo....SF7rTEm5cR54f92r2dZ2O+y02r2diT5eoyed8m88+9mpBRc2O+y0Wzoy2EP9v7pu1qoK989dmZ5CRRRze7O7Gzy9puZj5CVXwE0Eei2Pu1q+5GC0tiGG1eGbZrOXP34fN..voW7+jGm5cRH.cWPYe0W9kiU9K+Fugt3a7FS3Z0wqC1ee8e9e7enm+se6gNumVBP6O8keo9i+g+vHewI7svhKp+h+x+xS7Wnh+3e3OnurSmwJuu5q8Z568m8moRkNcO6sH.c..fSu3+ION0adO.8C1ee8u+69ce2su635rm6b5G7Vu0IxfSd929s5e+286Fq.S8cR9BUr6m+4pym+4GoxHpTI8W7VukN64N2DpVc7IIIQ+m+9e+HOp4E4zxEpXPH.c..fSuN48ujG3TjjjjIRv4RoA49e96+8SfZ0wK2En3nFbtjTmO+y0tGwfbmElDAmKIYrmOMN2EByZShfykj5dvA5e++y+GkLANeB...33FAnCLC8G+C+gIRv4Neyd6o+3e3OLwJuosIYv4NcNDyc44Aeyd6MQBN2wjjn+ie+u+DU.pGl4a9nn6AGn+3+8+8Dq7....NtP.5.yHe0W9ki8bNeP9xNcNwLBp6t6tSzKPgy+0+4+4DuLmVlF00tGbvIl6jfC1e+I5Env4q9S+oSTWnF....IBPGXl4ymhAPcRXTzOX+8mJWfBoz.T+SSoxdR5q9xubpbAJjRuPMmDFE8c2c2oWYeB4hT....3P.5.y.eyd6M0BLyU9y6Am8EewWLUK+u5O8mlpk+jvztO3KFyUC8iKSyKRiT5uCXTzA..vIIDfNvLvyd1yl56i48QPdZG3z2r2d5fo3EA4n5f82epOUDdQ+b.oimeqA...LoP.5.y.GGyQ7444gdRRxwR8au43QO8ae9ym56itGbvb8cRwwQvyyy+N....HDAnCLC7sGGAneLD.3353JnoC1e+ik8y3f9.crbwCNN9sFNRJOqq....ySH.cfYfI4iUrhzsa2o99Xd27bvoGW0s44QPe+ig9fiieqgCsUjzlRxHocsuuojhmg0IjdLXcuOeSIsixNtDa+7MOVqUGNwZzqiOTos4gUdOzVlqcTpXGQ2S8VWqpz5TkYRs4vKVi24NgmSB7BgEm0U..fokRKrvrtJ.fdcGIUWRcjz8suGKo2So+C3eeI8nYTcaZopRaiaLF4M1l+Goz9poo3fOewb1Vrc6yyh0nUGKqgeQgpqzKnzckTiiPc5npniEmjtCTh0g+bm3Ie0.X9GAnCLCrvhKNUWE2kjNyYNyTs7OJJU534l243Z+LNVbN93ywkEVXgo9uChliOG3EP0TZ.Osjz0UuAbFKolJczxZnoevnGmpIoU03Gf95RpsN9CPrt80IIskTzDr7tjROes9DrLGG0lw6+ip1ZxdbA3TMBPGXF3Lm4LS8.SVbw42edebEb5YO24NV1OiiybLc7YdtO3rm8rS84h+4lia+u.ZU66uu5O.71JcD0uiRGwxM79txJcTjKayWibxercac7RaakFbUnx18ga+1nf5aE6qN1xocAoK1tOksrZG7cWv6uUv26WWZETeiU1HjFae016yt1aXcwe6kUVeQYuuusFN+7lmp1xKrdGVepZ+6F4TVg0uJ1xxu9OJGqB2m4023puiR43pWEUlCqdE68cix1GV4MniEt7Vz4owZzNWYTpG4su8O9shx9c2zX+A7BAFZAfYfW57m+Tw9XbUpToik527bvYu7q9pS88wYO24lquKBNNt3Ayy+N3ELtfranhC3aCkdqD6+8qpza88Gpzf2enRGo8UBxqaNBuiRm2ptzcufz4Ju6YKuMUuyyZGW9uiRGA6cr+cn64Ud9+sT17t0UWc0Mm6nz4f+crub2AAt.CcsC4UGb0S+8iuMC19sT1b+cG69nZN4KOt7FGr8XkcL4dJ+9Yor9CW6Ku57Z157MUZewlJadU65eb8sEcrJu51sxYat9lv9n7rhMOUs0G+5tqtFdNje.8qq7me64sc2wl0Uwsy0xIexqt49sQdmmVz4JgaeEMZ+1vm6bD2wJW6qo5c9wGq9Ot3e7sn9QfWHM+9ubC3TryeLDzv4e4WdpuONJl1AN8Rm+7y02EAGGWjhW+BWX3IZF50d8WepeKn+Zu9qOUKeLxhsu+zAjl1J8VItgWd1vt8K68piRCDHV8ZUI8.kNOWiT5HxeKkEPZYa48HaZbkWY0afC2ylmqa+9KJoaaqagAXbKkdQEtn80csaqtW81Mm5ursLkxtc+usW8XIkFjjK.qqKoaX+6UroosFOqoz9iqqi9b72ueNrM635atgxZeuuxZ29Ja21cs0uVdo69J6Xv0socXKragtmROW4FJ6biKpAu.q8H69skROe7xJ8XUrx5KGz4PipJ1xqgx5OWxVdixhi18TZ+pqdzPo8aUGi5x8T5uO8+s1nVOpoz5cjW9FzEAI1VOWSY8iW2t8woeD3TEBPGXF3kN+4mpAm8pu1qMWGbpjzEJWdpFb1q9Zu1TqrmTt3a7FS0xed+hzTpTI8JSw6jf48KRyKXbiJ1gYtkW2996qr.Saqz.sxKfnFJaAnyO+tQv1UG9Bu7zVoAadAuzbKkFfVCuz4BhxeUntl29zuN2RY2N+s81es8ZG2QROV8txf2RoA9USY21vtz+EZ7CNWJ6BLzPG842eC0eats5uuYC06TU3QJsuNbk710m6W+tosLukW8sgR6eh0nG.ZrxlxD90kgEDnaZ.312t+N1VN9G2Zaqau2HVm74tXL21ae0Ro8SU0vWjz1PYmm1Vo+VQZ7BxMVoifsea99ZzNu6FJaZNzVY0+hFMb21+Lus0Pm9VfHAFK7ubAXF4huwane+u62McJ6u22apTtSRkJURWnbY04y+7IdYuvhKdhXjScWnluYu8l3k8Eei23DQvoW7hWTO6q9poxiCs+ru+2ehWlXr4O2cGUWR8Fjpiad1dsfsGlN297BdeeCkF72UTZv.OQ8FLi+npVOm5TrxlK2wJMPjPtQ5sHt72Nm8wU799VZxowDrrdRNa6wJseMV81+TOHcWR819c76GKqziCONm8yFJMn1pZzZStimgA90wl+AMJ54og8UYkdQHhUZa5vVNNUU9S6i5J8h.LrKlR34ecT54MWYLpKMTVax8ai5iXdamS8PJaciHuz2Voix9071eueNoE3ENy++q2.Nk5kN+40qWtr9xNG0AynWmTBLSJcTz+5m8rI9BE1ewe4e4Ds7ll9du4ap+8e2uahFf5BKtnJOkGc9IkEOyYza7Fug9i+g+vDsbOI86fWPz199fBbHVoArzx9JVCN.kwYtpdCkNhpqprQAssRCLvOf3JJ+QurwHru6nQqdmW46uOljljA62NmskW6Mtf72PC+BXHM357kFv2kWY8E47c4ssgIVo2x2UUuKXgcz3c9XQ4YXmCMHiac48U9+131ZxOx1cT5Ex5VJM.8Mrauk58NlA3ER7udAXF568luod929sSrQP8BkKehIvLozQQ+6++3+g92+c+tI1pZ+26MeySTAlc1ycN8lu4ap+6+q+qIR4svhKdh5BTHI85kKqm+7mq+zW9kSjx6rm6bmn9cvKH7GwxhFUspJM3mZJaUfdP2hriSPmsUZvGqorKHfaA1xM+1kRu0d2XHkiqdDZEkMe2yiae7XM4muswS3xKO4MZwt8q+w06qduUvGUtxHufvy6VidTDmy1F0f78UWYqOAM719C03MJ5sU9mCEa2OORCNP87VnQJ52WCSGkMU.Jqr0Cgo0i9v1J67+Xk1dumc+c8byAvKHXNnCLi88+A+fIx7Q+0d8WWuwa9lSfZzwqEOyYzewa8VZgIPP0eu27M0qWdbF3fYqW80ec88l.G6bAmeR5BT37l+4+4Sjicuz4Ou9Au0aMApQXJ3AJ8e3edqF5wda2cKT+Xk+7MtpsbFzBNWdVQRFkMWgaqzfQb6mXkMWiCu84kxBjWdoKu6Hf6o9mm09bWrh7x6JJcQPK7GCgAh4lOz9F2ay5Cq7p2WSY8IsU5EOIu4jsa05dX2ABMT1E5vmqLaLh0U2H+tZv1i03sPp4l1Eg6+v9d2EWxu96t0988Dk+cqQcMZKNaqD74Xk8npyutDV9g02JJ82Ft.lcAqeeke8eBz34B..f.PRDEDU9nplc+U0941J62hUyI8NwSg5BvbGBPGXFqToR5G7Vu0XufgEUpj9du4ap27O+OeBWyN93BR+kekWYrx+BKtn9Au0achL3bmWubY8V+U+Ui8Ep3kN+4OwFbty26MeyizBm2EJWV+f25slqezx8BtMTZP52RYOpzppzfY2To+CuuqxFcZ2bv0cKEKkMJ6s0gezYaXKu5JK.kJJMnu1JK.y6pz.HbWvfx15Xc06EE3tJaD3iU1JWcr5eweSJatSmWdk5ss4FsR260TuK5VtEgqaorfMcW7fosJJsd6Brzsh5W2KM2WYsOWcdEk0GNrQi8tJaED2cWW3NFzPid.5cBpKw1xab6qdp5ckFOV89nwy4wJqNWw9Juz4NG2MB7t7rpR+8xv5mVQ8dNfaEt+tdoonyU7K6VJag9y+2Fqp7WGHNpbW3D2uWjsdcMM36LlvG2f.mJw+JFf4Dkei2P+UW5R5UGwE2rnRkzq9Zul9K+q+qOQGXpyhm4L56+C9A5O6O+OejCRMpTIcw23Mze4e8e8ohm20m8bmS+0ww5huwaLx8AtQL9G7Vu0I5fycNr+NPJsO3s9q9qNQdGj7BnZJM3gXkFjvlJMHkxJakF2oiRezMIa5L12aqwadp5l2qkU5EHvXeWp2Emp0r0w51zrqxdjeUOmzcKkFzvt112sUuKdWanzfNpqrQEsgMc0r4001ba2okc+5FYcWvS0UZPNtm03OTi9Jt8Q0CT5zAnoxdNumWa1cgN1UosOWcr9HrOZXKyJ18ytJakz+vtPhU2V2pqrmE7OVi2b82UGtmRaS6nz4xt6BJ3rgxZqMsu9L0+BeWKk8TIvuc9H064AE4VJ64nt6NS3Fp2yCp6Um8OWIL3eW+p+uMhsaeRe6s2wVtkUum+2VrPwAnnYcE.XZyXLlYcc3v5f82Weyd6om8rmojjDs+96KIoEVXAc1ydVc9yed8xu5qdpdjBe929s5YO6Y5a1aOkjjntc6JIoyctyoEOyYzq7JuxohfxGju9YOS6s2d54e629cmCHk1Gbtycto9iquYM2uC16a9Fcv9622uCN64NmdsW+0OU+6f7DEEcZ4+2cU66s0vCrzM5hiRZGEiR4U1lN2sscQAobXRmx46qZeu0.xqK+geu61OdP62okXk0GNn8cU66Cq8MsxuSrFs56nXT62OLGebmSNNsS2EtYP6mQst3pGczjcwEbX6u1hEGN.IQ.53E.mDCPG.nHmhBPG...AdwZXG.......lSQ.5.......yAH.c......f4.DfN...NNTUoqXy6nrGSUEYcuzFOAqCw1xbPOmxcbqx7Cqrx648cdk0n7bsdRysBeGa+brF81O52vNm..3Hi.zA..vwkXk8rddPool883oTc3hiP5bq50GWk0zvEyY+FqdqywJs+9j+yqyouY0wwipXk8aJ.Lmi.zA..vwoGoz.EpVv2619FS+px.cck9799zj1J8I3ScusUUoitek9SNBbR8bhXkdLt5rsZ.fQwhy5J....dgRCIsh8Uib99apzm+xe1.JipJMnC2yp41AeeYk8rU18bJOumoytxoUNeer88vxNOkskUYk1lFk73u+Kpc39tNJsMTwllFCo7FTZ7KyXIcAus6x63Vm862UNa2seCqGtiQM7R+J1+Nu1Rr22k29Ib6CpNGJrLbW3hVCX+NnxeX8IGk5peYUT+Urxt6H7eVnC..LaX..NEYV+eS8HnpjLJ8VscCIsq5+1pN1llUU5n7ZTu2VtwJcN.ar4eW6eeufxYCkMWqcoopW4699AUFaZSSQbkUcuxxXecmbJK+4tbYu1gedCy2NJadOa7d0T822st5seYGusEmSc1U9lfWtzlW60uuOu1ZUk0Wqb1dsf11lJse2eeWMnM35i7qWEcrYifsGqr9W+94UKnM5WWW0a+6N1Eteyq72Mn7qq76Wqky1GkyIBcSkcLwu+xc9Q34NC5XL.lCvs3N...NtsgxF0TetEOtmTP9tmRCf55JcdTeQIcWa9pGj1x1scea58Gg7UkzCFgxXTbGa9unRu8wefsbFTPfq40NtrMu22luv9jUjzS8J+6ZSi+Bs2cTZ.e22q7df5Mf37bcIcau8ykUwitZXeueas5P1OEopc+dCa41VoWTg115h6UYMdKxd0s4cIk0uzPo8+CaN2ugMsuux5iFV4eYkdd1nT9gpoz9iZp+yIpVPdhs6qMro2u+ptMMuuR6ekscLniw.XN.AnC..fiaMT5sva3nC9dp3aQ7JJMXtMTu2Bu0seNbgmqrxB51s+72+0CJiNZvAUWjMTuyW9aYKqZCHOsUZf1M711Z12CCPusWYJkVWaGjtZEjN+xun5gK8egJNvsh56cWjfwoey45AkabP8psRCTsiN7b299s8118UZPzCK.5VJMv1Go7mdDRRWxVubkeGux+vJ199S811ZZvGCiUZe2c81VaadbOcABqesE.lqwbPG...yBOPoAU6laxUUZ.G0KH8t.RePNe2Sr4Obtl+3BJq7Fg9Gqz.Mc0mQ0SC9bGuxpH0suWw60kraKNHssyI+sUVvmt4U78yIct9kiJWYD122QGsEMs7li0MT5ECXSkFb7S03cmMHk19WQo2x2O1VdtWCSdmmE5wJ8NKXbJ+PMT5Er5g1+9wJs+45CIOMT54.0T54AWRrf+AbhFifN...lEbAwTy6cWvs4Id.kUa66giJZQAZ2d.a6vdqIONir6JJcNC2ToAkcAkNB1iCW8Mu5Q6wrLKZejm1Gg8Sd04qqraI60T179dkbR6vrlsrZozKXxlJseeXyq6hpaEU9s8J+cFwxOTCkdwNbWTkGpr0Qfh5+cqkA6pzKTvUND0c.Lmh.zA..vrPC06sh60TZP6CKn5Kjy2EaeeTCLIuQXbbCtIufmtTNayO8qqz1tadCeCM9iRrq9l29LdLKyPssumWe+Jp+QoOuzcXrgxlq6tf0GTfpCZ+tgRmG1WzVlMzQadymW46pqt05fQo7yqszVYyA8kT15HvsxIsR8tVFbQkMeyaOR0b.LWh.zA..vrhazBWQoASNnaq3F12yajTWUoAkLpy82qD7Y2BVWKc3CP+8B9brRaSMJH8w182iC1WUOj6WmNJsduh5OnuCybCePAU2v9dXeerRGoW21csmva68qMh0gJJcUF2EPZGkMGqcGijReD7UV82dCuvK6pdW87anrE7spiXcZP1U8t300PYyGbWcw0mDGj2v9jGZKOmVJasEnnaY8Ko7eLzMp2h6w4Tu.vLFAnC..fYE2Bilak6tw.RaakMhh2QYy856oAO20ySEaYTwl20U1Jh8gUUaYEaKuGZ29FEj91JMnsaprf0ckw3dqI+.kMx7t1jqeYXbWTiZJ6Y4dn1p2Qy0Errqs552byo7apr0TfapguZx6WWb42EjoqLbWHBoz6zhxJsM5eLLrt+.a8vEveYksXB1bDqSCq9VSYWHjxd+sqttg8c+558T+WriGayu6baWYEqhuvSO098t1Wrxuens8c2wE226tk7iKn7A..l7l0OyhA.ljl0+2TOBpp9eVXKk8bZN7wnUc0+yr4xJMfG+moy6p9uEfcoITrc6qozfKGTYTzyZ6vxptRC1aXkk+H45V3x7ySM617uHA6DjuhJOor9K2qMskkeenec12ZZ3OirKpuOLPyJAsM27GO7XeQssX0+ym871O0CRyZp+mC5i54K9plSc0I7bhX064QEU90BZSap7O+NrMYrk+flC5g6+0r6+vy+8K6p1s4pSwB.yMhl0U.fosS3+CZA.5QTTD++tyFA2Np2GIWGVw1x5nTFNtQ78vTV9sgIAW+R6wrLKqgW2866GzTJ3n11p3UeJZ+3tKJZqAWuisuNpmubTK+QoOw+V4eTmxEiZ+fKsS51O.lf3+ION0i.zAvoIDfN..voWLGzA......lCP.5.......yAH.c......f4.DfN......vb.BPG......XN.AnC......LGf.zA......lCP.5.......yAH.c......f4.DfN......vb.BPG......XN.AnC......LGf.zA......lCP.5.......yAH.c......f4.DfN......vb.BPG......XN.AnC......LGf.zA......lCP.5.......yAH.c......f4.DfN...NNTUR6Ho2aFWOvr28jzldetpRO2nxLo1jucjzZy5JwHXSIs9rtR.fIGBPG...GWhkzEm0UhojxRplRaiXvtn5ueJVo8gyKhkzEFy7VSoWzgiCwhy4.NUg.zA...N5JqzQxr5LtdbRTCIEYeedQjjtwXl20kzpSv5B.dAxhy5J....PNppzQFrijZIo1iY5Jae0VYi1XauzUVRqX+61p3fDGT5bkqKct8QQF19LVosmN4rcWd7KqJp39.+1ua+dT6S8qeU8J+VCo7Zq76e8qig6mp1+tUAkeE6qCSapg5uuMjKstzkW+Xa0a6wkF2eGVFg0ig02Fae41G9GqKp+nn9x71taeIa4VNnNEaqus070EOA.....GQUkjQo29uCyl1ztij10922IHMwdoaWuzcufzsgsbtiWZb0g63k+cr+8CU+2p02zae3RWSkEvrqd3+pZAssUyor1Q8daJui5cNZ6ro86bhUVej+69665Jq+yeetq5eTdiUu0IW5WIHcFk0u52lC66iU+Gi1To8w9sipp+9L2wlc71Ogk+5p+ySxqNjWezvlu6F06b6ttx5G8ay9k0Fp+yCp4UOZFTey6XfQoy8c+eC32Nb8kt1Z34Jt5YbP4l21y633t11Sdsy4oof......NBppQK.8Z1z4GTXc0e.bajS44RW8fz4BFptxFw2Z4j1Xa5dXN0mvz4GXTYk09tkF77odmfx2sOWOHMiR.5tO61WwJMHvc8RSc0+ETvU+2U8egABuXAqo7Cry0mTNHcU8R2Fp+9NW5FT.5tOeKuzbK61bAzVKmzjWcXGk118OdrgRa6CJfyhBP2u+ohxtnCRYiZtQROR8ddPd8stxzu95BRtoR+MfK3+cBRarx5eOJAn62GFqduHFtz556qK.....bpPUMZAneK0+nfVV8FfPr5O.JmMUuAesg5MvNmlJ+ffqaSuK+gAE6WO8C3wUmpkSZUPZBWcvWSiW.5tfO8UylNW8utxu8WU81mthxej+Kqz9S+5bXPgtz421beNuiQt..CqKt8cM6mCWw+2TY8ut9e+QBONHM0xIMt5l6B1TjhBPuZP5bWT.+f8CyaUke6Qp+KNS3EAvO+g8kt1wQI.8viit1S34K6pzK5..lxXNnC..f4It.7p38Jb0z1Ev0CxI+OVYyy2VAaOrLZn9CRK1990r4ohRmCtgoyEPVUkdQ.FEss6yaJoqnz.ddh5cTfOLdfRuUj2w92Mr0k7pOOI3yMT57O10W5dup5OHzNJs+v2SyIMRYGqpTP5jR6WCKOeORoWjlMr+cCkV+utWZZXe+g1+9wJ83seZpZeeE0+souec7vnQvm8mi5EMu1c0iqKokxI+UC11SU+yUbo9OeuiF7ZcvnH73SqB1dGM9qp8.3Pf.zA..v7jJJMnqXksvi8YAoYP2ZxcJHM9AO4eKgmmFR5K7RarxOfxF5vGfzMTZ.Y2TYWLh1R58UwKxZEotMuqpz.0ui8yaHo6Fj17pm9AcEaeOu1Y6bx+vVj0b8wCKc4oiRCjstR6qpY29ijzsU14EWNmzrgMM9627ZS4s.sMsckb1Va0e8X2fOGOfxbb5eGk7eTKW.LlH.c...LOwM+run5MHgalSZyaD8hsuOn.LbqR1OVCezqaqz.wG2G4V4UdaXeUVoir6cT5sZ737Lh2UVRoApdOkFz5ST+qz7sCxarxFozVJMP+2WSlfyb6q7tXJixHw1V8t.qUSo8SQp2U.eWZpnzik0T5EzotxZG9ip9rfqdbCMdWT.WdxqeaPibO.NAhmC5...XdQr80CT+OZp74lKr4caKupF7i7KGW.ogVQoAK6t8mehcagAZFlNmAM59t44cM6m6nzfqefxFodWcKrbiU+8Cgym8FJajyiCRasB9r6Bhzpfz4RS8b19fzVosuv4ccrF9yJ9v40ca69ukxFE5MTuizbKkV2aqrQL2cdR39KVoG6F2oVvgkquMuyWen5eMWHTiBxer5+7jNdemu7F8d.....7BppJ6wXV8bd4BVJ7wfUUksxR6GLpKHt6nrfaumxeUb2Lf5y5JKXF29xegyphxVY2CSm+BclaQQqoxlC7gbKpW9suJ4TV08ZaUrkm+inKG2BhmKH3xJ6QOla+6JK2izq3f5ue8zsHz4Wdt9T+.AKZE8tnEVMW6H1qNOnEIN2mCO13W907J6Xacc0bpCMUu8240GkmhZKgba2urbmuV0a64crx025eghJZg0aS0a6spxVY28Oe0+7PWeta+j2hDW8f8SsbRmqMEtfxA....fSnpp9eFQ6+xEvlKfU212UoAu2T8G3xZAkgKs91P4GXkT5HR5uubA6j2nkmW5hCRWcuuuVA6yv1mqsGNRngss0T9OGz2TCtOvUmBaC4sOKq9eVduaNskQM.8hZGanAGftqduqFbed8fuOuiewJ8hqD1lxazrGTawsuB41te8plx5qqa2VQ8sgmuVT.5kCZGt7to5Ov4aodOVuYA0SBPG.....iD2n+MLkUZfcUzfu8xGjpJ64i9vpSUGg50nTOFkxprFs1UrJtOnt5MfqQoe0u7lDbGiFmiOU0f6mJqQ63WrlrsoQQd0G+5w3zeDeHx6n9aH......bLntF9syM..lSvhDG......vbfEl0U.....L0zQRejRWIw+lYbcA..............X9zMU+qJ76nde1k+PM+u5cuoxekOOjq8FOhoamgjtoI2ptu+hZ2Np2G0fy6F0iK9BOmD3ENKNqq.....mxDqzUp6FRp8Xj+Z170XhTaJ1EU+AqFa2tS4bRy7l3QLc40dCUUoAA+HI83wtFcz452CejwcgYQkYLEOF4YTNFA.....LxppA+rPeXJ5Yg8jVcU7yHdmvm85mjUWCeEs2kliyGGaipiqyKlkpqgeNIvoZLB5...33TrRCfUZvivbUaZ6nzE3rvzEaeusRClphJdTmcOOwGT44R2Jdkadk0vRWrxF0S2nf5uu7elfGl2x4j2N1Wwd6uv5RYusG9YWflsJnsDxeeFppxZOMx46c6+A0G5W+7ais899p126Xyed0kQoN6NuniRGQ7gIVEeraX0qv98gscodOGeTKuv71V82GGaeeTqK90ih9sQXY3pqUsuWzuQCOtLNGeA....vTv5Jczw109xHo6EjlXkNpsFuzXjzcBRmajcW2KMF0+bLN1tsc8deWIsZP4cSu84NETVtzsq22GlN217e49tU71+4k2MxIu0BZugb4wop8yq5sOJZTWqGj2X0+H+62O6ebKu9lUGR6S1x1nr4Xse8qhxuucEMX6n9mm72S8dtl+4Jg0aor1d34RtuK7bnv4Gd8BJ6Z1sWMXe429xqclW9L114lp2iEapduU3G0yUBqGtx6V4jWmpJ62s9+9LueiFdbwc7M77i75GA....vTzcT5+v65daqt5Of.WfBUGR5bAw6Gbxsrayegz5gp2fDKKol18gSsbpawp+.Lhsoqo29L1VVa58YW4cKu8qKcaDj2l18iajIc6iGodGQ2Ca.5t.eWQ4GPpznGftQo8it5h6BMjWeyZAsucrsQmZJKv407pewJKvsXu72TC+VNO73jae3WWbmaTT.5t82ZJKvXW51of5k+wi5ET1t5R0f56NdayUd65UeyKet5e8b1u9aaTOWYC69zuN+vf5Qnpd0C2ETvU+MA4K73h+45t7Ed9Q8f5H.....lBBCnywOPmpJazeC4Bb2wE3XbP5BCNYS0a..RoA+3GXeQAzTS8Fb3FErOqGjtpp+.ccA9El27RqK3ZeG1.zyquNTcM5AnGWPdq5UO1U8qZP5po7aet9mv.wc0oAs5kWTffgJps3qdNowcgN7UKHc4kO+zUM3ygmiWU8dQnBymTuipuuMUuAUOpmq3BF22J17GmS98qmgG+baul21BOtD9Yoz1q+1pKBPGufi4fN...l1ppzfGdRNe20UVfEUsu+zbR2iU5sWdrxlqqsU+y60OS8FTyiU5si6N1+9QJMPkM7Ria9qWOnrJ688sjzUT9y010rk2flKsWwluZE78CZDhGGSxUf7Fp+1raNsGae+JJs8WOHc98gM71d3bB2k+v4Jea6q2SC9Vu1WEke6+wp2yMFU2PYyc5qHoKaeeb3NNGV+ZXK2gMerGT6JVi9ZMfT5uGcS0.2uMbuFk75qs883AjmGnz6jlMs4ugR+syft3K.uvg.zA..vwk14rs7VbuxKHkwcgjZMadWUoA3eSa8XCIcWaZb2Z4WKm72P8tPg0NmzjWaHTrM+EsOxaDOOJl1K7VtxO19t6Vzun1WX84KFPYFpsFbfe9boKuQyeb6StoxtvCs0gKH3PtKXQd0k1iP9GzuMJ51RuHtea7dJ62Gcra+tCHeiq5JsMtpRCT+N1OeaMZWT.fWHP.5...XZKLXNeqnz.K1PCNPCWdGmfr1PYiXdUkNh50U1n30199MFgxJtfsUUoAYTT8qkRG8zqOB6i7TT4db7bwNd.ema5C3tHEGk1WQAXVVi9w81C36NrAvJkd9oKfUW.sRo2IDUGg7GtO8+sP6fzshROOYPW.fKky1hCJ6Cy4Jand+sg6hQ39swjl+9aEk9awGpzm+4S6KpDvIBkl0U....bpWKk9O9NuQW8dJa935BLIb99JadckygQ37ksgRGwNor.adrxtPA9byGW+aK4Xk+7wd8bxuumVPdis6ipCHuRoi3bbN6iI8sFedhU9ysZoroifquIu52nz9dpxtMxC22toXvnpgx+346cHJCG+0e.+y8pFjt112iKH+90Mo9mpCqnzygF1sNedsqUUuir+ndtR3bBugx9sQ0gTONrhU+qk.Oxa+k2+sA.....LkbKk8nXJVoAO3dTX4ufY4VHutkxt0yWufzMJKDVtEPKWd82uUsaqhMMOTYAXUUYq11Nwp2GwVkU1ims0CRmagZqpxt8ucqX0t8QEksflE6ke2BhW0f5iwVGqnr9E2i5JEjtZZ3pGjWW81Out9OWaNVY8e9s4x1z429pp9WAzqo9W7yb42kV224xe3JMdnv.MWQY8+90YWe0fJq5Aoopxdrh4NNdGuxxEzqe6OreJr85Vw1cmS5ZmCqexUV9mC31G08RmqNutF74JqodWX57+sQQWLCWYWKX6w4TOBOt3NWx0lJaaK4sX6A....for5p2max6p9W3ub2t6CKciZ.5wJKn+AUdqn9eFlm2pYckBRW3nUtl5O3r3bxqKfNe07RWcusWOHuanr.bbppIe.5aly9Nu1bQ8MwdoolxO.c29OL+tKLvfDFHnJn951VrJVdoIuxpp5OP1ZA0e+8YUuzEqriaGl9IWP2qEjW+Qktn57Fp+eaLp+VyWUM9AnGq9O9Ft+b0afWXEMqq....3EJkUZ.WcT5skaQ2x5iZ5FUw1WCq7biLdaM34y7nlt7l+zGk75tqBZmy2Ms4NlzVSl9loU9cF056jtr7OucPhU1wxgk17pOt7NneCMrz3R2j72ZCi636w09C....................................GRapdebcMocS0+iwr7DaS2Mmh0E..fApzrtB...fWHDqzGMSw4r8vsMIcwCQ4GaS+zzJ1W.......yDU0n+74dVHV8+bbdZnnme6...ZwYcE....m5Eqzm6wR89rY18ccT1yB4xJ6YfcYkNZycjTKk+yJZ2yvYW47nb9dW4Etc+xtn5secye6xqLCqyUsauUNoYXkM......vTylJczo8eEa+tcreuSc62eufzuiRCD2WE61MAu6mNW4E6ssUkztA4aM0+HnuYPcye69iBdMu5rqbcuVMHM9ully8d..bBDyAc...Ls89R5F1+91R5xJ+QC22JR55RJxldIoG588wde9xdujRCf1ezp8Eqzfw6Dju2aXMhQPMk1Vc04V18UYkNx9ts01922dBrOA.voHDfN...l15nr.x8+6AotjZX+61R59p2ETtp1+9FdkWakFzq61WOOqX+9v7ciBR+gwcU+04xR5ZJqc2w6641aG..8f4fN...lG8zfO6BlMVoA25Fw6FAoyMR0EE760JHeEMOzOLBKi112m1qL7..3TBBPG...yiF1nKWzsvtzfGg9xET1LZ1..Xliawc...bRzmYeOLP8Xkd6pGtfx4muvUT87Jmgsc..fINBPG...mD4tcxWJX6UkzGHoKMj7ENG0yaNq2Q8t5uKkd6pWTv+iqxJ81xmaEd.fWvQ.5...33Pa662ToqN6G0QldCk9nN6CT1p890kzcra+wCIe2SoAkeYa99Y4j1Gaqm0U5EBXII8qNh061JMn+ZJ6hKrhj9sR5WbDKa..bBGAnC..fiCsU5pb9UjzuVYiBs6YBtuvOm216HoerReti+qkTW666X29njuekj92jz+hj944re2PoOlz96kzV1WsT5BQ23TmkR6CbWXg+eCRWQkA......vTwjddcWQYO10Nr4aTtc0KaS2jrdybaG...................................................................................................................................................................................................3zfnYcE....uXwXLmp92eDEEYlFk6os9oShlVGaGFiF7w9HMapW.X5i+C+...3XSylMutII4uWRWQRkm00mIfmnnnMt50PFDEZ...F5mDQAQUu5CljE5ov9oShlJGaGj+42tyEe9YO2UjLqrfzeqIRwRF6w+nNQx7ztlnmJYZTaqW9wDnNvoODfN...NVr81aeGYLqFkj7S0hK1ZokVpyrtNcT07i+3ULQQ+BEE8fqd0qd2IQYdZre5jnoww1h7O+1ctX2yb1elojtoLlVkL5wGz07Do8aeimdwNRRqekcKqEeoJKZRtRRjdOIEGYhdfNH5C+Iex42YZV+.vwGBPG...ScMa1rlII4uOpToqdZKfylMaV1jjrcTRxOco28cabDKqSs8SmDMIO1lGiLQ+xq90+rjRQ2ojw7nCNnz+vMd54aOJ4c8qrWbzhI2IR5ZRQ28mr04+PFQc.....LTau0Va9zm9z2aVWOlVZ9u9uVc6s1ZyiZ4bZue5jnI0w1PFYh9vk+568fq9re65W4qpLtky5WYu3Gb0m8a+vk+56Mr4tN.l+UZVWA...voeQQQUuxUtxim00iolEWrkjF6frbN02OcRzD5XqOiLQ+xk+5OHQlxIce9UuwSe0ViaYcimd91Ice9Ukzk9kK+0e.AoC....fAp41aep+VucRzFeQne5jnI8wkOb4u9de3xe8uZRVlRRar7yV+CW9qu2jtbAvwmEm0U....fhdjhcb7XtxXLQypGmViCWe0m9oeZ429se6NRytGGXiJWcdZVOCONdbrOGGqe08pYLIumcTuKjQlnGr72TUIJVRRQIcJcPoV+O+jWpcQy0byAO+1lEN61qe0m8Y2X6WYsIesG.SabKv...fotlausYoqd0b+2cr81aeSYL2JXysUTT6RkJ8OToRko1JTcylMiMIIapnn0t5Uu58ORk0.ZiSpx3S9jO4h6u+92IRZUIcA6l+rnRkdPkJUt67VvnNau0VMkTYizCVd4kqOoKe2wwEVbwa4lh.au0VOTRku5xKe8ib4OAN1JkNewWXwjM6dPoqOnECtMVduqWRIefhhh66KMZs+mac9edQAou9U9pJKblRa1c+u8xtU.d.bxAyAc...LSYLlKFkFHRSEEsohh1TR6Ji4ZljjeayO9iWYJWEtjwXt3TdeLQbv96ucjzOyHsQjw7SUTzskTSYL2o41a+Ay55WdZ1rY0nnnJRZ2Hoa1rYyoxy08nnn382ee+iiWPRWZZruFWKbFypQRMFTv4qu7dUKEY9MJJJVIpYhQq00XtqwnGZjwnHcqe4xecgGquwSe0VIFyizhmM7hdAfS.3VbG...yEhJU5muzRK018Y6nh1TQQ2SROZZrOs6uSDCXwG+we7JQQQwJI41W8cdG+ae46u8VasYTTTslMadW+9v4AIII0hjZGkj7y0BKrY2tcWQRaLs2uWc4k+wS68wglwT6fCJMvQzeAYRmC4F8vex1u7em+2s9U2q1BkLqahhps9x68far04aj6t4fR2cgyXZt9U1cMFEcfSVH.c...LWZokVp8Vas0iKEEsp+1MFSzSe5SiMFy0jjhhhdxUtxUZGd6caSWEiwTQRcpToxi9zO8SKmjjT1+1luUqVW1XL65dti2pUqKWpToNu8a+1c7xe6JUpzXVdKjaGEZIiouU76nRkdfII4ZIIIUkWvuexm7IWra2ttGaaelqMzrYyxQQQWrToRc9Q+nezt9kk6676SJpbFVctYylwxXV0HswRu661X6s1ps834F9o6S9jO4hgGW7qKga2VeVQR6FEE8TiwzWcoUqVWVRZ.40bXZKGUqu7yVwXT6AN54WY2xJJcEiu6AI+Cge+M197a7fke1chhhhkwN2zywMd54a+guyyZoEeoJRpwQtxCfiMmHthw...3EOFiIJR5ZFioo+1a1r4uHoa2+MSRxeuII4uOoa2+slMa9KByeylM+.SRx1ljj+QSRx+Rys292dvAG7KLII+VuzDaRR9sIIIe2sCbR2tevA6u+upYylePR2taYy+ut41a+amV2d1ihRkJ0VRxrvBumwXh7WX8VZok1HpToe3BKrv2cmFzrYy5cO3fO2jj7Kr8U+5lau81t1PR2taevAGzW+VRRRcaeTYa4bqbJmeym7IexnLs.pJIE0s6CjjLROHJJpZX+396u+87Ot3UWtU31a1r4sNX+8+s1iK+hjtc2xzs6p8k2tc+fjtc+MCJutiqtf4mthplHMjGgduTYiwrtwXV+n7nWSRpahdrjYZO8P.vDFAnC..f4BKrvBUZ1r40sud+s2d60kT4nRk9tQRb6s29NQR2JxX9oWc4k+gWc4k+gQFyemLlZas0V0CRWMiwrVToRuwUWd4RQROHRp1nTWhhhpJiQeWdMledTTTbRRR8gl4omGYLllQR2xdwB9flMa99exm7IWzXLQKszRsci3scjquiLl6d0kW9Mt5xK+CiJU5GJo3jjjaYSWKYLqDFrbjz6YLllKszRsa1rYMYL2Kux4f82enOlvLII2zXLsW5ce2FRRkJUZCoz.uGmN.a65dRZ2nRk9g15yUUTzMGg7Vyl2GYOt9F11hR5182Lsu3KKDYthhJMvftuwSOe6U25U9oqt0q7Sy66+vezdWNxsvw0s6fCfuqowBFcswq1BfYEBPG...yENX+8+Uljjes80+RonnUMR2eokVJa9maL0LRarz67Na31zRuy67HSZv22rmzYLsu5xKeaWPqKs7x0MFSiQs9DUpzc+t79NuyZFioUjz6Mr7MsrzRK0IpToebhwrljLxXV0jj7uz8fC97lMa9A8LJvGbPrQZcYCHVRpRkJeljZ6ZCQII2MJJprN3fJtzz7i9nJQQQwJJ59RRljjUMFSqk7V40WZokZmXL22NR3wEUea1rYbTTTEi2nFuzRK01XLM54X0gfKv9nRk96by0da8ouaG7P11R6nRkxNmXokZGUpzcihhh61saswoNMxLQUzAeyXOp3e3OZuKqyj7ajjRLZsgOB662VkJ91fG.ymXNnC..f4BQII+Xs3hskjzAGDmTpzpkhhtSylM0RKsT8lezGUQQQwFiI1ezxkjhjtTTTTYa.icjwDmXL88XSyH8jH6sc8fXLl1W8pWscPdeZjlsiHoMvxaKoa27i9nJlyblqYLl2SRqlzs6JMa1bokVZo1K8tuaCiw7jO8S+zxMa1rVRRRbylMujr215RRZwEaYRR5nEVXUYmmxIKt3sJoz40uReupwXZE1e6Jmtc6VUErfukjjTuTTjjzSa1r42svnYLl1QRUa9u9uV0Mx5ipHoqXLlNW8pWsmfSWXgEdjczwKNuQQUSLlGeUav4ddjjVuToRW4vTWNzhT4wcAa66BNO87+MMG776Nr7bimdwNe3670yrojA.FODfN...lOr3hs8VAxaKoFas0VQkjtSylM2PO+4tTFGkt.e0CiwrYz96WVm8rtMcpZ0qtYylUjzEWZok1TRZo+l+lVRpkjteyO9iukJU5d1QX9VMa1LtY5TD3ZJcTyaof9ikVZoNas0VOHxXVsYyl2dokVpicN+2H3hSTNR5uMr9XLlMWXgEZGtcGaYYhj9GMIIAeYjLdWXfCow93ZTTztgaaokVpSys2dbKxoN+fySLZsZa8J2dVWm.vzCAnC..f4YskjzAGDqyd11xXThwb+2o2GyXRxtnxYWgxkjhhhx6Yfc7zrxNMkjjbqRQQq1rYyKtTvn.uz67Nq0b6suWTTzErosdonnppa2q6OJ0au0VaJu9fRIIORKrvM0AGTo4G8QcTTTrQpt66MFSGEE03pW8p2Hr935uyqt5+HgSdKbceWdSRVWRq3tv.CnYGNBvcxYaRO+4k0YNy.Jlz1hQpuE1N67ZWFi4KFXAbTYTm0uxtG5QQO5rlegQQwcM592XqWdjCNe8qraYcJ6hTA7h.lC5...XtjcUJOVRe2nqaLlVkhh5adf2rYy5M2d6eSylMKuzRK0wXLaJiYE+4kcqVst7r9VT+nvXe7pkjjbK+UvcII2sPtKHS6sBdK+fy6o+zxdqv2wrvBqlr3h0r293OvKIsjwrRN6uUr82UTN9tGMdKrvirKdc87JJcNrW1ade2VJ6Qilq9FNm+MROMJJpbyO9i64YIt4LmYTVa.ZEIcsbV84qJIs3hKt4HTFGEskNS7gMSFozUh8Ch56hRMPK9RULI8+H4C.y2XDzA..v7hUZ1roaTLuPys298JkNGnWycKWGUpz8kwr91au8cVbwE+e81u8a2oUqVqHi4NRZM2nwFcvA+byhK9aR5182r0Va8fnnncS51crV4vmWrvBKrgII4mYmW9WnYyl++GEE0wXLWyjjbSIsaoRkVSRxH0pTTTslMaVqRkJO3oO8owMa17uOux0Hc+Hi4lQRcTTTOi1cTRxcMkJ8aZt81+pVsZ8yuxUtR6VsZU0jjbOIYVZok5K.P6HRuRhw73kClG+dMlFljjN1K1xZkRRZnEV3NIc69KZ0p0+fj5zrYye12shkaUpTo0LII+LEE8AMa17mFEE01XLWwjjbSEEk2dpu1xA6u+uoUqV+zRkJ0ta2tUrskctxUtxPdDnczzU5IZgnpJc5FLRV+J6EKYjIwz3FO8kaen1gljJIQQO8PkG.LywHnC..fYNiwXrOWp+GcOipkzkrOdu9taq2kVZoMjwbWYLqdv96+Gat81cMII+K1GmZe2Bm0R+M+MshJU5pRZmHoehLlUiLl6ajdPd66vMobli6CX6GKbqh616NfaZRR901mS6+BIsSzAG7icyg+RkJcWiwriII4CZt81cS518eSFSG6Bm2E7KW6i9rKHoK4ddk+c6y28caDYL+cR5JIc69uY6u+0RZmnRk9wETUqZLFyhKt35CpsXRWb4tVylMqrz69tMjwbWI8dIc6tks9dkDiYM+iOKszRchN3ferjL11++lII4WDYL+zgcbzqsbgjtc25f82+OZaKMGPaYBJ5QKT5v+T.vHiQQG9y6VnjduRxLsuq..vD1fuTi....S.M2dayRW8pSz+cGM+W+WqJIoEWrU37XtYylqHonkVZoG5u8s1ZqMhjduqt7x8MWjOx0mIPabTKilMal83Qq2EWuvzEqm+7x5rms8Plq2Cutk0eW396n56ZWiv9n4G8QUj9tEKuC294i9nJpToxiZaYRbrc8qra4EV7b6z8fnktwSO+P2mGs80dwKrXxl+jsdkKO7TC....fWnzb6sOVG44s1Zq60b6sMs9e++dIiwDYLlnVsZc4s2Zqc1Nc0MehaRzFOt6mvnYRcbY8keV8+oke1He925KuW00W9Y0We4mU+Pte13vlG.Lefawc...bpi6V7NYgE1p41a+aZt81amzs6VRxDEEMzmgz.SEG770RTz68f24qVZzxPR0EhhtyBQQ2YT2Ee3OZuKWxn+VcPoMFyZI.lgH.c...bpyRKsTmqt7x+vnjjerhhdjhh1HJI4u6pKu7ObZc6YCLL23oWrShw7ODYh9U+yucmQZZVXjwXTeyu9b8O+1ctn8Yl9cm12F8.....3DpWDt0s4Vb+zqI8wkMV9qu2+zxOaciLSr0kAiLQ+SuyW+vMV9qu2jpLAvwOFAc...L0YLlNMa1r7rtdLui9oWLTaqW91ckzu7c1ajGI8A4e9s6bwe4xe8Gz0X5TaqW91COG.XdEAnC..fiCsT2ti37t8jmO9i+3ULFSiIPQcpte5jnI3w1dTaqW4FcMpc2ydls+vezdWdbFMciLQO3c9pk5d1yrcWE0o1VuxMlz0S.b7h.zA..vTWTRxcMQQevm7IexD+wa1r1m7IexEKEEcOEEswQsrNM2OcRzj7Xadps0Ke6tlR20rXxu9Wt7W+AiZf5FYh9vezdWdik+50kozutajtOibNvoC7bPG...GKZt0V0MRqFUpzsqToxim00mipO8S+zxc618JljjOHR5CWZ4kqOIJ2Sa8SmDMsN1Vj0uxdwZwjZkL5mDUReVThdzAQkd5Ye929z+e9zKzQR5+u29KJev4VLtTRzeqojVwXhtRhL+uzAOesa7zKdjdF2Cf4GDfN...N1zrYyZljjehjpNqqKS.cjTqnjj+gkd22swjrfOk0OcRzT6X6vr9xOakHEcsHYthTTEEYRWSBLQcLF0VQ5IFE8Xcv2zh.yA........................................................................................................................................................................................................................................................................................................................v+216N73z3LJJ.5MoBnCBk.cfoCr5.Qpf3TAVoBrbEDTEDoJv3NPoCnDnCT9wJF+1cXQ.VrPfyYFM5wrOV9f+vbmuG6B.............................6ie4Tu...Nys96Je4.6q9csu043PWK65qw6ceaaMcn8A.b0R.c.f9MKIe305EI4gd56lj7wWq+2jb+q0iSxmK880j77AtVtKI+1FdMljj+nz2u2yyeTR9R4w+YRV0Su+co9gz7deS9bZdOlj7TRdrm9lkc6yQ....Xilmlc78kzNzZW2U56acN12JG69bXFWNGujjaKGaZmisqmiwao2Zey1Re02a2sk9lmc6yQ.fqZ+5odA..bg66k5aSyNYuultkyI..WHDPG.33ZdodTZFI88UcGyeJIK+IVO..blR.c.fiqko8ug6a2ba8ZbZuC5+yO0pA.fyVBnC.b78To9lrei49Mk5UcNW..bAQ.c.fiu4k5Qocn62RcG2eL8ekWG.f+mS.c.fiuU4vFy8wo8uY89tMlA.vE.AzA.FF0QSeR1swb23sC.bEQ.c.fgw7R8nr86u3q0c71A.3Bl.5..Citi49Gei9mj1i29Cu2KH..NuHfN.vvoNh5Sy1Gy8Yk5koc3d..t.IfN.vvYdmGOaK8V2g8Eu2KD..N+HfN.vvYWGy8Io4J39ZFuc.fq.BnC.LrpgsmlMOl6epTuL1Ac.fqBBnC.LrdLM6j9Zy1POenTu3XtX..37g.5..CqUI44xi6Nl6cGu8udrWP..bdP.c.fg2eUpml1i49rR8xzNLO..WvDPG.X38bZOl62Tpq6nd81xF..W3DPG.X3sJsCee6q+u63se+Psf..3zS.c.fSi4k5IoYL2q6j9yoYD2A.3Jg.5..mFKxOFy8Qo4J2dc71cuOG.3Ji.5..mN0P3eJM6j9ZONvqE..NwDPG.3zoFBeZodQLd6..WcDPG.3zYQZe0bes4C6x..fyABnC.zuW572t169X9Fdc99ddNduWiGy912Oe..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................ne+G.Xr4gHnnCF8C....PRE4DQtJDXBB" ],
 					"embed" : 1,
 					"forceaspect" : 1,
 					"id" : "obj-24",
@@ -8916,7 +9374,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
 					"patching_rect" : [ 20.5, 20.5, 729.0, 729.0 ],
-					"pic" : "AkRest.png",
+					"pic" : "AkOpen.png",
 					"presentation" : 1,
 					"presentation_rect" : [ 20.5, 20.5, 729.0, 729.0 ]
 				}
@@ -9218,23 +9676,23 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "AkRest.png",
+				"name" : "AkOpen.png",
 				"bootpath" : "~/Documents/Max 8/Library/anaerobickareoke",
-				"patcherrelativepath" : "../../../../../Documents/Max 8/Library/anaerobickareoke",
+				"patcherrelativepath" : "../../../../Documents/Max 8/Library/anaerobickareoke",
 				"type" : "PNG",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "colors",
 				"bootpath" : "~/Documents/Max 8/Library/anaerobickareoke",
-				"patcherrelativepath" : "../../../../../Documents/Max 8/Library/anaerobickareoke",
+				"patcherrelativepath" : "../../../../Documents/Max 8/Library/anaerobickareoke",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pics",
 				"bootpath" : "~/Documents/Max 8/Library/anaerobickareoke",
-				"patcherrelativepath" : "../../../../../Documents/Max 8/Library/anaerobickareoke",
+				"patcherrelativepath" : "../../../../Documents/Max 8/Library/anaerobickareoke",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
